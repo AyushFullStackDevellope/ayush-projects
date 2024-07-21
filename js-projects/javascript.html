@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!--  -->
+  <style>
+    .main-container {
+      background-color: gray;
+      width: 60vw;
+      margin-left: 20vw;
+      height: 50vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .input-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .display {
+      background-color: rgb(92, 62, 116);
+      width: 100%;
+      height: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 32px;
+      padding: 10px;
+    }
+
+    .input-box {
+      height: 44px;
+      width: 80%;
+      font-size: 22px;
+    }
+
+    .button {
+      width: 80%;
+      margin: 20px;
+      height: 44px;
+      background-color: lightgreen;
+      font-size: 12px;
+    }
+  </style>
+  <!--  -->
+  <script>
+    // function numberTyped() {
+    //   let valueOne = document.getElementById("displayOne").value;
+    //   let valueTwo = document.getElementById("displayTwo").value;
+    //   // process
+    //   process("add", valueOne, valueTwo);
+    //   process("sub", valueOne, valueTwo);
+    //   process("mul", valueOne, valueTwo);
+    //   process("div", valueOne, valueTwo);
+    //   // output for html
+    //   document.getElementById("display").innerHTML = z;
+    //   // output for console
+
+    //   output(valueThree);
+    // }
+
+    // // new function
+    // function process(action, numberOne, numberTwo) {
+    //   let result = 0;
+    //   // process
+    //   numberOne = Number(numberOne);
+    //   numberTwo = Number(numberTwo);
+    //   if (action == "add") {
+    //     result = numberOne + numberTwo;
+    //   } else if (action == "sub") {
+    //     result = numberOne - numberTwo;
+    //   } else if (action == "mul") {
+    //     result = numberOne * numberTwo; 
+    //   } else if (action == "div") {
+    //     result = numberOne / numberTwo;
+    //   }
+    //   // output for console and HTML
+    //   console.log("THE OUTPUT_", result);
+    //   document.getElementById("display").innerHTML = result;
+
+    // }
+
+    // function output(valueThree) {
+    //   console.log("THE OUTPUT_", result);
+    //   document.getElementById("display").innerHTML = result;
+    // }
+    // function playMusic(){
+    //   sa();
+    //   re();
+    //   ga();
+    // }
+    // function sa(){
+    //   console.log(" SA ")
+    // }
+    // function re(){
+    //   console.log(" RE ")
+    // }
+    // function ga(){
+    //   console.log(" GA ")
+    // }
+    // function ma(){
+    //   console.log(" MM ")
+    // }
+// function
+function daysRemaining(){
+  let student = {
+    firstName : "Ayush",
+    rollNumber : 18,
+    lastName : "Nakade",
+  };
+
+  console.log(
+    "STUDENT DETAIL = ",
+    student.firstName,
+    "LAST NAME = ",
+    student.lastName,
+    "ROLL NUMBER = ",
+    student.rollNumber,
+
+  );
+}
+  </script>
+</head>
+
+<body style="margin: 0px">
+  <div class="main-container">
+    <div class="display" id="display">
+      <h1 class="display-text" id="display-text"></h1>
+
+    </div>
+
+    <div class="input-container">
+      <input id="displayOne" type="number" class="input-box" placeholder="Bet Number" />
+      <input id="displayTwo" type="number" class="input-box" placeholder="Coins" />
+      <button class="button" onclick="daysRemaining()">CLICK ME</button>
+    </div>
+  </div>
+</body>
+</html>

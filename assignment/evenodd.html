@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EVEN ODD</title>
+    <!-- internal styling -->
+    <style>
+      .container {
+        width: 90vw;
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.8
+        ); /* semi-transparent background for better readability */
+        border-radius: 10px;
+      }
+
+      .display {
+        width: 100%;
+        height: 60px;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        border-radius: 10px;
+      }
+
+      .display-text {
+        color: rgb(20, 255, 235);
+        font-size: 22px;
+        text-align: center;
+      }
+
+      .box {
+        height: 60px;
+        width: 80vw;
+        max-width: 400px;
+        border: 2px solid black;
+        text-align: center;
+        margin: 10px;
+        font-weight: bold;
+        font-size: large;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+      }
+
+      #section-one {
+        background-color: aqua;
+      }
+
+      #section-two {
+        background-color: rgb(239, 66, 66);
+      }
+
+      #section-three {
+        background-color: lightgreen;
+      }
+
+      input {
+        height: 40px;
+        width: 80vw;
+        max-width: 400px;
+        border: 2px solid rgb(113, 255, 5);
+        font-size: larger;
+        margin: 10px 0;
+        padding: 5px;
+        box-sizing: border-box;
+        border-radius: 10px;
+      }
+
+      body {
+        background-color: gray;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-image: url("https://i.pinimg.com/originals/7d/2a/9f/7d2a9fca264faa93561f72b5fc885fec.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      @media (min-width: 768px) {
+        .container {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          background-color: rgba(
+            255,
+            255,
+            255,
+            0.9
+          ); /* Slightly more opaque for larger screens */
+        }
+
+        .box {
+          width: calc(33% - 40px);
+        }
+
+        input {
+          width: calc(50% - 20px);
+          margin: 10px;
+        }
+      }
+    </style>
+    <script>
+      // script function for even odd
+      function evenOrOdd() {
+        let x = document.getElementById("input-one").value;
+        if (x % 2 == 0) {
+          document.getElementById("display-text").innerHTML = "EVEN NUMBER";
+        } else {
+          document.getElementById("display-text").innerHTML = "ODD NUMBER";
+        }
+      }
+      // function for eligible for vote or not eligible for vote
+      function isEligable() {
+        let x = document.getElementById("input-one").value;
+        if (x >= 18) {
+          document.getElementById("display-text").innerHTML =
+            "ELIGIBLE TO VOTE";
+        } else {
+          document.getElementById("display-text").innerHTML =
+            "NOT ELIGIBLE TO VOTE";
+        }
+      }
+      // function for numbers are equal or not equal
+      function isEqualTo() {
+        let x = document.getElementById("input-one").value;
+        let y = document.getElementById("input-two").value;
+        if (x == y) {
+          document.getElementById("display-text").innerHTML =
+            "BOTH NUMBERS ARE EQUAL";
+        } else {
+          document.getElementById("display-text").innerHTML =
+            "BOTH NUMBERS ARE NOT EQUAL";
+        }
+      }
+    </script>
+  </head>
+  <!-- html programme and UI -->
+
+  <body>
+    <div class="container">
+      <div class="display">
+        <h1 id="display-text" class="display-text"></h1>
+      </div>
+      <input type="number" id="input-one" placeholder="Enter here" />
+      <input type="number" id="input-two" placeholder="Enter here" />
+      <button class="box" id="section-one" onclick="isEligable()">VOTE</button>
+      <button class="box" id="section-two" onclick="evenOrOdd()">
+        EVEN or ODD
+      </button>
+      <button class="box" id="section-three" onclick="isEqualTo()">
+        EQUAL or NOT
+      </button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="https://images.indianexpress.com/2024/02/YouTube-YouTube-1.jpg?w=414">
+    <title>youtube.com</title>
+    <style>
+        /* Basic reset and styles */
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #181818;
+            color: white;
+        }
+
+        /* Header styling */
+        .header {
+            background-color: #202020;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .header img {
+            height: 40px;
+            margin-right: 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #ffffff;
+        }
+
+        /* Main content styling */
+        .content {
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Main video styling */
+        .main-video {
+            flex: 2;
+            background-color: #282828;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .main-video iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 5px;
+        }
+
+        /* Smaller videos container */
+        .side-videos {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Each smaller video styling */
+        .side-video {
+            background-color: #282828;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .side-video iframe {
+            width: 100%;
+            height: 150px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        /* Footer styling */
+        .footer {
+            background-color: #202020;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            color: #1DA1F2;
+        }
+
+        .footer div {
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer a {
+            color: #1DA1F2;
+            text-decoration: none;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .main-video iframe {
+                height: 300px;
+            }
+
+            .side-video iframe {
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header with YouTube logo and title -->
+    <div class="header">
+        <img src="https://images.indianexpress.com/2024/02/YouTube-YouTube-1.jpg?w=414" alt="YouTube Logo">
+        <h1>YouTube</h1>
+    </div>
+
+    <!-- Main content area with videos -->
+    <div class="content">
+        <!-- Main video on the left -->
+        <div class="main-video">
+            <iframe src="https://www.youtube.com/embed/bzbsJGMVHxQ?si=k4OWzOoRwK4PcZWf" title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <!-- Side videos on the right -->
+        <div class="side-videos">
+            <div class="side-video">
+                <iframe src="https://www.youtube.com/embed/CFZWI8ExfuY?si=bY4eBvgz24qQ359a" title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="side-video">
+                <iframe src="https://www.youtube.com/embed/Hmhp1ZYPC5w?si=m0-iEzasLypq3UGi" title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div class="side-video">
+                <iframe src="https://www.youtube.com/embed/BFU9eSKO_t4?si=zK3Bxfzcz3KsoqDx" title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer with social media links -->
+    <div class="footer">
+        <div>SUSCRIBE</div>
+        <div>
+            <a href="#">Facebook</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+.style-switcher {
+  position: fixed;
+  right: 0;
+  top: 60px;
+  padding: 15px;
+  width: 200px;
+  border: 1px solid var(--bg-black-50);
+  background: var(--bg-black-100);
+  z-index: 101;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  transform: translateX(100%);
+}
+.style-switcher .open {
+  transform: translateX(-25px);
+}
+.style-switcher .s-icon {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  font-size: 20px;
+  background: var(--bg-black-100);
+  color: var(--text-black-900);
+  right: 100%;
+  border: 1px solid var(--bg-black-50);
+  margin-right: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+.style-switcher .s-icon {
+  line-height: 40px;
+}
+.style-switcher .style-switcher-toggler {
+  top: 0;
+}
+.style-switcher .day-night {
+  bottom: 20px;
+}
+.style-switcher .color-switcher {
+  top: 15px;
+}
+
+.style-switcher h4 {
+  margin: 0 0 10px;
+  color: var(--text-black-700);
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.style-switcher .colors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.style-switcher .colors span {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid red;
+}
+
+.s-icon {
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.color-options {
+  display: none;
+  margin-top: 10px;
+}
+
+.color-options .color-option {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.color-option[data-color="#ec1839"] {
+  background-color: #ec1839;
+}
+
+.color-option[data-color="#2196f3"] {
+  background-color: #2196f3;
+}
+
+.color-option[data-color="#ff5722"] {
+  background-color: #ff5722;
+}
+
+.color-option[data-color="#4caf50"] {
+  background-color: #4caf50;
+}
+
+:root {
+  --theme-color: #ec1839;
+}
+
+/* Define the CSS variables */
+:root {
+  --theme-color: #ec1839; /* Default color */
+}
+
+body[data-theme="color1"] {
+  --theme-color: #ff5733;
+}
+
+body[data-theme="color2"] {
+  --theme-color: #33c4ff;
+}
+:root {
+  --theme-color: #ec1839;
+}
+
+/* Example usage in your CSS */
+.main-container {
+  color: var(--theme-color);
+}
+
+.logo a span,
+.my-profession span,
+.hello .name,
+.nav a.active i,
+.nav a.active,
+.section-title h2,
+.skill-percent,
+.timeline .timeline-title {
+  color: var(--theme-color);
+}
+
+.btn {
+  background-color: var(--theme-color);
+  border-color: var(--theme-color);
+}

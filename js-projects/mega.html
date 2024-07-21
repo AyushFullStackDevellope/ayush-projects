@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .box {
+            height: 60px;
+            width: 50vw;
+            border-style: solid;
+            text-align: center;
+            margin: 20px;
+            margin-left: 300px;
+        }
+
+        #section-one {
+            background-color: aqua;
+            margin-top: 50px;
+        }
+
+        #section-two {
+            background-color: rgb(239, 66, 66);
+        }
+
+        #section-three {
+            background-color: lightgreen;
+        }
+
+        input {
+            height: 50px;
+            width: 700px;
+            border-style: solid;
+            border-color: rgb(113, 255, 5);
+            border-width: 20px;
+            font-size: larger;
+            margin-left: 290px;
+            margin-top: 20px;
+
+        }
+
+        body {
+            margin: 0;
+            background-color: rgb(219, 219, 219);
+        }
+
+        .head {
+            background-color: cornflowerblue;
+            width: 100vw;
+            height: 30vh;
+            text-align: center;
+            font-size: 50px;
+            color: azure;
+        }
+    </style>
+    <script>
+
+        function process(x, y) {
+            let z = Number(x) + Number(y);
+            // output
+
+            let output = "";
+            // even
+            if (z % 2 == 0) {
+                output = "EVEN"
+                // odd
+            } else {
+                output = "ODD";
+            }
+
+            return output;
+        }
+        function iterate() {
+            // input
+            let x = prompt("ENTER HERE= ");
+            let y = prompt("ENTER HERE= ");
+            // process
+            let z = Number(x) + Number(y);
+            // output
+
+
+            document.getElementById("head").innerHTML = process(x, y);
+        }
+        function assign() {
+            // input
+            let x = 1;
+            let y = 2;
+            // process
+            let z = x + y;
+
+            document.getElementById("head").innerHTML = process(x, y);
+        }
+        function htmlFunction() {
+            // input
+            let x = document.getElementById("input").value;
+            let y = document.getElementById("input-two").value;
+            // process
+            let z = Number(x) + Number(y);
+            // output
+
+            document.getElementById("head").innerHTML = process(x, y);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="head" class="head"></div>
+
+    <input type="text" id="input" placeholder="Enter here">
+
+    <input type="text" id="input-two" placeholder="Enter here">
+
+    <div class="main">
+        <button class="box" id="section-one" onclick="iterate()">
+            <h1>Button one</h1>
+        </button>
+        <button class="box" id="section-two" onclick="assign()">
+            <h1>Button two</h1>
+        </button>
+        <button class="box" id="section-three" onclick="htmlFunction()">
+
+            <h1>Button three</h1>
+
+        </button>
+    </div>
+</body>
+
+</html>

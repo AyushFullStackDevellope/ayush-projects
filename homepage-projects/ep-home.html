@@ -1,0 +1,2107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Enjoyprogramming.com</title>
+
+  <!-- CSS and JS links -->
+  <link rel="icon" type="image/x-icon" href="./assets/EP_logo_new.jpeg" />
+  <link rel="stylesheet" href="enjoytwo.css" />
+  <link rel="stylesheet" href="color.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/bootstrap-icons.svg" />
+  <!-- Style switchers -->
+  <link rel="stylesheet" href="styleswitchers.css" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1&display=swap");
+
+:root {
+  --bg-black-900: #f2f2fc;
+  --bg-black-100: #fdf9ff9f;
+  --bg-black-50: #e8dfec;
+  --text-black-700: #000000;
+  --text-black-900: #939393;
+}
+
+body.dark {
+  --bg-black-900: #151515;
+  --bg-black-100: #222222;
+  --bg-black-50: #393939;
+  --text-black-700: #ffffff;
+  --text-black-900: #e9e9e9;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+.section {
+  background: var(--bg-black-900);
+  min-height: 100vh;
+  display: block;
+  padding: 0 30px;
+  opacity: 1;
+  position: fixed;
+  left: 270px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.3s ease;
+}
+
+.section.back-section {
+  z-index: 1;
+}
+
+.section.active {
+  z-index: 2;
+  opacity: 1;
+  animation: slideSection 1s ease;
+}
+
+@keyframes slideSection {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+.padd-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container {
+  max-width: 1100px;
+  width: 100%;
+  margin: auto;
+}
+
+.section .container {
+  padding-top: 60px;
+  padding-bottom: 70px;
+}
+
+.section-title {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
+  font-size: 40px;
+  color: var(--theme-color);
+  font-weight: 700;
+  position: relative;
+}
+
+.section-title h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 50px;
+  height: 4px;
+  background-color: var(--theme-color);
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 25px;
+  height: 4px;
+  background-color: var(--theme-color);
+  margin-top: 8px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  position: relative;
+}
+
+.btn {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 35px;
+  color: white;
+  border-radius: 40px;
+  display: inline-block;
+  white-space: nowrap;
+  border: none;
+  background: var(--skin-color);
+  transition: all 0.3s ease;
+}
+
+.explore {
+  margin-top: 50px;
+  margin-left: 450px;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.shadow-dark {
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
+
+/* aside */
+.aside {
+  width: 270px;
+  background: var(--bg-black-100);
+  position: fixed;
+  top: 0;
+  padding: 30px;
+  left: 0;
+  height: 100%;
+  border-right: 1px solid var(--bg-black-50);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.nav a {
+  display: block;
+  width: 100%;
+  padding: 10px 20px;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.aside .logo {
+  position: absolute;
+  top: 20px;
+  font-size: 30px;
+  text-transform: capitalize;
+}
+
+.aside .logo a {
+  color: var(--text-black-900);
+  font-weight: 700;
+  padding: 15px 20px;
+  font-size: 30px;
+  letter-spacing: 5px;
+  position: relative;
+}
+
+.aside .logo a span {
+  font-family: "Clicker Script", cursive;
+  font-size: 40px;
+}
+
+.aside .logo a ::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-bottom: 5px solid var(--theme-color);
+  border-left: 5px solid var(--theme-color);
+  bottom: 0;
+  left: 0;
+}
+
+.aside .logo a ::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-top: 5px solid var(--theme-color);
+  border-right: 5px solid var(--theme-color);
+  top: 0;
+  right: 0;
+}
+
+.aside .nav-toggler {
+  height: 40px;
+  width: 45px;
+  border: 1px solid var(--bg-black-50);
+  cursor: pointer;
+  position: fixed;
+  left: 300px;
+  top: 20px;
+  border-radius: 5px;
+  background: var(--bg-black-100);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.aside .nav-toggler span {
+  height: 2px;
+  width: 18px;
+  background: var(--theme-color);
+  display: inline-block;
+  position: relative;
+}
+
+.aside .nav-toggler.open span {
+  background-color: transparent;
+}
+
+.aside .nav-toggler span::before {
+  content: "";
+  height: 2px;
+  width: 18px;
+  background: var(--theme-color);
+  position: absolute;
+  top: -6px;
+  left: 0;
+}
+
+.aside .nav-toggler.open span::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.aside .nav-toggler span::after {
+  content: "";
+  height: 2px;
+  width: 18px;
+  background: var(--theme-color);
+  position: absolute;
+  top: 6px;
+  left: 0;
+}
+
+.aside .nav-toggler.open span::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+.aside .nav {
+  margin-top: 50px;
+}
+
+.aside .nav li {
+  margin-bottom: 20px;
+  display: block;
+}
+
+.aside .nav li a {
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  border-bottom: 1px solid var(--bg-black-50);
+  color: var(--text-black-900);
+  padding: 5px 15px;
+}
+
+.aside .nav li a.active {
+  color: var(--theme-color);
+}
+
+.aside .nav li a i {
+  margin-right: 15px;
+}
+
+/* home */
+.home {
+  min-height: 100vh;
+  display: flex;
+  color: var(--text-black-900);
+}
+
+.home .home-info {
+  flex: 0 0 60%;
+  max-width: 60%;
+}
+
+h3.hello {
+  font-size: 40px;
+  margin: 15px 0;
+}
+
+h3.hello span {
+  font-weight: 600;
+  color: var(--skin-color);
+  font-size: 40px;
+  font-family: "Clicker Script", cursive;
+}
+
+.typing {
+  color: var(--skin-color);
+}
+
+.home-info p {
+  margin-bottom: 70px;
+  font-size: 25px;
+  color: var(--text-black-900);
+}
+
+.home .home-img {
+  flex: 0 0 40%;
+  max-width: 40%;
+  text-align: center;
+  position: relative;
+}
+
+.home-img::after {
+  content: "";
+  position: absolute;
+  height: 80px;
+  width: 70px;
+  border-bottom: 10px solid var(--theme-color);
+  border-right: 10px solid var(--theme-color);
+  right: 20px;
+  bottom: -40px;
+}
+
+.home-img::before {
+  content: "";
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  border-top: 10px solid var(--theme-color);
+  border-left: 10px solid var(--theme-color);
+  left: 20px;
+  top: -40px;
+}
+
+.home .home-img img {
+  margin: auto;
+  border-radius: 5px;
+  height: 400px;
+}
+
+/* about */
+.about .about-content {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.about .about-content .about-text {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.about .about-content .about-text h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 700px;
+  color: var(--text-black-900);
+}
+
+.about .about-content .about-text h3 span {
+  color: var(--theme-color);
+}
+
+.about .about-content .about-text h3 p {
+  font-size: 12px;
+  line-height: 25px;
+  color: var(--text-black-700);
+}
+
+.about .about-content .personal-info {
+  flex: 0 0 60%;
+  max-width: 60%;
+  margin-top: 40px;
+}
+
+.about .about-content .personal-info .info-item {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.about .about-content .personal-info .info-item p {
+  font-weight: 600;
+  padding: 10px 0;
+  font-size: 16px;
+  color: var(--text-black-900);
+  border-bottom: 1px solid var(--bg-black-50);
+}
+
+.about .about-content .personal-info .info-item p span {
+  font-weight: 400;
+  color: var(--text-black-700);
+  margin-left: 4px;
+  display: inline-block;
+}
+
+.about .about-content .personal-info .info-item .buttons {
+  margin-top: 30px;
+}
+
+.about .about-content .personal-info .info-item .buttons .btn {
+  margin-top: 10px;
+}
+
+.about .about-content .skills {
+  flex: 0 0 40%;
+  max-width: 40%;
+  margin-top: 40px;
+}
+
+.about .about-content .skills .skill-item {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.about .about-content .skills .skill-item h5 {
+  line-height: 40px;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text-black-900);
+  text-transform: capitalize;
+}
+
+.about .about-content .skills .skill-item .progress {
+  background-color: var(--bg-black-50);
+  height: 7px;
+  border-radius: 4px;
+  width: 100%;
+  position: relative;
+}
+
+.about .about-content .skills .skill-item {
+  margin-bottom: 25px;
+}
+
+.about .about-content .skills .skill-item .progress .progress-in {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  border-radius: 4px;
+  background-color: var(--theme-color);
+}
+
+.about .about-content .skills .skill-item .skill-percent {
+  position: absolute;
+  right: 0;
+  color: var(--text-black-900);
+  top: -40px;
+  font-weight: 400;
+  line-height: 40px;
+}
+
+.about .about-content .education,
+.about .about-content .experience {
+  flex: 0 0 50%;
+  max-width: 50%;
+  margin-top: 30px;
+}
+
+.about .about-content h3.title {
+  font-size: 24px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  color: var(--text-black-900);
+}
+
+.about .about-content .timeline-box {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.about .about-content .timeline {
+  background-color: var(--bg-black-100);
+  padding: 30px 15px;
+  border-radius: 10px;
+  width: 100%;
+  position: relative;
+}
+
+.about .about-content .timeline .timeline-item {
+  position: relative;
+  padding-left: 37px;
+  padding-bottom: 50px;
+}
+
+.about .about-content .timeline .timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.about .about-content .timeline .timeline-item::before {
+  content: "";
+  width: 1px;
+  position: absolute;
+  height: 100%;
+  left: 7px;
+  top: 0;
+  background-color: var(--theme-color);
+}
+
+.about .about-content .timeline .circle-dot {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: var(--theme-color);
+}
+
+.about .about-content .timeline .timeline-date {
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: var(--text-black-700);
+}
+
+.about .about-content .timeline .timeline-date .fa {
+  margin-right: 5px;
+}
+
+.about .about-content .timeline .timeline-title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  color: var(--text-black-700);
+}
+
+.about .about-content .timeline .timeline-title {
+  line-height: 25px;
+  font-size: 16px;
+  text-align: justify;
+  color: var(--text-black-700);
+}
+
+/* portfolio sectionn  */
+.portfolio .container {
+  padding-bottom: 40px;
+}
+
+.portfolio .portfolio-heading {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 40px;
+}
+
+.portfolio .portfolio-heading h2 {
+  color: var(--text-black-900);
+  font-weight: 500;
+}
+
+.portfolio .portfolio-item {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  margin-bottom: 30px;
+}
+
+.portfolio .portfolio-item-inner {
+  border: 6px solid var(--bg-black-100);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.portfolio .portfolio-item-inner .portfolio-img img {
+  width: 100%;
+  display: block;
+}
+
+.portfolio .portfolio-item-inner .portfolio-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio .portfolio-item-inner .portfolio-img img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.portfolio .portfolio-item-inner .portfolio-img:hover img {
+  transform: scale(1.1);
+}
+
+.portfolio .portfolio-item-inner .portfolio-img .portfolio-hover {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.portfolio .portfolio-item-inner .portfolio-img:hover .portfolio-hover {
+  top: 0;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.portfolio .portfolio-item-inner .portfolio-img .portfolio-hover-content {
+  color: white;
+  text-align: center;
+  transform: translateY(20px);
+  transition: transform 0.4s ease-in-out;
+}
+
+.portfolio .portfolio-item-inner .portfolio-img:hover .portfolio-hover-content {
+  transform: translateY(0);
+}
+
+.portfolio .portfolio-item-inner .portfolio-img .portfolio-hover-content h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.portfolio .portfolio-item-inner .portfolio-img .portfolio-hover-content h3 b {
+  font-weight: 700;
+}
+
+/* contact sectionn */
+
+.contact-title {
+  color: var(--theme-color);
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.contact-sub-title {
+  color: var(--text-black-900);
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 60px;
+}
+
+.contact .contact-info-item {
+  flex: 0 0 25%;
+  max-width: 25%;
+  text-align: center;
+}
+
+.contact .contact-info-item p {
+  font-size: 16px;
+  line-height: 25px;
+  color: var(--text-black-700);
+  font-weight: 400;
+}
+
+.contact .contact-info-item .icon {
+  display: inline-block;
+}
+
+.contact .contact-info-item .icon {
+  font-size: 25px;
+  color: var(--theme-color);
+}
+
+.contact .contact-info-item .icon * {
+  fill: var(--theme-color);
+  /* For SVG icons */
+  color: var(--theme-color);
+  /* For FontAwesome icons */
+}
+
+.contact .contact-info-item h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-black-900);
+  text-transform: capitalize;
+  margin: 15px 0 5px;
+}
+
+.contact .contact-info-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (max-width: 1199px) {
+  .section .container {
+    padding-top: 70px;
+  }
+
+  .aside {
+    left: -270px;
+  }
+
+  .aside.open {
+    left: 0;
+  }
+
+  .aside .nav-toggler {
+    display: flex;
+    left: 30px;
+  }
+
+  .aside .nav-toggler.open {
+    left: 300px;
+  }
+
+  .section {
+    left: 0;
+  }
+
+  .section.open {
+    left: 270px;
+  }
+
+  .about .about-content .personal-info .info-item p span {
+    display: block;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .contact .contact-info-item,
+  .portfolio .portfolio-item {
+    flex: 0 0 50%;
+    max-width: 30%;
+  }
+
+  .about .about-content .education,
+  .home .home-info {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .home .home-img {
+    max-width: 100%;
+    top: 50px;
+    padding: 10px;
+    padding-bottom: 10px;
+    display: block;
+  }
+
+  .home-img::after {
+    content: "";
+    position: absolute;
+    height: 80px;
+    width: 70px;
+    border-bottom: 10px solid var(--theme-color);
+    border-right: 10px solid var(--theme-color);
+    right: -5px;
+    bottom: -40px;
+  }
+
+  .home-img::before {
+    content: "";
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    border-top: 10px solid var(--theme-color);
+    border-left: 10px solid var(--theme-color);
+    left: -5px;
+    top: -40px;
+  }
+
+  .home img {
+    height: 50px;
+    width: 250px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact .contact-info-item,
+  .about .about-content .experience,
+  .about .about-content .skills,
+  .about .about-content .education,
+  .about .about-content .personal-info {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .portfolio .portfolio-item {
+    max-width: 50%;
+  }
+
+  .home .home-img {
+    display: none;
+  }
+
+  .contact .contact-info-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-top: 10px;
+  }
+
+  .contact .contact-info-item p {
+    flex: 0 0 50%;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  /* For zooming out (smaller viewports) */
+  @media (max-width: 1400px) and (min-width: 1200px) {
+    .section .container {
+      padding-top: 60px;
+    }
+
+    .aside {
+      left: -250px;
+    }
+
+    .aside.open {
+      left: 0;
+    }
+
+    .aside .nav-toggler {
+      left: 25px;
+    }
+
+    .aside .nav-toggler.open {
+      left: 280px;
+    }
+
+    .section {
+      left: 0;
+    }
+
+    .section.open {
+      left: 250px;
+    }
+
+    .about .about-content .personal-info .info-item p span {
+      margin-left: 0;
+    }
+  }
+
+  /* For zooming in (larger viewports) */
+  @media (max-width: 800px) and (min-width: 600px) {
+    .contact .contact-info-item,
+    .portfolio .portfolio-item {
+      flex: 0 0 100%;
+      max-width: 50%;
+    }
+
+    .about .about-content .education,
+    .home .home-info {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .home .home-img {
+      max-width: 100%;
+      top: 40px;
+      padding: 8px;
+      padding-bottom: 8px;
+    }
+
+    .home-img::after,
+    .home-img::before {
+      border-width: 8px;
+      height: 60px;
+      width: 60px;
+    }
+
+    .home img {
+      height: 40px;
+      width: 200px;
+    }
+  }
+
+  /* For zooming out (smaller viewports) */
+  @media (max-width: 1400px) and (min-width: 1200px) {
+    .section .container {
+      padding-top: 60px;
+    }
+
+    .aside {
+      left: -250px;
+    }
+
+    .aside.open {
+      left: 0;
+    }
+
+    .aside .nav-toggler {
+      left: 25px;
+    }
+
+    .aside .nav-toggler.open {
+      left: 280px;
+    }
+
+    .section {
+      left: 0;
+    }
+
+    .section.open {
+      left: 250px;
+    }
+
+    .about .about-content .personal-info .info-item p span {
+      margin-left: 0;
+    }
+  }
+
+  /* For zooming in (larger viewports) */
+  @media (max-width: 800px) and (min-width: 600px) {
+    .contact .contact-info-item,
+    .portfolio .portfolio-item {
+      flex: 0 0 100%;
+      max-width: 50%;
+    }
+
+    .about .about-content .education,
+    .home .home-info {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .home .home-img {
+      max-width: 100%;
+      top: 40px;
+      padding: 8px;
+      padding-bottom: 8px;
+    }
+
+    .home-img::after,
+    .home-img::before {
+      border-width: 8px;
+      height: 60px;
+      width: 60px;
+    }
+
+    .home img {
+      height: 40px;
+      width: 200px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .contact .contact-info-item,
+    .about .about-content .experience,
+    .about .about-content .skills,
+    .about .about-content .education,
+    .about .about-content .personal-info {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .portfolio .portfolio-item {
+      max-width: 100%;
+    }
+
+    .home .home-img {
+      display: none;
+    }
+
+    .contact .contact-info-item {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-top: 8px;
+    }
+
+    .contact .contact-info-item p {
+      margin-top: 8px;
+      font-size: 12px;
+    }
+  }
+}
+
+.additional-box {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.additional-box button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  color: white;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+.additional-box button:hover {
+  background: linear-gradient(135deg, #5d79f0, #9d64d6);
+  transform: scale(1.05);
+}
+
+.additional-box-content {
+  display: block;
+  padding: 0 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-item img {
+  margin-bottom: 10px;
+}
+
+.course-details {
+  color: #717070;
+  margin-top: 10px;
+}
+.notes .section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.notes-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.policy-box {
+  background: #f7f7f7;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 10px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-box {
+  background: #f7f7f7;
+  padding: 30px;
+  border-radius: 8px;
+  margin: 10px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-box .form-group {
+  margin-bottom: 20px;
+}
+
+.feedback-box .form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.feedback-box .btn {
+  background: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.feedback-box .btn:hover {
+  background: #0056b3;
+}
+
+@media only screen and (max-width: 767px) {
+  .additional-box {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .additional-box button {
+    padding: 10px;
+  }
+
+  .additional-box-content {
+    padding: 0 10px;
+  }
+
+  .icon-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .icon-item img {
+    width: 40px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .icon-grid,
+  .course-details {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    border-style: solid;
+  }
+
+  .icon-item img {
+    width: 55px;
+  }
+}
+  </style>
+</head>
+<div>
+</div>
+
+<body class="dark">
+  <!-- Main container start -->
+  <div class="main-container">
+    <!-- Aside start -->
+    <div class="aside">
+      <div class="logo">
+        <img src="./assets/logo-radius.png" height="150px" width="auto" />
+      </div>
+      <div class="nav-toggler">
+        <span></span>
+      </div>
+
+      <ul class="nav">
+        <li>
+          <a href="#home" class="active"><i class="fa fa-home"></i>Home</a>
+        </li>
+        <li>
+          <a href="#about"><i class="fa fa-user"></i>About</a>
+        </li>
+        <li>
+          <a href="#portfolio"><i class="fa fa-briefcase"></i>Portfolio</a>
+        </li>
+        <li>
+          <a href="#services"><i class="fa fa-wrench"></i>Cources</a>
+        </li>
+        <li>
+          <a href="#pictures"><i class="fa-solid fa-image"></i>Pictures</a>
+        </li>
+        <li>
+          <a href="#contact"><i class="fa fa-comments"></i>Contact</a>
+        </li>
+      </ul>
+
+      <a href="index.html" class="btn" style="margin-top: 40px;">Back to Home</a>
+    </div>
+    <!-- Aside end -->
+
+    <!-- Main content start -->
+    <div class="main-content">
+      <!-- Home section start -->
+      <section class="home active section" id="home">
+        <div class="container">
+          <div class="row">
+            <div class="home-info padd-15">
+              <h3 class="hello">
+                Discover the world of IT with
+                <span class="name">Enjoy Programming</span>
+              </h3>
+              <h3 class="my-profession">
+                <span class="typing"></span>
+              </h3>
+              <p>
+                Embrace innovation, enhance skills, and excel in your career,
+                Join us to unlock your potential in the digital landscape.
+              </p>
+            </div>
+            <div class="home-img padd-15">
+              <img src="./assets/EP_robo.png" alt="Enjoy" width="300px" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Home section end -->
+
+      <!-- About section start -->
+      <section class="about section" id="about">
+        <div class="container">
+          <div class="row">
+            <div class="section-title padd-15">
+              <h2>About Us</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="about-content padd-15">
+              <div class="row">
+                <div class="about-text padd-15">
+                  <h3>
+                    <span class="top-head">Enjoy Programming</span>
+                    - Where Innovation Meets Enjoyment
+                  </h3>
+                </div>
+              </div>
+              <div class="row">
+                <div class="personal-info padd-15">
+                  <div class="row"></div>
+                </div>
+                <div class="skills padd-15">
+                  <div class="row"></div>
+                </div>
+              </div>
+              <div class="row">
+                <p style="color: rgb(112, 112, 112)">
+                  At Enjoy Programming, we are dedicated to cultivating a
+                  professional environment where innovation and expertise
+                  converge. Our certified trainers are industry leaders,
+                  passionate about sharing their extensive knowledge and
+                  experience. They are the cornerstone of our institution,
+                  guiding students through a curriculum that mirrors the
+                  current IT landscape. Our state-of-the-art labs are equipped
+                  with the latest technology, ensuring that students have
+                  access to the tools they need to succeed. These facilities
+                  are not just classrooms; they are incubators for the next
+                  generation of IT professionals. Our students are at the
+                  heart of everything we do. They come from diverse
+                  backgrounds, each bringing a unique perspective to the
+                  table. At Enjoy Programming, they find a supportive
+                  community that values collaboration and creativity.
+                  Together, we are more than an institution; we are a
+                  movement. A movement towards a future where technology is
+                  not just understood but also enjoyed. Join us at Enjoy
+                  Programming, where your journey in IT will be as rewarding
+                  as it is enlightening.
+                </p>
+                <div class="education">
+                  <h3 class="title">Education</h3>
+                  <div class="row">
+                    <div class="timeline-box padd-15">
+                      <div class="timeline shadow-dark">
+                        <!-- Timeline item -->
+                        <div class="timeline-item">
+                          <div class="circle-dot"></div>
+                          <h3 class="timeline-date">
+                            <i class="fa fa-calendar"></i> 7 Months
+                          </h3>
+                          <h4 class="timeline-title">
+                            Zero to Hero in Information Technology
+                          </h4>
+                          <p style="color: rgb(112, 112, 112)">
+                            From Zero to Hero in Information Technology, Enjoy
+                            Programming is your guide to mastering the digital
+                            domain. Gain proficiency in front-end development,
+                            crafting intuitive user interfaces with HTML, CSS,
+                            and JavaScript. Delve into back-end technologies,
+                            managing databases and server-side logic with
+                            languages like Python and Node.js. Our curriculum
+                            bridges the gap, turning beginners into full-stack
+                            developers with a command of both client and
+                            server realms. Ascend from basic coding to
+                            architecting robust web applications, becoming the
+                            tech hero every company seeks.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="education padd-15">
+                  <h3 class="title">IT Educational Offerings</h3>
+                  <div class="row">
+                    <div class="timeline-box padd-15">
+                      <div class="timeline shadow-dark">
+                        <!-- Timeline item -->
+                        <div class="timeline-item">
+                          <div class="circle-dot"></div>
+                          <h3 class="timeline-date">
+                            <i class="fa fa-calendar"></i> 15 Months
+                          </h3>
+                          <h4 class="timeline-title">
+                            Zero to Master in Information Technology
+                          </h4>
+                          <p style="color: rgb(112, 112, 112)">
+                            Dive into the world of AI and Robotics, where
+                            algorithms come to life and machines learn to
+                            think. Master the full spectrum of full-stack
+                            development, from elegant front-end design to
+                            robust back-end systems. Equip yourself with a
+                            technical skillset that spans programming
+                            languages, cloud computing, and cybersecurity.
+                            Become an IT virtuoso, adept in the latest
+                            technologies that are shaping the future of our
+                            digital world. Enjoy Programming is your crucible
+                            for IT mastery, transforming raw potential into
+                            technical prowess and innovation.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- About section end -->
+
+      <!-- Portfolio section start -->
+      <section class="portfolio section" id="portfolio">
+        <div class="row">
+          <div class="section-title padd-15">
+            <h2 style="margin-top: 60px">Portfolio</h2>
+          </div>
+          <div class="row">
+            <div class="portfolio-heading padd-15">
+              <h2>Student's Creation</h2>
+            </div>
+          </div>
+
+          <!-- ***** ROW ONE******** -->
+          <div class="row">
+            <!-- Portfolio item start -->
+            <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+                  <a href="https://himanshufullstackdeveloper.github.io/portfoilo_himanshu/">
+                    <img src="./assets/EP_Himanshu.jpeg" alt="Project Image" class="img" />
+                    <div class="portfolio-hover">
+                      <div class="portfolio-hover-content">
+                        <h3><b>Himanshu Patil</b>
+                          <br>
+                        </h3> Class 12th <br> Concept School Katol
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Portfolio item end -->
+            <!-- Portfolio item start -->
+            <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+                  <a href="./assignment/musicplayer.html">
+                    <img src="./assets/EP_Atharv.jpeg" alt="Project Image" class="img" />
+                    <div class="portfolio-hover">
+                      <div class="portfolio-hover-content">
+                        <h3><b>Atharv Dixit</b>
+                          <br>
+                        </h3> Class 10th<br> Mount Carmel Convent School Katol
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Portfolio item end -->
+            <!-- Portfolio item start -->
+            <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+                  <a href="./youtube.html">
+                    <img src="./assets/EP_ratnesh.jpeg" alt="Project Image" class="img" />
+                    <div class="portfolio-hover">
+                      <div class="portfolio-hover-content">
+                        <h3><b>Ratnesh Khairwar</b><br></h3>
+                        Class 8th <br> Mount Carmel Convent School Katol
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Portfolio item end -->
+
+            <!-- ***** ROW TWO******** -->
+            <div class="portfolio-heading padd-15">
+              <h2>Student's Creation</h2>
+            </div>
+            <!-- Portfolio item start -->
+            <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+                  <a href="https://ayushlfullstackdeveloper.github.io/AyushFullstackDeveloper/">
+                    <img src="./assets/EP_Ayush_L.jpeg" alt="Project Image" class="img" />
+                    <div class="portfolio-hover">
+                      <div class="portfolio-hover-content">
+                        <h3><b>Ayush Lolusare</b></h3>
+                        Eng. 1st Yr <br>GNIT Nagpur
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Portfolio item start -->
+            <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+                  <a href="./youtube.html">
+                    <img src="./assets/EP_yash.jpeg" alt="Project Image" class="img" />
+                    <div class="portfolio-hover">
+                      <div class="portfolio-hover-content">
+                        <h3><b>Yash Dhapke </b></h3>Class 10th<br> Mount Carmel Convent School Katol
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Portfolio item end -->
+            <!-- Portfolio item start -->
+            <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+                  <a href="./youtube.html">
+                    <img src="https://i.pinimg.com/736x/e3/e3/48/e3e3480c7752cebc014ece611369876b.jpg"
+                      alt="Project Image" class="img" />
+                    <div class="portfolio-hover">
+                      <div class="portfolio-hover-content">
+                        <h3><b>YouTube</b></h3>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Portfolio item end -->
+
+            <!-- ***** ROW THREE******** -->
+
+            <!-- Portfolio item start -->
+            <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+                  <a href="./youtube.html">
+                    <img src="https://i.pinimg.com/736x/e3/e3/48/e3e3480c7752cebc014ece611369876b.jpg"
+                      alt="Project Image" class="img" />
+                    <div class="portfolio-hover">
+                      <div class="portfolio-hover-content">
+                        <h3><b>YouTube</b></h3>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Portfolio item end -->
+            <!-- Portfolio item start -->
+            <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+                  <a href="./youtube.html">
+                    <img src="https://i.pinimg.com/736x/e3/e3/48/e3e3480c7752cebc014ece611369876b.jpg"
+                      alt="Project Image" class="img" />
+                    <div class="portfolio-hover">
+                      <div class="portfolio-hover-content">
+                        <h3><b>YouTube</b></h3>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Portfolio item end -->
+            <!-- Portfolio item start -->
+            <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+                  <a href="./youtube.html">
+                    <img src="https://i.pinimg.com/736x/e3/e3/48/e3e3480c7752cebc014ece611369876b.jpg"
+                      alt="Project Image" class="img" />
+                    <div class="portfolio-hover">
+                      <div class="portfolio-hover-content">
+                        <h3><b>YouTube</b></h3>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Portfolio item end -->
+            <div class="buttons padd-15">
+              <a href="home.html" class="btn hire-me">Explore More</a>
+            </div>
+            <!-- Portfolio item end -->
+          </div>
+        </div>
+      </section>
+      <!-- Portfolio section end -->
+
+      <!-- ========= SERVICES SECTION START=========== -->
+      <section class="about section" id="services">
+        <div class="container">
+          <div class="row">
+            <div class="section-title padd-15">
+              <h2>Courses</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="about-content padd-15">
+              <div class="additional-box padd-15">
+                <!-- +++++++ COURSES SECTION images and logo++++++++ -->
+                <!-- -----FIRST ROW----- -->
+                <button onclick="toggleContent(this)">Novice Developers</button>
+                <div class="additional-box-content">
+                  <div class="icon-grid">
+                    <div class="icon-item">
+                      <img src="https://cdn-icons-png.flaticon.com/512/174/174854.png" height="50px" width="auto" />
+                      <p>HTML</p>
+                    </div>
+                    <div class="icon-item">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png"
+                        height="50px" width="auto" />
+                      <p>CSS</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="./assets/teasting.png" height="50px" width="auto" />
+                      <p>Manual Testing</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="./assets/js.png" height="50px" width="auto" />
+                      <p>JavaScript</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="./assets/fundamentals-removebg-preview.png" height="50px" width="auto" />
+                      <p>Fundamentals</p>
+                    </div>
+                  </div>
+                  <div class="course-details">
+                    <h1>Phase_01</h1>
+                    <p><strong>Course Description:</strong> This course is designed for beginners to get started with
+                      web development. You'll learn the basics of HTML, CSS, JavaScript, and Manual Testing.</p>
+                    <p><strong>Duration:</strong> 3 months</p>
+                    <p><strong>Prerequisites:</strong> None</p>
+                    <p><strong>Fee Structure:</strong> $300</p>
+                  </div>
+                </div>
+              </div>
+              <!-- -----SECOND ROW----- -->
+              <div class="additional-box">
+                <button onclick="toggleContent(this)">Beginners</button>
+                <div class="additional-box-content">
+                  <div class="icon-grid">
+                    <div class="icon-item">
+                      <img src="https://www.freepnglogos.com/uploads/android-logo-png/android-logo-0.png" height="50px"
+                        width="auto" />
+                      <p>Android Development(Intermediate)</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="./assets/Java-removebg-preview.png" height="50px"
+                        width="auto" />
+                      <p>Java(Beginner)</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/23-swift-512.png"
+                        height="50px" width="auto" />
+                      <p>Swift(Beginner)</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="./assets/detabase.png" height="50px" width="auto" />
+                      <p>Database(Beginner)</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="./assets/teasting.png" height="50px" width="auto" />
+                      <p>Manual Testing(Professional)</p>
+                    </div>
+                    <div class="icon-item">
+                      <img
+                        src="https://cdn3.iconfinder.com/data/icons/social-media-logos-glyph/2048/5315_-_Apple-512.png"
+                        height="50px" width="auto" />
+                      <p>iOS Development(Beginner)</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="./assets/soft.png" height="50px" width="auto" />
+                      <p>Software Designing</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="./assets/Python-Emblem-removebg-preview.png" height="50px" width="auto" />
+                      <p>Python(Beginner)</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="https://static-00.iconduck.com/assets.00/node-js-icon-454x512-nztofx17.png"
+                        height="50px" width="auto" />
+                      <p>Node JS(Intermediate)</p>
+                    </div>
+                  </div>
+                  <div class="course-details">
+                    <h1>Phase_02</h1>
+                    <p><strong>Course Description:</strong> This course is aimed at beginners looking to expand their
+                      knowledge in mobile and web development, as well as software design and testing.</p>
+                    <p><strong>Duration:</strong> 6 months</p>
+                    <p><strong>Prerequisites:</strong> Basic understanding of programming</p>
+                    <p><strong>Fee Structure:</strong> $500</p>
+                  </div>
+                </div>
+              </div>
+              <!-- -----THIRD ROW----- -->
+              <div class="additional-box">
+                <button onclick="toggleContent(this)">Intermediate</button>
+                <div class="additional-box-content">
+                  <div class="icon-grid">
+                    <div class="icon-item">
+                      <img src="./assets/scm-new-removebg-preview.png" height="50px" width="auto" />
+                      <p>SCM</p>
+                    </div>
+                    <div class="icon-item">
+                      <img
+                        src="https://cdn1.iconfinder.com/data/icons/soleicons-fill-vol-1/64/reactjs_javascript_library_atom_atomic_react-512.png"
+                        height="50px" width="auto" />
+                      <p>React JS</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="./assets/detabase.png" height="50px" width="auto" />
+                      <p>Database</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="./assets/autoo.png" height="50px" width="auto" />
+                      <p>Automation(Beginner)</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="./assets/app.png" height="50px" width="auto" />
+                      <p>Apps Designing</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="./assets/pmt498-removebg-preview.png" height="50px" width="auto" />
+                      <p>PMT</p>
+                    </div>
+                    <div class="icon-item">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/695px-C_Programming_Language.svg.png"
+                        height="50px" width="auto" />
+                      <p>C Language</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="https://static-00.iconduck.com/assets.00/node-js-icon-454x512-nztofx17.png"
+                        height="50px" width="auto" />
+                      <p>Node Js</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="./assets/Python-Emblem-removebg-preview.png" height="50px" width="auto" />
+                      <p>Python (Advanced)</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="https://brandslogos.com/wp-content/uploads/images/large/java-logo-1.png" height="50px"
+                        width="auto" />
+                      <p>Java (Advanced)</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="./assets/Reactnative.webp" height="50px" width="auto" />
+                      <p>React Native</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/23-swift-512.png"
+                        height="50px" width="auto" />
+                      <p>Swift (Advanced)</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="https://www.freepnglogos.com/uploads/android-logo-png/android-logo-0.png" height="50px"
+                        width="auto" />
+                      <p>Android Development(Professional)</p>
+                    </div>
+                    <div class="icon-item">
+                      <img
+                        src="https://cdn3.iconfinder.com/data/icons/social-media-logos-glyph/2048/5315_-_Apple-512.png"
+                        height="50px" width="auto" />
+                      <p>iOS Development(Professional)</p>
+                    </div>
+                  </div>
+                  <div class="course-details">
+                    <h1>Phase_03</h1>
+                    <p><strong>Course Description:</strong> Intermediate courses focusing on more advanced topics in
+                      software development, automation, and mobile app development.</p>
+                    <p><strong>Duration:</strong> 9 months</p>
+                    <p><strong>Prerequisites:</strong> Basic to intermediate programming knowledge</p>
+                    <p><strong>Fee Structure:</strong> $700</p>
+
+                  </div>
+                </div>
+              </div>
+              <!-- -----FOURTH ROW----- -->
+              <div class="additional-box padd-15">
+                <button onclick="toggleContent(this)">Expert</button>
+                <div class="additional-box-content">
+                  <div class="icon-grid">
+                    <div class="icon-item">
+                      <img src="./assets/autoo.png" height="50px" width="auto" />
+                      <p>Automation</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="./assets/inter.png" height="50px" width="auto" />
+                      <p>Interview Preparation</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="./assets/Deployment-removebg-preview.png" height="50px" width="auto" />
+                      <p>Deployment</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="./assets/Reactnative.webp" height="50px" width="auto" />
+                      <p>React Native (Professional)</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="https://static-00.iconduck.com/assets.00/node-js-icon-454x512-nztofx17.png"
+                        height="50px" width="auto" />
+                      <p>Node JS (Professional)</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="./assets/datascience-removebg-preview.png" height="50px" width="auto" />
+                      <p>Data Science</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="./assets/dataanalytic-removebg-preview.png" height="50px" width="auto" />
+                      <p>Data Analytics</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="./assets/softwaretesting-removebg-preview.png" height="50px" width="auto" />
+                      <p>Software Testing</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="./assets/robotics-removebg-preview.png" height="50px" width="auto" />
+                      <p>Robotics</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="./assets/Ai-removebg-preview.png" height="50px" width="auto" />
+                      <p>Artificial Intelligence</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="./assets/ml-recorded-future-removebg-preview.png" height="50px" width="auto" />
+                      <p>Machine Learning</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="./assets/web.png" height="50px" width="auto" />
+                      <p>Web Development</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="./assets/pmanage.png" height="50px" width="auto" />
+                      <p>Product Management</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="./assets/designing_-removebg-preview.png" height="50px" width="auto" />
+                      <p>UI/UX Designing</p>
+                    </div>
+                    <div class="icon-item">
+                      <img src="./assets/cyber-removebg-preview.png" height="50px" width="auto" />
+                      <p>Cyber Security</p>
+                    </div>
+                  </div>
+                  <div class="course-details">
+                    <h1>Phase_04 & Phase_05</h1>
+                    <p><strong>Course Description:</strong> Expert courses for advanced learners looking to specialize
+                      in areas like automation, data science, AI, and professional web and app development.</p>
+                    <p><strong>Duration:</strong> 12 months</p>
+                    <p><strong>Prerequisites:</strong> Intermediate to advanced programming knowledge</p>
+                    <p><strong>Fee Structure:</strong> $1000</p>
+                  </div>
+                </div>
+                <!-- NOTES SECTION -->
+                <div class="container">
+                  <div class="row padd-15">
+                    <h3 style="font-size: 40px;">Cancellation & Refund Policy</h3>
+                  </div>
+                  <div class="row">
+                    <div class="about-content padd-15">
+
+                      <p>1. The student can ask for a <u>refund within 30 days</u> of payment without any question asked.</p>
+                      <p>2. The institute needs to refund within 30 days of the refund filled by the students.</p>
+                      <p>3. The institute reserves a right to cancle the admission in case of misbehaviour or incomplete assignments.</p>
+                      <p>4. In case of completion of level 5, students need to file for a job and the institute needs to provide interviews to candidates within 180 days. In case of failure students can ask for 50% of refund of total paid fee.</p>
+                      <p>5. The student cannot roll in institute for any courcse if he cancles or gets terminated for any of level or any of course offered by Enjoy Programming.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="container">
+                  <div class="row padd-15">
+                    <h3 style="font-size: 40px;">Certification</h3>
+                  </div>
+                  <div class="row">
+                    <div class="about-content padd-15">
+
+                      <p>1. The students needs to clear wrriten and oral examinations held internally & by external professionals to get certified for a given levels % get eligible for the next level.</p>
+                      <p>2. In case of failure, the institute can give two more exam chances and required training to clear a given level.</p>
+                      <b><p>3. The student can continue any phase or level anytime, not necessarilyhe continues the batch he got admitted.</p></b>
+                    </div>
+                  </div>
+                </div>
+                <!-- Feedback -->
+                <div class="row">
+                    <div class="section-title padd-15">
+                        <h2>Feedback</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="feedback-content padd-15">
+                        <div class="feedback-box">
+                            <form>
+                                <div class="form-group">
+                                    <label for="feedback-name">Name</label>
+                                    <input type="text" id="feedback-name" class="form-control" placeholder="Your Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="feedback-email">Email</label>
+                                    <input type="email" id="feedback-email" class="form-control" placeholder="Your Email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="feedback-message">Message</label>
+                                    <textarea id="feedback-message" class="form-control" rows="5" placeholder="Your Feedback"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit Feedback</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ========= PITCHURES SECTION START=========== -->
+      <!-- Images section start -->
+      <section class="portfolio section" id="pictures">
+        <div class="row">
+          <div class="section-title padd-15">
+            <h2 style="margin-top: 60px">Pictures</h2>
+          </div>
+          <div class="row">
+            <div class="portfolio-heading padd-15">
+              <h2>Visual Anthology</h2>
+            </div>
+          </div>
+          <div class="row">
+            <!-- Images item start -->
+            <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+                  <img src="./assets/EP_img-one.jpg" alt="Project Image" class="img" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Images item end -->
+            <!-- Images item start -->
+            <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+                  <img src="./assets/EP_img-three.jpg" alt="Project Image" class="img" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Images item end -->
+            <!-- Images item start -->
+            <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+                  <img src="./assets/EP_img-two.jpg" alt="Project Image" class="img" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Images item end -->
+            <!-- Images item start -->
+            <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+                  <video controls loop height="100%" width="100%">
+                    <source src="./assets/EP_reel.mp4" type="video/mp4" />
+                  </video>
+                </div>
+              </div>
+            </div>
+
+            <!-- Images item end -->
+            <!-- Images item start -->
+            <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <video controls height="100%" width="100%">
+                  <source src="./assets/EP_reel-two.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+
+            <!-- Images item end -->
+
+          </div>
+        </div>
+      </section>
+      <!-- ========= PITCHURES SECTION END=========== -->
+      <!-- Contact section start -->
+      <section class="contact section" id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="section-title padd-15">
+              <h2>Contact Us</h2>
+            </div>
+          </div>
+          <h3 class="contact-title">Have you any question?</h3>
+          <h4 class="contact-sub-title">I am At Your Service</h4>
+          <div class="row">
+            <!-- Contact info item start -->
+            <div class="contact-info-item padd-15">
+              <div class="icon"><i class="fa fa-phone"></i></div>
+              <h4>Call Us On</h4>
+              <p>+91 7272757670</p>
+            </div>
+            <!-- Contact info item end -->
+            <!-- Contact info item start -->
+            <div class="contact-info-item padd-15">
+              <div class="icon"><i class="fa fa-map-marker-alt"></i></div>
+              <h4>Find Us</h4>
+              <p>Nagpur, India</p>
+            </div>
+            <!-- Contact info item end -->
+            <!-- Contact info item start -->
+            <div class="contact-info-item padd-15">
+              <div class="icon"><i class="fa fa-envelope"></i></div>
+              <h4>Email</h4>
+              <p>supportdesk@enjoyprogramming.info</p>
+            </div>
+            <!-- Contact info item end -->
+            <!-- Contact info item start -->
+            <div class="contact-info-item padd-15">
+              <a href="https://ayushfullstackdevellope.github.io/EP/enjoyone.html">
+                <div class="icon"><i class="fa fa-globe-europe"></i></div>
+                <h4>Website</h4>
+                <p>Enjoyprogramming.com</p>
+            </div>
+            </a>
+            <!-- Contact info item end -->
+            <!-- Contact info item start -->
+            <div class="contact-info-item padd-15" style="margin-top: 30px; color: var(--theme-color)">
+              <a href="https://www.instagram.com/enjoyprogrammings/" target="_blank">
+                <div class="icon" class="contact-info-item padd-15">
+                  <i class="bi bi-Instagram"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" class="bi bi-github"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                  </svg>
+                </div>
+                <h4>Instagram</h4>
+                <p>Enjoy Programming</p>
+              </a>
+            </div>
+            <!-- Contact info item end -->
+            <!-- Contact info item start -->
+            <div class="contact-info-item padd-15" style="margin-top: 30px">
+              <a href="https://www.linkedin.com/in/enjoy-programming-43606b290/" target="_blank">
+                <div class="icon">
+                  <i class="bi bi-linkedin"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" class="bi bi-linkedin"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                  </svg>
+                </div>
+                <h4>LinkedIn</h4>
+                <p>Enjoy Programming</p>
+              </a>
+            </div>
+            <!-- Contact info item end -->
+            <!-- Contact info item start -->
+            <div class="contact-info-item padd-15" style="margin-top: 30px">
+              <a href="https://x.com/EnjoyProgra">
+                <div class="icon">
+                  <i class="bi bi-twitter"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" class="bi bi-skype"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                  </svg>
+                </div>
+                <h4>Twitter</h4>
+                <p>Enjoy Programming</p>
+              </a>
+            </div>
+            <!-- Contact info item end -->
+            <!-- Contact info item start -->
+            <div class="contact-info-item padd-15" style="margin-top: 30px">
+              <a href="https://www.facebook.com/profile.php?id=61551450214007">
+                <div class="icon">
+                  <i class="bi bi-facebook"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" class="bi bi-facebook"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                  </svg>
+                  </svg>
+                </div>
+                <h4>Facebook</h4>
+                <p>Enjoy Programming</p>
+              </a>
+            </div>
+            <!-- Contact info item end -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact section end -->
+    </div>
+    <!-- Main content end -->
+  </div>
+  <!-- Main container end -->
+
+  <!-- Style switcher start -->
+  <!-- Style switcher start -->
+  <div class="style-switcher">
+    <div class="day-night s-icon">
+      <i class="fa fa-toggle-on"></i>
+    </div>
+    <div class="color-switcher s-icon">
+      <i class="fas fa-palette"></i>
+      <div class="color-options">
+        <span class="color-option" data-color="#ec1839"></span>
+        <span class="color-option" data-color="#2196f3"></span>
+        <span class="color-option" data-color="#ff5722"></span>
+        <span class="color-option" data-color="#4caf50"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Style switcher end -->
+
+  <!-- Style switcher end -->
+  <!-- JS Files -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
+  <script src="script.js"></script>
+  <script src="styleswitcher.js"></script>
+</body>
+
+</html>

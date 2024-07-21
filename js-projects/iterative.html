@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EP_Table</title>
+    <!-- internal styling -->
+    <style>
+      button {
+        margin-top: 10px;
+        margin-left: 640px;
+        height: 5vh;
+        width: 10vw;
+        background-color: rgb(128, 128, 205);
+        color: aliceblue;
+      }
+
+      input {
+        margin-left: 250px;
+        height: 30px;
+        width: 300px;
+        background-color: rgb(145, 145, 145);
+        color: azure;
+        margin-top: 5px;
+        font-size: large;
+        cursor: cell;
+      }
+
+      body {
+        background-image: url(https://news.cnrs.fr/sites/default/files/styles/visuel_principal/public/assets/images/multiplications_pretexte.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 85vh;
+        width: 100vw;
+      }
+
+      #display {
+        height: 30vh;
+        width: 40vw;
+        color: black;
+        background-color: rgba(0, 0, 0, 0.7);
+        margin-top: 100px;
+        margin-left: 400px;
+        color: azure;
+        font-size: larger;
+        padding: 20px;
+        animation-name: fadeIn;
+        animation-duration: 1s;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+
+    <script>
+      //   function iterate() {
+      //     let x = prompt("ENTER HERE= ");
+      //     alert("PROMPT = " + x);
+      //   }
+      //   function htmlFunction() {
+      //     let x = document.getElementById("input").value;
+
+      //     alert("HTML = " + x);
+      //   }
+      //   function assign() {
+      //     let x = "HEY!";
+
+      //     alert("ASSIGN = " + x);
+      //   }
+      //     let index = 0;
+      //     while (index < inputs.length) {
+      //         let output = "ARRAY AT  " + index + " is " + inputs[index];
+
+      //         index++;
+      //         console.log(output);
+
+      //     }
+      // }
+      // let lastNumber = 0;
+      // function buttonOne() {
+      //   lastNumber = lastNumber + 10;
+
+      //   document.getElementById("display").innerHTML = 10;
+      // }
+      // function buttonTwo() {
+      //   lastNumber = lastNumber + 20;
+
+      //   document.getElementById("display").innerHTML = 20;
+      // }
+
+      // function buttonResult() {
+      //   document.getElementById("display").innerHTML = lastNumber;
+      // }
+
+      function relOPerator() {
+        let x = document.getElementById("input-one").value;
+        let y = document.getElementById("input-two").value;
+        let z = Number(x) >= Number(y);
+
+        document.getElementById("display").innerHTML = z;
+      }
+    </script>
+  </head>
+  <!-- body -->
+
+  <body>
+    <!-- input button display -->
+    <div id="display"></div>
+    <br />
+    <input type="text" id="input-one" />
+    <input type="text" id="input-two" />
+    <br />
+    <br />
+    <button onclick="buttonOne()">10</button>
+    <button onclick="buttonTwo()">20</button>
+    <button onclick="relOPerator()">click here</button>
+  </body>
+</html>

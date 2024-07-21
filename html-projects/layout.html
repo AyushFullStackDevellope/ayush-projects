@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>layout</title>
+    <!-- <style>
+       
+        .main {
+            background-color: gray;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .one {
+            background-color: aquamarine;
+            height: 30%;
+            display: flex;
+            flex-direction: row;
+        }
+        .top-one{
+            background-color: green;
+            width: 40%;
+        }
+        .top-two{
+            background-color: blue;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+  
+            
+        }
+        .col-one{
+            background-color: red;
+            height: 50%;
+        }
+        .col-two{
+            background-color: purple;
+            height: 50%;
+        }
+        .two{
+            background-color: yellow;
+            height: 70%;
+            display: flex;
+            flex-direction: row;
+        }
+        .top{
+            background-color: cadetblue;
+            width: 30%;
+        }
+        .middle{
+            background-color: palevioletred;
+            width: 40%;
+        }
+        .bottom{
+            background-color: magenta;
+            width: 30%z;
+        }
+
+    </style> -->
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 100vw;
+            background-color: black;
+        }
+
+        .top-container {
+            background-color: aqua;
+            height: 30%;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .bottom-container {
+            background-color: brown;
+            display: flex;
+            flex-direction: row;
+            height: 70%;
+        }
+
+        .left-box {
+            background-color: blue;
+            width: 40vw;
+        }
+
+        .right-box {
+            background-color: green;
+            width: 60vw;
+        }
+
+        .top {
+            background-color: red;
+            height: 15vh;
+        }
+
+        .left {
+            background-color: yellow;
+            width: 34vw;
+        }
+
+        .middle {
+            background-color: rgb(60, 245, 3);
+            width: 34vw;
+        }
+
+        .end {
+            background-color: rgb(0, 21, 255);
+            width: 34vw;
+        }
+
+        .left-one {
+            background-color: rgb(254, 51, 193);
+            height: 23.3vh;
+        }
+
+        .left-two {
+            background-color: rgb(255, 174, 0);
+            height: 23.3vh;
+        }
+
+        .left-three {
+            background-color: rgb(0, 247, 255);
+            height: 23.3vh;
+        }
+
+        .one {
+            background-color: rgb(8, 148, 125);
+            height: 30%;
+        }
+
+            .two {
+                background-color: rgb(234, 157, 157);
+                height: 70%;
+                display: flex;
+                flex-direction: row;
+            }
+
+        .first {
+            background-color: rgb(248, 136, 218);
+            width: 20vw;
+        }
+
+        .second {
+            background-color: rgb(127, 255, 200);
+            width: 20vw;
+        }
+
+        .up {
+            background-color: rgb(105, 63, 63);
+            height: 70%;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .down {
+            background-color: blueviolet;
+            height: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- main container  -->
+    <div class="main">
+        <!-- top box -->
+        <div class="top-container">
+            <div class="left-box"></div>
+            <div class="right-box">
+                <div class="top"></div>
+                <div class="bottom"></div>
+            </div>
+        </div>
+
+        <div class="bottom-container">
+            <div class="left">
+                <div class="left-one"></div>
+                <div class="left-two"></div>
+                <div class="left-three"></div>
+            </div>
+            <div class="middle">
+                <div class="one"></div>
+                <div class="two">
+                    <div class="first"></div>
+                    <div class="second"></div>
+                </div>
+            </div>
+            <div class="end">
+                <div class="up">
+                    <div class="first"></div>
+                    <div class="second"></div>
+                </div>
+                <div class="down"></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess</title>
+    <style>
+        body {
+            background-color: #3d3d3d;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr  1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr  1fr 1fr 1fr 1fr;
+            width: 80vmin;
+            height: 80vmin;
+            border: 10px solid #8B4513;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+            background: #8B4513;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 6.5vmin;
+            font-family: Arial, sans-serif;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        .white {
+            background-color: #EEEED2;
+        }
+
+        .black {
+            background-color: #769656;
+        }
+
+        .piece::before {
+            font-size: 9.5vmin;
+            color: #000;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+        }
+
+        .rook::before {
+            content: '\2656';
+        }
+
+        .knight::before {
+            content: '\2658';
+        }
+
+        .bishop::before {
+            content: '\2657';
+        }
+
+        .queen::before {
+            content: '\2655';
+        }
+
+        .king::before {
+            content: '\2654';
+        }
+
+        .pawn::before {
+            content: '\2659';
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box black rook piece"></div>
+        <div class="box white knight piece"></div>
+        <div class="box black bishop piece"></div>
+        <div class="box white queen piece"></div>
+        <div class="box black king piece"></div>
+        <div class="box white bishop piece"></div>
+        <div class="box black knight piece"></div>
+        <div class="box white rook piece"></div>
+
+        <div class="box white pawn piece"></div>
+        <div class="box black pawn piece"></div>
+        <div class="box white pawn piece"></div>
+        <div class="box black pawn piece"></div>
+        <div class="box white pawn piece"></div>
+        <div class="box black pawn piece"></div>
+        <div class="box white pawn piece"></div>
+        <div class="box black pawn piece"></div>
+
+        <div class="box black"></div>
+        <div class="box white"></div>
+        <div class="box black"></div>
+        <div class="box white"></div>
+        <div class="box black"></div>
+        <div class="box white"></div>
+        <div class="box black"></div>
+        <div class="box white"></div>
+
+        <div class="box white"></div>
+        <div class="box black"></div>
+        <div class="box white"></div>
+        <div class="box black"></div>
+        <div class="box white"></div>
+        <div class="box black"></div>
+        <div class="box white"></div>
+        <div class="box black"></div>
+
+        <div class="box black"></div>
+        <div class="box white"></div>
+        <div class="box black"></div>
+        <div class="box white"></div>
+        <div class="box black"></div>
+        <div class="box white"></div>
+        <div class="box black"></div>
+        <div class="box white"></div>
+
+        <div class="box white"></div>
+        <div class="box black"></div>
+        <div class="box white"></div>
+        <div class="box black"></div>
+        <div class="box white"></div>
+        <div class="box black"></div>
+        <div class="box white"></div>
+        <div class="box black"></div>
+
+        <div class="box black pawn piece"></div>
+        <div class="box white pawn piece"></div>
+        <div class="box black pawn piece"></div>
+        <div class="box white pawn piece"></div>
+        <div class="box black pawn piece"></div>
+        <div class="box white pawn piece"></div>
+        <div class="box black pawn piece"></div>
+        <div class="box white pawn piece"></div>
+
+        <div class="box white rook piece"></div>
+        <div class="box black knight piece"></div>
+        <div class="box white bishop piece"></div>
+        <div class="box black queen piece"></div>
+        <div class="box white king piece"></div>
+        <div class="box black bishop piece"></div>
+        <div class="box white knight piece"></div>
+        <div class="box black rook piece"></div>
+    </div>
+</body>
+
+</html>

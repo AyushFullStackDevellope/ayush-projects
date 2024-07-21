@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>EP_vowel</title>
+    <!-- internal styling -->
+    <style>
+        body {
+            background-image: url(https://thumbs.dreamstime.com/z/preschool-students-pronouncing-vowels-learning-vector-illustration-pupils-how-to-read-276922625.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #input {
+            width: 80%;
+            max-width: 300px;
+            height: 40px;
+            background-color: rgba(145, 145, 145, 0.8);
+            color: azure;
+            font-size: larger;
+            text-align: center;
+            border: none;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        button {
+            height: 5vh;
+            width: 40%;
+            max-width: 200px;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: aliceblue;
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #2980b9, #3498db);
+            transform: translateY(-2px);
+        }
+
+        #display {
+            width: 90%;
+            height: 10vh;
+            max-width: 600px;
+            background-color: rgba(0, 0, 0, 0.749);
+            color: azure;
+            font-size: 2vw;
+
+            text-align: center;
+            padding: 20px;
+            border-radius: 5px;
+            animation-name: fadeIn;
+            animation-duration: 1s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            #display {
+                font-size: 4vw;
+            }
+
+            button {
+                width: 60%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #display {
+                font-size: 6vw;
+            }
+
+            button {
+                width: 80%;
+            }
+        }
+    </style>
+    <!-- script -->
+    <script>
+        // vowels or not function
+        function vowels() {
+            let x = document.getElementById("input").value.toLowerCase();
+
+            if ((x == "a") || (x == "e") || (x == "i") || (x == "o") || (x == "u")) {
+                document.getElementById("display").innerHTML = "The Letter reveals a vowel!!";
+            } else {
+                document.getElementById("display").innerHTML = "The Letter reveals a consonant!!";
+            }
+        }
+    </script>
+</head>
+<!-- body -->
+
+<body>
+    <!-- input button display -->
+    <div id="display"></div>
+    <br>
+    <br>
+    <br>
+    <input type="character" id="input" placeholder="Write here">
+    <br>
+    <button onclick="vowels()">CHECK</button>
+</body>
+
+</html>

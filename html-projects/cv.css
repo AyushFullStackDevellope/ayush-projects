@@ -1,0 +1,114 @@
+.top-section {
+    border: 5px outset rgb(18, 18, 18);
+    text-align: center;
+    background-color: rgb(171, 247, 247);
+}
+
+.name {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+
+}
+
+.information {
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: right;
+
+}
+
+.head1 {
+    text-align: left;
+    font-size: xx-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.about {
+    font-size: large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+}
+
+.head2 {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: xx-large;
+    background-color: aqua;
+}
+
+.workex {
+    font-size: large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.middle2 {
+    font-size: x-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.middle3 {
+    font-size: x-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.middle4 {
+    font-size: x-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.head0 {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: xx-large;
+    background-color: aqua;
+}
+
+.lng {
+    font-size: large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.body {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.middle {
+    font-size: x-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.img {
+    width: 4cm;
+    height: 4cm;
+    margin-bottom: 0.7cm;
+    border-radius: 50%;
+    border: 0.15cm solid white;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+page {
+    background: rgb(223, 216, 216);
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0.5cm;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+page[size="A4"] {
+    width: 19cm;
+    height: 61.4cm;
+}
+
+page {
+    border: 5px outset rgb(0, 0, 0);
+}

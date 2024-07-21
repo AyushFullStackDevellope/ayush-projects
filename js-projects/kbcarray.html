@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>kbc.com</title>
+    <link rel="stylesheet" href="./kbcarray.css">
+    <link rel="icon" type="image/x-icon"
+        href="https://images.news18.com/webstories/2023/09/kbc23_int_14aug_landscape_thumb.jpg">
+</head>
+
+<body
+    style="background-image: url(https://images.news18.com/webstories/2023/09/kbc23_int_14aug_landscape_thumb.jpg);  width: 100%; background-repeat: no-repeat; background-size: cover;">
+    <!-- start button -->
+    <button class="start-button" id="play-button" onclick="letsBegin()">PLAY NOW</button>
+    <!-- display -->
+    <div class="main-container" id="main-body" hidden="true">
+        <div class="display" id="container">
+            <h4 id="text-display" class="text-display"></h4>
+            <br>
+            <div id="loader" class="loader" id="loader" style="display: none;"></div>
+        </div>
+        <!-- buttons -->
+        <button class="button" id="option-one" onclick="answer(0)"></button>
+        <button class="button" id="option-two" onclick="answer(1)"></button>
+        <button class="button" id="option-three" onclick="answer(2)"></button>
+        <button class="button" id="option-four" onclick="answer(3)"></button>
+    </div>
+    <script src="./kbcarray.js"></script>
+</body>
+
+</html>

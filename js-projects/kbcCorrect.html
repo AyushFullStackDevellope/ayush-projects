@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>KBC</title>
+
+    <!-- internal styling  -->
+    <style>
+        .main-container {
+            height: 100%;
+            width: 100%;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        /* start button */
+        .start-button {
+            height: 65px;
+            width: 170px;
+            background-color: #c7b53c;
+            font-size: 20px;
+            color: white;
+            border-radius: 30%;
+            margin-left: 600px;
+            margin-top: 300px;
+        }
+
+        /* display */
+        .display {
+            width: 90%;
+            height: 200px;
+            background-color: #d2854263;
+            margin-left: 5%;
+            border-radius: 50px;
+            border-style: solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text-display {
+            font-size: 50px;
+            color: white;
+        }
+
+        .button {
+            height: 70px;
+            width: 400px;
+            border-radius: 250px;
+            margin: 10px;
+            margin-left: 15%;
+            margin-top: 40px;
+            background-color: #0b81b07f;
+            font-size: 30px;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Loader */
+        .loader {
+            border: 16px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 16px solid #3498db;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+            display: none;
+            margin: auto;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<!-- background image  -->
+
+<body style="background-image: url('background.jpg'); height: 100%; width: 100vw; background-repeat: no-repeat;">
+    <!-- start button -->
+    <button class="start-button" id="play-button" onclick="startGame()">LET'S START</button>
+    <!-- display -->
+    <div class="main-container" id="main-body" hidden="true">
+        <div class="display" id="container">
+            <h1 id="text-display" class="text-display"></h1>
+            <div class="loader" id="loader"></div>
+        </div>
+
+        <!-- buttons -->
+        <button class="button" id="answer-one" onclick="answer(1)"></button>
+        <button class="button" id="answer-two" onclick="answer(2)"></button>
+        <button class="button" id="answer-three" onclick="answer(3)"></button>
+        <button class="button" id="answer-four" onclick="answer(4)"></button>
+    </div>
+
+    <script>
+        function startGame() {
+            document.getElementById("main-body").hidden = false;
+            document.getElementById("play-button").hidden = true;
+            displayQuestion();
+        }
+
+        // Questions array
+        const questions = [
+            {
+                question: "1. मूल रामायण की रचना किसने की थी?",
+                answers: ["A. ऋषि वाल्मिकी", "B. तुलसी दास", "C. संत एकनाथ", "D. अनहिनंदा"],
+                correct: 1
+            },
+            {
+                question: "2.  लक्ष्मण को किसका अवतार माना जाता है?",
+                answers: ["A. राम", "B. कृष्ण", "C. शेषनाग", "D. भगवान शिव"],
+                correct: 3
+            },
+            {
+                question: "3.  उस जंगल का क्या नाम था जहाँ भगवान राम, लक्ष्मण और देवी सीता वनवास के दौरान रुके थे?",
+                answers: ["A. अरन्या", "B. अरण्यक", "C. दंडकारण्य", "D. करण्या"],
+                correct: 3
+            },
+            {
+                question: "4.  रावण निम्नलिखित में से किस भगवान का भक्त था?",
+                answers: ["A. विष्णु", "B.ब्रह्मा", "C.शिव", "D.इस में से कोई नहीं"],
+                correct: 3
+            },
+            {
+                question: "5.   भगवान राम के पिता का नाम क्या था?",
+                answers: [" A. शालिशुका", "B. नहपाना", "C. राजाधिराज", " D. दशरथ "],
+                correct: 4
+            },
+            {
+                question: "6.  भावार्थ रामायण किसने लिखी है?",
+                answers: ["A. माधव कंडाली", "B.एकनाथ", "C. कृतिबास", "D. बुद्ध रेड्डी"],
+                correct: 2
+            },
+            {
+                question: "7.निम्नलिखित में से कौन रामचरितमानस के भाग हैं?",
+                answers: ["A. बाल कांडा", "B.अरण्य काण्ड", "C. किष्किन्धा काण्ड", "D.उपरोक्त सभी सही हैं"],
+                correct: 4
+            },
+            {
+                question: "8.उस धनुष का क्या नाम था जिसका उपयोग भगवान राम ने देवी सीता स्वयंवर में उनसे विवाह करने के लिए किया था?",
+                answers: ["A.पिनाका", "B. पिंडका", "C. आनंदका", "D. रूलापाण्ड"],
+                correct: 1
+            },
+            {
+                question: "9.निम्नलिखित में से कौन सा/से रामायण का वह संस्करण है जो भारत के बाहर उभरा है?",
+                answers: ["A. कंबोडिया - रीमकर", "B. थाईलैंड - रामकियेन", "C. बर्मा (म्यांमार) - यम ज़टडॉ", "D. उपरोक्त सभी सही हैं"],
+                correct: 4
+            },
+            {
+                question: "10.भगवान राम ने राजा के रूप में किस शहर पर शासन किया?",
+                answers: ["A. अयोध्या", "B. लंका", "C. मिथिला", "D. किष्किन्धा "],
+                correct: 1
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+
+        function displayQuestion() {
+            const q = questions[currentQuestionIndex];
+            document.getElementById("text-display").innerHTML = q.question;
+            document.getElementById("answer-one").innerHTML = q.answers[0];
+            document.getElementById("answer-two").innerHTML = q.answers[1];
+            document.getElementById("answer-three").innerHTML = q.answers[2];
+            document.getElementById("answer-four").innerHTML = q.answers[3];
+        }
+
+        function answer(givenAnswer) {
+            document.getElementById("loader").style.display = "block";
+            setTimeout(() => {
+                document.getElementById("loader").style.display = "none";
+                if (questions[currentQuestionIndex].correct === givenAnswer) {
+                    document.getElementById("text-display").innerHTML = "सही जवाब";
+                    currentQuestionIndex++;
+                    if (currentQuestionIndex < questions.length) {
+                        displayQuestion();
+                    } else {
+                        document.getElementById("text-display").innerHTML = "मुबारको आप जीत चुके हैं पूरे 7 करोड़ रुपये";
+                    }
+                } else {
+                    document.getElementById("text-display").innerHTML = "गलत जवाब.";
+                    currentQuestionIndex = 0;
+                    setTimeout(displayQuestion, 2000);
+                }
+            }, 2000);
+        }
+    </script>
+</body>
+
+</html>

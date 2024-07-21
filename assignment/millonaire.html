@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>millonaire.com</title>
+    <link rel="icon" type="image/x-icon"
+        href="https://images.news18.com/webstories/2023/09/kbc23_int_14aug_landscape_thumb.jpg">
+    <link rel="stylesheet" href="./milloinaire.css">
+
+</head>
+
+<body
+    style="background-image: url(https://images.news18.com/webstories/2023/09/kbc23_int_14aug_landscape_thumb.jpg);  width: 100%; background-repeat: no-repeat; background-size: cover;">
+    <!-- start button -->
+    <button class="start-button" id="play-button" onclick="dostart()">PLAY NOW</button>
+    <!-- display -->
+    <div class="main-container" id="main-body" hidden="true">
+        <div class="display" id="container">
+            <h4 id="text-display" class="text-display"></h4>
+        </div>
+        <!-- buttons -->
+        <button class="button" id="answer-one" onclick="answer(1)"></button>
+        <button class="button" id="answer-two" onclick="answer(2)"></button>
+        <button class="button" id="answer-three" onclick="answer(3)"></button>
+        <button class="button" id="answer-four" onclick="answer(4)"></button>
+    </div>
+    <script src="./milloinaire.js"></script>
+</body>
+
+</html>

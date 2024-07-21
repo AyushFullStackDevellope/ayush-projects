@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="icon" type="image/x-icon"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDTqOhtSiIFrfbnjxdZiY4yaM0wnOeL1ymjA&usqp=CAU">
+    <style>
+        /* General body styling */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(111, 111, 111);
+            background-image: url("https://i.pinimg.com/originals/e1/f0/1b/e1f01b38d63b1b2609323e83086236cc.gif");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Main container styling */
+        .main-container {
+            width: 90vw;
+            max-width: 300px;
+            min-height: 550px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 20px 20px 60px #04f3ef, -20px -20px 60px #f6fd9f;
+            border-radius: 25px;
+            border: 7px solid rgb(0, 0, 0);
+            background-color: #5f5f5c;
+            background-image: url("https://i.pinimg.com/736x/1c/75/36/1c7536795d93d6d5727d3ca0a841efeb.jpg");
+            background-position: center;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        /* Header styling */
+        .header {
+            width: 170px;
+            background-color: black;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10px;
+            box-sizing: border-box;
+            border-radius: 0 0 20px 20px;
+        }
+
+        /* Camera styling inside the header */
+        .header .camera {
+            background-color: rgb(160, 160, 160);
+            height: 12px;
+            width: 12px;
+            border-radius: 50%;
+        }
+
+        /* Control text styling */
+        .control {
+            color: #ffffff;
+            font-size: 11px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Rotating image styling */
+        .image {
+            height: 120px;
+            width: 120px;
+            margin-top: 100px;
+            border-radius: 50%;
+            animation: rotate 4s linear infinite;
+            transition: transform 0.5s ease;
+        }
+
+        /* Keyframe animation for rotating the image */
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Volume slider styling */
+        #volumnButton {
+            width: 80%;
+            margin: 20px 0;
+        }
+
+        /* Button container styling */
+        .button {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 200px;
+            gap: 15px;
+        }
+
+        /* Button styling */
+        .button button {
+            background-color: #ffffff;
+            border: none;
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            text-align: center;
+            font-size: 15px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <!-- Header section -->
+        <div class="header">
+            <div class="camera"></div>
+            <div class="control">ᯤ 80% 𓈆 ♪</div>
+        </div>
+        <!-- Rotating image -->
+        <img src="https://play-lh.googleusercontent.com/w-dAcwA7_eHrxCKF7eslRkc78zxeTQp_oRnrK1n9UHYfzALEsTUSA1HJ2QItWy7LmSY"
+            class="image">
+        <!-- Control buttons -->
+        <div class="button">
+            <button onclick="previousButton()">⏮ </button>
+            <button onclick="togglePlayPause()">▶</button>
+            <button onclick="nextButton()">⏭</button>
+        </div>
+    </div>
+    <!-- Audio player -->
+    <audio src="../assets/audio/Killing Jija – Animal Movie _ BGM Ringtone - MobCup.Com.Co.mp3" id="audioPlayer"></audio>
+
+    <script>
+        // Array of song file names
+        let currentSong = 0;
+        let isPlaying = false;
+        let songs = [
+            "Lokiverse 2.0 Ringtone Download - MobCup.Com.Co.mp3",
+            "Vikram – Lokiverse _ Bgm Ringtone - MobCup.Com.Co.mp3",
+            "Gangsta Paradise Ringtone Download - MobCup.Com.Co.mp3",
+            "Killing Jija – Animal Movie _ BGM Ringtone - MobCup.Com.Co.mp3",
+            "old_Rakta Charitra - Mila Toh Marega.mp3"
+        ];
+
+        // Function to play music
+        function playMusic() {
+            let audio = document.getElementById("audioPlayer");
+            audio.play();
+            isPlaying = true;
+            document.getElementById("playPauseButton").innerText = "⏸";
+        }
+
+        // Function to pause music
+        function pauseMusic() {
+            let audio = document.getElementById("audioPlayer");
+            audio.pause();
+            isPlaying = false;
+            document.getElementById("playPauseButton").innerText = "▶";
+        }
+
+        // Function to toggle between play and pause
+        function togglePlayPause() {
+            if (isPlaying) {
+                pauseMusic();
+            } else {
+                playMusic();
+            }
+        }
+
+        // Function to play the next song
+        function nextButton() {
+            currentSong++;
+            if (currentSong >= songs.length) {
+                currentSong = 0;
+            }
+            let audio = document.getElementById("audioPlayer");
+            audio.src = "../assets/audio/" + songs[currentSong];
+            audio.play();
+            isPlaying = true;
+            document.getElementById("playPauseButton").innerText = "⏸";
+        }
+
+        // Function to play the previous song
+        function previousButton() {
+            currentSong--;
+            if (currentSong < 0) {
+                currentSong = songs.length - 1;
+            }
+            let audio = document.getElementById("audioPlayer");
+            audio.src = "../assets/audio/" + songs[currentSong];
+            audio.play();
+            isPlaying = true;
+            document.getElementById("playPauseButton").innerText = "⏸";
+        }
+    </script>
+</body>
+
+</html>

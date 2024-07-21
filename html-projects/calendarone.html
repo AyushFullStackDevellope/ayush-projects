@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- internal styling -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #2980b9, #2c3e50);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        th {
+            background: #34495e;
+        }
+
+        td {
+            background: #2980b9;
+            color: #fff;
+        }
+
+        .event {
+            background: #c0392b;
+            border-radius: 5px;
+            padding: 5px;
+            font-size: 14px;
+        }
+
+        .event img {
+            max-width: 100%;
+            height: auto;
+            max-height: 80px;
+            border-radius: 5px;
+            border: 2px solid #fff;
+            transition: transform 0.3s;
+        }
+
+        .event img:hover {
+            transform: scale(1.05);
+        }
+
+        .caption {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            background: #27ae60;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 18px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .button:hover {
+            background: #219653;
+        }
+    </style>
+    <title>EP_Calendar</title>
+</head>
+<!-- html programme -->
+
+<body>
+    <div class="container">
+        <!-- top heading of first month  -->
+        <h1 class="caption">Jan 2024</h1>
+        <div class="button-container">
+            
+            <a href="calendartwo.html" class="button">⏩</a>
+        </div>
+        <table>
+            <thead>
+                <!-- first row for weeks -->
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                    <th>Events</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- row for dates -->
+                <tr>
+                    <td class="event-day">31</td>
+                    <td class="event-day">1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td class="event"><img
+                            src="https://blog.woodenstreet.com/images/data/image_upload/1674190626bannernew1.jpg"
+                            alt="Event Image"></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td class="event">Republic Day</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td class="event"><img
+                            src="https://i0.wp.com/allresultbd.com/ent/wp-content/uploads/2023/08/New-Year-2024.jpg?fit=500%2C300&ssl=1"
+                            alt="Event Image"></td>
+                </tr>
+                <!-- rows for dates -->
+                <tr>
+                    <td>21</td>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td class="event"></td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>29</td>
+                    <td>30</td>
+                    <td>31</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="event"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

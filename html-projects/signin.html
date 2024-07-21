@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>enjoyprogramming.registration</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../assets/logo/ep_logo_new.jpeg"
+    />
+
+    <!-- internal styling -->
+    <style>
+      /* Global styles */
+      body {
+      background-image: url("../assets/logo/ep_logo_new.jpeg");
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: 700px;
+
+    }
+
+    body {
+      background-color: black;
+      font-family: 'Gamja Flower', sans-serif;
+      font-family: 'Space Mono', monospace;
+      margin-top: 150px;
+
+    }
+
+    h1 {
+      text-align-last: center;
+      color: rgb(136, 243, 255);
+      border-style: dotted;
+      margin-left: 700px;
+
+    }
+
+    .st1 {
+      text-align-last: right;
+      margin: 40px;
+      color: antiquewhite;
+
+    }
+
+    .button {
+      background-color: #96e9c6;
+      color: black;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+      border-radius: 5px;
+      text-decoration: none;
+      outline: none;
+    }
+      /* button hover effect */
+      .button:hover {
+        background-color: #75d9b0;
+        transform: scale(1.05);
+      }
+
+      /* Responsive styles */
+      @media (max-width: 768px) {
+        body {
+          margin-top: 50px;
+          background-size: 500px;
+        }
+
+        h1 {
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .st1 {
+          text-align: center;
+          margin: 20px;
+        }
+
+        .button {
+          margin: 10px 0;
+        }
+      }
+
+      @media (max-width: 480px) {
+        body {
+          margin-top: 20px;
+          background-size: 300px;
+        }
+
+        .st1 {
+          margin: 10px;
+        }
+
+        .button {
+          padding: 8px 16px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <!-- header -->
+      <h1>WELC⭕ME!!</h1>
+      <!-- form -->
+      <form action="formdetails.html">
+        <!-- sign in content -->
+        <p class="st1">
+          By creating an account you agree to our
+          <a
+            href="https://www.linkedin.com/in/enjoy-programming-43606b290/?originalSubdomain=in"
+            style="color: dodgerblue"
+            >🔏 Terms & Privacy</a
+          >.
+        </p>
+
+        <div class="st1">
+          <!-- button -->
+          <a href="login.html">
+            <button class="button" type="button" class="cancelbtn">
+              Sign in
+            </button></a
+          >
+          &emsp;&emsp;OR&emsp;&emsp;
+          <a href="formdetails.html">
+            <button class="button" type="submit" class="signupbtn">
+              Create New
+            </button></a
+          >
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

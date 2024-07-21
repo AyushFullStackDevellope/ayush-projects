@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- internal styling -->
+    <link rel="icon" type="image/x-icon"
+        href="../assets/logo/ep_logo_new.jpeg">
+    <style>
+        .st2 {
+            background-color: #789461;
+            color: #DBE7C9;
+        }
+
+        fieldset {
+            padding: 20px;
+            font-family: 'Gamja Flower', sans-serif;
+            font-family: 'Space Mono', monospace;
+
+        }
+
+        body {
+            background-color: black;
+        }
+
+
+
+        h1 {
+            text-align: center;
+            background-color: aqua;
+        }
+
+        legend {
+            background-color: #294B29;
+        }
+
+        .button {
+            background-color: #96e9c6;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            border-radius: 5px;
+            text-decoration: none;
+            outline: none;
+        }
+
+        /* button hover effect */
+        .button:hover {
+            background-color: #75d9b0;
+            transform: scale(1.05);
+        }
+    </style>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- form -->
+    <form style="background-color:#789461; padding: 20px;">
+        <fieldset class="st2">
+            <!-- form heading -->
+            <legend><u>ENJOY PROGRAMMING: Personal Details</u></legend>
+            <!-- timings -->
+            <label for="tm">Prefrred Timings:</label>&emsp;&emsp;&emsp;&emsp;
+            <input type="time" id="tm">&emsp;&emsp;to&emsp;&emsp; <input type="time">
+            <br>
+            <br>
+            <br>
+            <!-- dates -->
+            <label for="dt">Prefrred Batch Date:</label>&emsp;&emsp;&emsp;&emsp;
+            <input type="date" id="dt">&emsp;&emsp;to&emsp;&emsp; <input type="date">
+            <br><br><br>
+            <!-- date of birth -->
+            <label for="dob">Prefrred Batch Date:</label>&emsp;&emsp;&emsp;&emsp;
+            <input type="date" id="dob">
+            <br><br><br>
+            <label for="em">📧 Email:</label>&emsp;&emsp;&emsp;&emsp;
+            <input type="email" id="em">
+            <br><br><br>
+            <label for="ph">📞 Contact No.</label>&emsp;&emsp;&emsp;&emsp;
+            <input type="tel" id="ph" pattern="{0-9} {10}">
+            <br><br><br>
+            <label for="ph">Communication [10]:</label>&emsp;&emsp;&emsp;&emsp;
+            <input type="range" id="ph">
+            <br><br><br>
+            <label for="no">Age:</label>&emsp;&emsp;&emsp;&emsp;
+            <input type="number" id="no" pattern="{1-60}">
+            <br><br><br>
+            <br><br><br>
+            <label for="opt">Pick a Batch:</label>&emsp;&emsp;&emsp;&emsp;
+            <select value="batch" id="opt">
+                <optgroup label="Jr. Batch">
+                    <option value="Batch1">Visionary Batch
+                    <option value="Batch2">Scholar Batch
+                </optgroup>
+                <optgroup label="Seniour Batch">
+                    <option value="Batch3">Adventesious Batch
+                    <option value="Batch4">Proficient Batch
+                </optgroup>
+            </select>
+            <br>
+            <br>
+            <textarea id="tar" placeholder="Tell Something About Yourself...."
+                style="height: 74px; width: 500px;"></textarea>
+            <br><br>
+            <!-- buttons -->
+            <a href="formdetails.html">
+                <input class="button" type="button" value="Preview"></a>
+            &emsp;
+            <a href="formcompletation.html">
+                <input class="button" type="button" value="Submit"> </a>
+        </fieldset>
+    </form>
+    <h1>😊THANK YOU</h1>
+</body>
+
+</html>

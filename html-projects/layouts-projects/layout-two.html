@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <!-- internal styling -->
+    <style>
+      table {
+        width: 100vw;
+        height: 100vh;
+      }
+
+      tr {
+        width: 100%;
+        border-style: solid;
+      }
+
+      td {
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- table -->
+    <table>
+        <!-- row one -->
+      <tr>
+        <td colspan="4" style="background-color: blueviolet;">a</td>
+      </tr>
+       <!-- row two -->
+      <tr>
+        <td rowspan="3" style="background-color: rgb(44, 221, 0);">a</td>
+        <td colspan="3" style="background-color: rgb(205, 65, 179);">a</td>
+      </tr>
+       <!-- row three -->
+      <tr>
+        <td colspan="3" style="background-color: rgb(158, 229, 255);">a</td>
+      </tr>
+       <!-- row four -->
+      <tr>
+        <td colspan="3" style="background-color: rgb(255, 243, 10);">a</td>
+      </tr>
+    </table>
+  </body>
+</html>

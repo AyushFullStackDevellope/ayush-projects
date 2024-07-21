@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EP_Table</title>
+    <!-- Internal Styling -->
+    <style>
+      /* Styling the button */
+      button {
+        margin-top: 20px;
+        height: 5vh;
+        width: 20vw;
+        max-width: 150px;
+        background: linear-gradient(135deg, #3498db, #2980b9);
+        color: aliceblue;
+        border: none;
+        border-radius: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      button:hover {
+        background: linear-gradient(135deg, #2980b9, #3498db);
+        transform: translateY(-2px);
+      }
+
+      /* Styling the display div */
+      #display {
+        height: auto;
+        min-height: 30vh;
+        width: 80vw;
+        max-width: 600px;
+        background-color: rgba(0, 0, 0, 0);
+        color: black;
+        font-size: larger;
+        padding: 20px;
+        margin: 20px auto;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 25px;
+        animation-name: fadeIn;
+        animation-duration: 1s;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* Body styling with background image */
+      body {
+        background-image: url("https://i.makeagif.com/media/10-22-2020/Pms24f.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        color: azure;
+      }
+
+      /* Media Queries */
+      @media (max-width: 768px) {
+        button {
+          width: 30vw;
+          font-size: 20px;
+        }
+
+        #display {
+          width: 90vw;
+          font-size: 20px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        button {
+          width: 40vw;
+          font-size: 20px;
+        }
+
+        #display {
+          width: 95vw;
+          font-size: 18px;
+        }
+      }
+      @media (max-width: 768px) {
+        button {
+          width: 30vw;
+          font-size: 20px;
+        }
+
+        #display {
+          width: 90vw;
+          font-size: 20px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        button {
+          width: 40vw;
+          font-size: 20px;
+        }
+
+        #display {
+          width: 95vw;
+          font-size: 18px;
+        }
+      }
+    </style>
+    <!-- Script -->
+    <script>
+      // Function for multiplication table
+      function iterative() {
+        let table = Number(
+          prompt("Select a number for the multiplication table")
+        );
+        let result = "";
+        let x = 1;
+        while (x <= 10) {
+          result += `${table} × ${x} = ${table * x}<br>`;
+          x++;
+        }
+        document.getElementById("display").innerHTML = result;
+      }
+    </script>
+  </head>
+
+  <!-- Body -->
+  <body>
+    <!-- Display area for the multiplication table -->
+    <div id="display"></div>
+    <br />
+    <!-- Button to trigger the multiplication table generation -->
+    <button onclick="iterative()">Try Now !!</button>
+  </body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MY PAGE</title>
+    <link rel="icon" type="image/x-icon" href="./images/mobile_Phone.jpg" />
+
+    <style>
+      .box {
+        height: 60px;
+        width: 50vw;
+        border-style: solid;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px;
+      }
+
+      #section-one {
+        background-color: rgb(255, 0, 0);
+      }
+
+      #section-two {
+        background-color: rgb(37, 37, 219);
+      }
+
+      .display {
+        width: 100vw;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 20px;
+        background-color: lightgray;
+      }
+
+      a {
+        font-size: 22px;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .input-box {
+        height: 60px;
+        width: 50vw;
+        border-style: solid;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 50px;
+        background-color: lightslategray;
+      }
+
+      input {
+        width: 100%;
+        height: 100%;
+        font-size: 22px;
+      }
+    </style>
+
+    <script>
+      // let a = 0;
+      // function add() {
+
+      //     if (a <= 9) {
+      //         a++;
+      //         document.getElementById("output").innerHTML = a;
+      //     }
+      // }
+      // function sub() {
+      //     if (a > 0) {
+      //         a--;
+      //         document.getElementById("output").innerHTML = a;
+      //     }
+      // }
+      // let a = 0;
+      // let clickCount = 0;
+
+      // function add() {
+
+      //     clickCount++;
+      //     if (clickCount == 1) {
+      //         document.getElementById("output").innerHTML = "LSG VS MI";
+      //     } else if (clickCount == 2) {
+      //         document.getElementById("output").innerHTML = "SEQUENCE IS NOT AVAILABLE";
+      //     }
+      // }
+
+      // function sub() {
+
+      //     clickCount++;
+      //     if (clickCount == 1) {
+      //         document.getElementById("output").innerHTML = "RCB VS LSG";
+      //     } else if (clickCount == 2) {
+      //         document.getElementById("output").innerHTML = "SEQUENCE IS NOT AVAILABLE";
+      //     }
+      // }
+
+      // function add() {
+      //     let x = document.getElementById("input").value;
+
+      //     if (x > 0) {
+      //         if (x < 18 && x > 0) {
+      //             document.getElementById("output").innerHTML = "Child"
+      //         } else if (x < 35 && x > 18) {
+      //             document.getElementById("output").innerHTML = "Young"
+      //         } else if (x < 60 && x > 35) {
+      //             document.getElementById("output").innerHTML = "Middle aged"
+      //         } else if (x < 80 && x > 60) {
+      //             document.getElementById("output").innerHTML = "Old"
+      //         } else if (x < 100 && x > 80) {
+      //             document.getElementById("output").innerHTML = "Very Old"
+      //         } else if (x > 100) {
+      //             document.getElementById("output").innerHTML = "Too old"
+      //         }
+      //     } else {
+
+      //         document.getElementById("output").innerHTML = "Invalid"
+      //     }
+      // }
+
+      //   function dataType() {
+      //     let x = document.getElementById("input").value;
+      //     x = Number(x);
+      //     let z = 10 + x;
+
+      //     document.getElementById("output").innerHTML = z;
+      //   }
+      // function swipeNumber() {
+      //   let x= 100;
+      //   let y = 200;
+      //   z = y;
+      //   y = x;
+      //   console.log("value of y is = ", z );
+      //   console.log("value of z is = ", x );
+
+      // }
+      function swipeNumber() {
+        age = prompt("ENTER YOUR AGE");
+        if (age >= 18) {
+          weight = prompt("ENTER YOUR Weight");
+          if (weight >= 60) {
+            document.getElementById("output").innerHTML =
+              "YOU ARE ELIGIBLE TO DONATE";
+          } else {
+            document.getElementById("output").innerHTML =
+              "YOU ARE NOT ELIGIBLE TO DONATE";
+          }
+        } else {
+          document.getElementById("output").innerHTML =
+            "YOU ARE NOT ELIGIBLE TO DONATE";
+        }
+      }
+    </script>
+  </head>
+
+  <body style="margin: 0">
+    <div class="display">
+      <h1 id="output"></h1>
+    </div>
+    <div class="input-box">
+      <input type="number" id="input" />
+    </div>
+    <div class="input-box">
+      <input type="number" id="input-two" />
+    </div>
+    <button id="section-two" class="box" onclick="swipeNumber()">
+      <h1>CLICK</h1>
+    </button>
+  </body>
+</html>

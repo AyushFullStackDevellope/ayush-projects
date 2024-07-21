@@ -1,0 +1,167 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial Black', sans-serif;
+    background-image: url(https://i.ytimg.com/vi/MForOVuA6hs/maxresdefault.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* start button  */
+.start-button {
+    height: 65px;
+    width: 200px;
+    background-color: #4CAF50;
+    font-size: 24px;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.3s;
+    transform-style: preserve-3d;
+    margin-top: 440px;
+}
+
+/* start button hover */
+.start-button:hover {
+    transform: translateY(-3px);
+}
+
+/* styling for main container */
+.main-container {
+    width: 90%;
+    max-width: 800px;
+}
+
+/*  display container */
+.display {
+    width: 80%;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 50px auto;
+    border-radius: 20px;
+    border: 3px solid #4CAF50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+/* questions displaying text  */
+.text-display {
+    font-size: 10px;
+    color: #4CAF50;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.text-display {
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* main play button */
+.button {
+    height: 60px;
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px auto;
+    background-color: #3498db;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: transform 0.3s, background-color 0.3s;
+    transform-style: preserve-3d;
+}
+
+.button:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+}
+
+@media (min-width: 768px) {
+    .main-container {
+        padding: 20px;
+    }
+
+    .text-display {
+        font-size: 25px;
+    }
+
+    .button {
+        font-size: 28px;
+    }
+    
+}
+
+/* loader */
+.loader {
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid #514b82;
+    animation:
+        l20-1 0.8s infinite linear alternate,
+        l20-2 1.6s infinite linear;
+}
+
+@keyframes l20-1 {
+    0% {
+        clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%)
+    }
+
+    12.5% {
+        clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%)
+    }
+
+    25% {
+        clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%)
+    }
+
+    50% {
+        clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)
+    }
+
+    62.5% {
+        clip-path: polygon(50% 50%, 100% 0, 100% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%)
+    }
+
+    75% {
+        clip-path: polygon(50% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 100%, 0% 100%)
+    }
+
+    100% {
+        clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0% 100%)
+    }
+}
+
+@keyframes l20-2 {
+    0% {
+        transform: scaleY(1) rotate(0deg)
+    }
+
+    49.99% {
+        transform: scaleY(1) rotate(135deg)
+    }
+
+    50% {
+        transform: scaleY(-1) rotate(0deg)
+    }
+
+    100% {
+        transform: scaleY(-1) rotate(-135deg)
+    }
+}

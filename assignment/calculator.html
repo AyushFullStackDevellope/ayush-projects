@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- fav icon link -->
+    <link rel="icon" type="image/x-icon"
+        href="https://w7.pngwing.com/pngs/880/820/png-transparent-computer-icons-calculator-calculator-electronics-text-rectangle-thumbnail.png">
+    <!-- internal styling -->
+    <style>
+        .main {
+            height: 80vh;
+            width: 40vw;
+            background-color: black;
+            display: grid;
+            grid-template-rows: 1fr 3fr;
+            padding: 10px;
+            margin-left: 100px;
+            border-radius: 2%;
+            margin-top: 60px;
+        }
+
+        .second-box {
+            height: 80%;
+            width: 100%;
+            background-color: rgb(0, 0, 0);
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-gap: 10px;
+        }
+
+        button {
+            height: 100%;
+            width: 100%;
+            padding: 10px;
+            font-size: 24px;
+            border: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+            cursor: cell;
+            transition: background-color 0.3s ease;
+
+        }
+
+        button:hover {
+            background-color: #d8c4c4;
+            color: black;
+        }
+
+        .last-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            height: 19%;
+            width: 100%;
+            grid-gap: 10px;
+            margin-top: 10px;
+        }
+
+        .clear {
+            background-color: #ff4136;
+            color: #fff;
+        }
+
+        body {
+            background-image: url("https://img.freepik.com/free-photo/top-view-calculator-notebook-frame_23-2149103980.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .number {
+            background-color: #fff;
+            color: #333;
+
+        }
+
+        .operator {
+            background-color: #FF8911;
+            color: #fff;
+        }
+
+        .operator-top {
+            background-color: #464646;
+            color: #fff;
+        }
+
+        #display {
+            background-color: rgb(124, 124, 124);
+            color: rgb(255, 255, 255);
+            font-size: 30px;
+            text-align: end;
+            margin-bottom: 10px;
+            border-radius: 5%;
+        }
+    </style>
+    <!-- script  -->
+    <script>
+        let action = 0;
+        let displayString = "";
+        let total = 0;
+
+        function numberTyped(passnumber) {
+            displayString = displayString + passnumber.toString();
+            document.getElementById("display").innerHTML = displayString;
+        }
+        // function for add button
+        function add() {
+            total = Number(displayString);
+            action = 1;
+            displayString = "";
+            document.getElementById("display").innerHTML = displayString;
+        }
+        // function for subtract button
+        function minus() {
+            total = Number(displayString);
+            action = 2;
+            displayString = "";
+            document.getElementById("display").innerHTML = displayString;
+        }
+        // function for  division 
+        function div() {
+            total = Number(displayString);
+            action = 3;
+            displayString = "";
+            document.getElementById("display").innerHTML = displayString;
+        }
+        // function for multiplication
+        function multiply() {
+            total = Number(displayString);
+            action = 4;
+            displayString = "";
+            document.getElementById("display").innerHTML = displayString;
+        }
+        // calculator keys working 
+        function showresult() {
+            if (action == 1) {
+                total = total + Number(displayString);
+            } else if (action == 2) {
+                total = total - Number(displayString);
+            } else if (action == 3) {
+                total = total / Number(displayString);
+            } else if (action == 4) {
+                total = total * Number(displayString);
+            }
+
+
+            displayString = total;
+            document.getElementById("display").innerHTML = displayString;
+
+        }
+        // back space button
+        function backspace() {
+            displayString = displayString.substring(0, displayString.length - 1)
+            document.getElementById("display").innerHTML = displayString;
+        }
+        // clear function button
+        function clearFunction() {
+            total = 0;
+            displayString = " ";
+            document.getElementById("display").innerHTML = " ";
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <!-- main html code and UI of calculator -->
+    <main class="main">
+        <div id="display">
+            <div class="first-box">
+                <div style="background-color: rgb(124, 124, 124); height: 10vw; width: 40vw;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                        class="bi bi-apple" viewBox="0 0 16 16">
+                        <path
+                            d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282" />
+                        <path
+                            d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <!-- calculator  -->
+        <div style="height: 100%; width: 100%;">
+            <div class="second-box">
+                <div><button onclick="clearFunction()" class="operator-top">AC</button></div>
+                <div><button onclick="backspace()" class="operator-top">⇦</button></div>
+                <div><button onclick="per()" class="operator-top">%</button></div>
+                <div><button onclick="div()" class="operator">/</button></div>
+                <div><button onclick="numberTyped(7)" class="number">7</button></div>
+                <div><button onclick="numberTyped(8)" class="number">8</button></div>
+                <div><button onclick="numberTyped(9)" class="number">9</button></div>
+                <div><button onclick="multiply()" class="operator">X</button></div>
+                <div><button onclick="numberTyped(4)" class="number">4</button></div>
+                <div><button onclick="numberTyped(5)" class="number">5</button></div>
+                <div><button onclick="numberTyped(6)" class="number">6</button></div>
+                <div><button onclick="minus()" class="operator">-</button></div>
+                <div><button onclick="numberTyped(1)" class="number">1</button></div>
+                <div><button onclick="numberTyped(2)" class="number">2</button></div>
+                <div><button onclick="numberTyped(3)" class="number">3</button></div>
+                <div><button onclick="add()" class="operator">+</button></div>
+            </div>
+            <div class="last-row">
+                <div><button onclick="numberTyped(0)" class="number">0</button></div>
+                <div><button onclick="numberTyped(0)" class="number">00</button></div>
+                <div><button class="operator" onclick=" showresult()">=</button></div>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>
