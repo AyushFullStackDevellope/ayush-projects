@@ -8,11 +8,9 @@
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
     />
     <title>landing.page.com</title>
-
     <!-- CSS and JS links -->
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2/2144.png" />
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="helper/color.css" />
+    <link rel="stylesheet" href="./homepage-projects/index.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -22,10 +20,13 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/bootstrap-icons.svg"
     />
     <!-- Style switchers -->
-    <link rel="stylesheet" href="./homepage-projects/helper/styleswitchers.css" />
+    <link
+      rel="stylesheet"
+      href="./homepage-projects/helper/styleswitchers.css"
+    />
   </head>
 
-  <body>
+  <body class="dark">
     <!-- Main container start -->
     <div class="main-container">
       <!-- Aside start -->
@@ -75,7 +76,9 @@
                   cutting-edge technology with creative finesse to bring your
                   ideas to life.
                 </p>
-                <a href="./html-projects/resume.html" class="btn">Download CV</a>
+                <a href="./html-projects/resume.html" class="btn"
+                  >Download CV</a
+                >
               </div>
               <div class="home-img padd-15">
                 <img
@@ -258,24 +261,19 @@
               <h2 style="margin-top: 60px">Portfolio</h2>
             </div>
             <div class="row">
-              <div class="portfolio-heading padd-15">
-                <h2>My Projects</h2>
-              </div>
-            </div>
-            <div class="row">
               <!-- Portfolio item start -->
               <div class="portfolio-item padd-15">
                 <div class="portfolio-item-inner shadow-dark">
                   <div class="portfolio-img">
-                    <a href="../html-projects/signin.html">
+                    <a href="./homepage-projects/html-projects.html">
                       <img
-                        src="https://png.pngitem.com/pimgs/s/197-1971077_self-storage-blog-icon-blog-icon-transparent-hd.png"
+                        src="https://play-lh.googleusercontent.com/MPDzYIvnXkFgILeyVYa1ZrBhWrQI6voJQ83R3TGhUvU4jjcV3ClQVlhuWDucmSkSwqc=w240-h480-rw"
                         alt="Project Image"
                         class="img"
                       />
                       <div class="portfolio-hover">
                         <div class="portfolio-hover-content">
-                          <h3><b>Registration form </b></h3>
+                          <h3><b>HTML Projects</b></h3>
                         </div>
                       </div>
                     </a>
@@ -288,15 +286,15 @@
               <div class="portfolio-item padd-15">
                 <div class="portfolio-item-inner shadow-dark">
                   <div class="portfolio-img">
-                    <a href="../assignment/musicplayer.html">
+                    <a href="./homepage-projects/css-projects.html">
                       <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQZRYR-teMO8ClDR3mIGxMHj4GJHT1_4W2nr_vowXpj_moar_YaBabWqQ1X098V9S5ADU&usqp=CAU"
+                        src="https://play-lh.googleusercontent.com/TxjQBGYHvMJsBX5dCvxQ4R-_4N-XrVhW6-p7D7TXanXKZMD8L-UkeMBWO1dtubGVNqU"
                         alt="Project Image"
                         class="img"
                       />
                       <div class="portfolio-hover">
                         <div class="portfolio-hover-content">
-                          <h3><b>Music Player</b></h3>
+                          <h3><b>CSS Projects</b></h3>
                         </div>
                       </div>
                     </a>
@@ -308,24 +306,39 @@
               <div class="portfolio-item padd-15">
                 <div class="portfolio-item-inner shadow-dark">
                   <div class="portfolio-img">
-                    <a href="../html-projects/youtube.html">
+                    <a href="./homepage-projects/js-projects.html">
                       <img
-                        src="https://i.pinimg.com/736x/e3/e3/48/e3e3480c7752cebc014ece611369876b.jpg"
+                        src="https://play-lh.googleusercontent.com/s4AnA0RrLKhVMKDBSBTjNvPBBK2wQk3-4ZP2RONGxK_VqnMNXWTmPy-6f8J64GxDgyU"
                         alt="Project Image"
                         class="img"
                       />
                       <div class="portfolio-hover">
                         <div class="portfolio-hover-content">
-                          <h3><b>YouTube</b></h3>
+                          <h3><b>JavaScript Projects</b></h3>
                         </div>
                       </div>
                     </a>
                   </div>
                 </div>
               </div>
-
-              <div class="buttons padd-15">
-                <a href="./homepage-projects/home.html" class="btn hire-me">Explore More</a>
+              <!-- Portfolio item start -->
+              <div class="portfolio-item padd-15">
+                <div class="portfolio-item-inner shadow-dark">
+                  <div class="portfolio-img">
+                    <a href="./homepage-projects/bootstrap-projects.html">
+                      <img
+                        src="https://www.sketchappsources.com/resources/source-image/bootstrap-icons-1.4.0-neanda.png"
+                        alt="Project Image"
+                        class="img"
+                      />
+                      <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                          <h3><b>Bootstrap Projects</b></h3>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
               </div>
               <!-- Portfolio item end -->
             </div>
@@ -461,16 +474,7 @@
     <!-- Style switcher start -->
     <div class="style-switcher">
       <div class="day-night s-icon">
-        <i class="fas fa-moon fa-spin"></i>
-      </div>
-      <div class="color-switcher s-icon">
-        <i class="fas fa-palette"></i>
-        <div class="color-options">
-          <span class="color-option" data-color="#ec1839"></span>
-          <span class="color-option" data-color="#2196f3"></span>
-          <span class="color-option" data-color="#ff5722"></span>
-          <span class="color-option" data-color="#4caf50"></span>
-        </div>
+        <i class="fas fa-moon fa"></i>
       </div>
     </div>
 
@@ -479,7 +483,7 @@
     <!-- Style switcher end -->
     <!-- JS Files -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
-    <script src="index.js"></script>
+    <script src="./homepage-projects/index.js"></script>
     <script src="./homepage-projects/helper/styleswitcher.js"></script>
   </body>
 </html>
