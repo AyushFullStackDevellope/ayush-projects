@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orangelo - Fine Dining Experience</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      :root {
+        --primary-color: #ff6b35;
+        --secondary-color: #4a4e69;
+        --light-color: #f7f7f2;
+        --dark-color: #2b2d42;
+        --accent-color: #ffd700;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+        color: var(--dark-color);
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Playfair Display", serif;
+      }
+      .navbar {
+        transition: background-color 0.3s ease;
+        padding: 1rem 0;
+      }
+      .navbar.scrolled {
+        background-color: rgba(43, 45, 66, 0.9) !important;
+      }
+      .navbar-brand {
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+      .nav-link {
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 0.5rem 1rem;
+      }
+      .hero-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url("https://b.zmtcdn.com/data/pictures/1/20102691/e29878dbf88b9953632bdb998e8f75be.jpeg")
+            no-repeat center center;
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        color: var(--light-color);
+      }
+      .btn-custom {
+        background-color: var(--primary-color);
+        color: var(--light-color);
+        border: none;
+        padding: 0.75rem 1.5rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+      }
+      .btn-custom:hover {
+        background-color: var(--secondary-color);
+        color: var(--light-color);
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .menu-item {
+        transition: transform 0.3s, box-shadow 0.3s;
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+      }
+      .menu-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+      .menu-item img {
+        height: 200px;
+        object-fit: cover;
+      }
+      .testimonial {
+        background-color: var(--light-color);
+        border-radius: 15px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+      .testimonial img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        margin-right: 20px;
+        border: 3px solid var(--primary-color);
+      }
+      .reservation-form {
+        background-color: var(--secondary-color);
+        color: var(--light-color);
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+      .gallery-img {
+        transition: transform 0.3s;
+        border-radius: 15px;
+        overflow: hidden;
+      }
+      .gallery-img:hover {
+        transform: scale(1.05);
+      }
+      .section-title {
+        position: relative;
+        display: inline-block;
+        padding-bottom: 15px;
+        margin-bottom: 40px;
+        font-size: 2.5rem;
+      }
+      .section-title::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 70px;
+        height: 3px;
+        background-color: var(--primary-color);
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .order-section {
+        background-color: var(--light-color);
+        padding: 60px 0;
+      }
+      .order-item {
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s;
+      }
+      .order-item:hover {
+        transform: translateY(-5px);
+      }
+      .order-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 15px;
+      }
+      .quantity-input {
+        width: 60px;
+        text-align: center;
+      }
+      .about-section {
+        background-color: var(--light-color);
+        padding: 80px 0;
+      }
+
+      .about-img {
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .contact-section {
+        background-color: var(--secondary-color);
+        color: var(--light-color);
+        padding: 80px 0;
+      }
+
+      .contact-info {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: 30px;
+        margin-bottom: 30px;
+      }
+
+      .contact-form {
+        background-color: var(--light-color);
+        border-radius: 15px;
+        padding: 30px;
+        color: var(--dark-color);
+      }
+
+      .contact-icon {
+        font-size: 2rem;
+        color: var(--primary-color);
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Orangelo</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#order">Order</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="container text-center">
+        <h1 class="display-1 fw-bold mb-4">Welcome to Orangelo</h1>
+        <p class="lead mb-5">Experience the finest dining in town</p>
+        <a href="#menu" class="btn btn-lg btn-custom me-3">View Our Menu</a>
+        <a
+          href="#reservation"
+          class="btn btn-lg btn-outline-light"
+          onclick="reservation()"
+          >Make a Reservation</a
+        >
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-5">
+      <div class="container">
+        <h2 class="text-center section-title">Our Exquisite Menu</h2>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                class="card-img-top"
+                alt="Grilled Salmon"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Grilled Salmon</h5>
+                <p class="card-text">
+                  Fresh Atlantic salmon, grilled to perfection, served with
+                  asparagus and lemon butter sauce.
+                </p>
+                <p class="card-text"><strong>$24.99</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card menu-item">
+              <img
+                src="https://insanelygoodrecipes.com/wp-content/uploads/2021/12/Spaghetti-Bolognese-with-Basil-in-a-Plate.jpg"
+                class="card-img-top"
+                alt="Truffle Pasta"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Truffle Pasta</h5>
+                <p class="card-text">
+                  Homemade fettuccine with black truffle cream sauce, topped
+                  with Parmesan cheese.
+                </p>
+                <p class="card-text"><strong>$22.99</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                class="card-img-top"
+                alt="Chocolate Lava Cake"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Chocolate Lava Cake</h5>
+                <p class="card-text">
+                  Decadent chocolate cake with a molten center, served with
+                  vanilla ice cream.
+                </p>
+                <p class="card-text"><strong>$9.99</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1546039907-7fa05f864c02?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                class="card-img-top"
+                alt="Beef Tenderloin"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Beef Tenderloin</h5>
+                <p class="card-text">
+                  Prime beef tenderloin, cooked to your liking, served with
+                  roasted vegetables and red wine reduction.
+                </p>
+                <p class="card-text"><strong>$29.99</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                class="card-img-top"
+                alt="Grilled Vegetable Platter"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Grilled Vegetable Platter</h5>
+                <p class="card-text">
+                  Assortment of seasonal vegetables, grilled and served with
+                  balsamic glaze and herb-infused olive oil.
+                </p>
+                <p class="card-text"><strong>$18.99</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card menu-item">
+              <img
+                src="https://images.unsplash.com/photo-1609501676725-7186f017a4b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                class="card-img-top"
+                alt="Seafood Risotto"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Seafood Risotto</h5>
+                <p class="card-text">
+                  Creamy Arborio rice with a medley of fresh seafood, finished
+                  with a touch of saffron.
+                </p>
+                <p class="card-text"><strong>$26.99</strong></p>
+              </div>
+            </div>
+
+        </div>
+        <img src="https://d4t7t8y8xqo0t.cloudfront.net/resized/1080X/restaurant%2F662233%2Fmenu%2Fmenu11551445343717.jpg" alt="">
+        </div>
+        <div class="text-center mt-4">
+          <button
+            class="btn btn-lg btn-custom"
+            data-bs-toggle="modal"
+            data-bs-target="#reservationModal"
+            onclick="reservation()"
+          >
+            Make a Reservation
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order" class="order-section py-5">
+      <div class="container">
+        <h2 class="text-center section-title">Order Our Delicious Food</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="order-item">
+              <img
+                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                alt="Grilled Salmon"
+              />
+              <h5>Grilled Salmon</h5>
+              <p>Fresh Atlantic salmon, grilled to perfection</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="price">$24.99</span>
+                <div class="input-group" style="width: 120px">
+                  <button class="btn btn-outline-secondary" type="button">
+                    -
+                  </button>
+                  <input
+                    type="text"
+                    class="form-control quantity-input"
+                    value="0"
+                  />
+                  <button class="btn btn-outline-secondary" type="button">
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="order-item">
+              <img
+                src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=722&q=80"
+                alt="Truffle Pasta"
+              />
+              <h5>Truffle Pasta</h5>
+              <p>Homemade fettuccine with black truffle cream sauce</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="price">$22.99</span>
+                <div class="input-group" style="width: 120px">
+                  <button class="btn btn-outline-secondary" type="button">
+                    -
+                  </button>
+                  <input
+                    type="text"
+                    class="form-control quantity-input"
+                    value="0"
+                  />
+                  <button class="btn btn-outline-secondary" type="button">
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="order-item">
+              <img
+                src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                alt="Chocolate Lava Cake"
+              />
+              <h5>Chocolate Lava Cake</h5>
+              <p>Decadent chocolate cake with a molten center</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="price">$9.99</span>
+                <div class="input-group" style="width: 120px">
+                  <button class="btn btn-outline-secondary" type="button">
+                    -
+                  </button>
+                  <input
+                    type="text"
+                    class="form-control quantity-input"
+                    value="0"
+                  />
+                  <button class="btn btn-outline-secondary" type="button">
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="order-item">
+              <img
+                src="data:image/jpeg;base64,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"
+                alt="Grilled Salmon"
+              />
+              <h5>Double Cheese Pizza</h5>
+              <p>Fresh Atlantic salmon, grilled to perfection</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="price">$24.99</span>
+                <div class="input-group" style="width: 120px">
+                  <button class="btn btn-outline-secondary" type="button">
+                    -
+                  </button>
+                  <input
+                    type="text"
+                    class="form-control quantity-input"
+                    value="0"
+                  />
+                  <button class="btn btn-outline-secondary" type="button">
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="order-item">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlm4kVBTWbBvdyKCx99e23_65jh5ba6KdPoA&usqp=CAU"
+                alt="Truffle Pasta"
+              />
+              <h5>Cheese Sandwich</h5>
+              <p>Homemade fettuccine with black truffle cream sauce</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="price">$22.99</span>
+                <div class="input-group" style="width: 120px">
+                  <button class="btn btn-outline-secondary" type="button">
+                    -
+                  </button>
+                  <input
+                    type="text"
+                    class="form-control quantity-input"
+                    value="0"
+                  />
+                  <button class="btn btn-outline-secondary" type="button">
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="order-item">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLWU6r0QSxRn5lx-_uu4jJpPsHN2rZUMl6wQ&usqp=CAU"
+                alt="Chocolate Lava Cake"
+              />
+              <h5>Cheese Noodles Desert</h5>
+              <p>Decadent chocolate cake with a molten center</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="price">$9.99</span>
+                <div class="input-group" style="width: 120px">
+                  <button class="btn btn-outline-secondary" type="button">
+                    -
+                  </button>
+                  <input
+                    type="text"
+                    class="form-control quantity-input"
+                    value="0"
+                  />
+                  <button class="btn btn-outline-secondary" type="button">
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="order-item">
+              <img
+                src="https://ik.imagekit.io/awwybhhmo/satellite_images/chinese/gray/hero/2.jpg?tr=w-3840,q-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"
+                alt="Grilled Salmon"
+              />
+              <h5>Fire Noodles</h5>
+              <p>Fresh Atlantic Noodles, grilled to perfection</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="price">$24.99</span>
+                <div class="input-group" style="width: 120px">
+                  <button class="btn btn-outline-secondary" type="button">
+                    -
+                  </button>
+                  <input
+                    type="text"
+                    class="form-control quantity-input"
+                    value="0"
+                  />
+                  <button class="btn btn-outline-secondary" type="button">
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="order-item">
+              <img
+                src="https://b.zmtcdn.com/data/dish_photos/cee/ecb0ac336b49e97ff6e23c35641a2cee.jpg"
+                alt="Truffle Pasta"
+              />
+              <h5>Cheese Pizza</h5>
+              <p>Homemade fettuccine with black truffle cream sauce</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="price">$22.99</span>
+                <div class="input-group" style="width: 120px">
+                  <button class="btn btn-outline-secondary" type="button">
+                    -
+                  </button>
+                  <input
+                    type="text"
+                    class="form-control quantity-input"
+                    value="0"
+                  />
+                  <button class="btn btn-outline-secondary" type="button">
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="order-item">
+              <img
+                src="https://b.zmtcdn.com/data/dish_photos/16f/4584660b61c73c70f83ce59a789d716f.png"
+                alt="Chocolate Lava Cake"
+              />
+              <h5>Cold Coffee</h5>
+              <p>Decadent chocolate cake with a molten center</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="price">$9.99</span>
+                <div class="input-group" style="width: 120px">
+                  <button class="btn btn-outline-secondary" type="button">
+                    -
+                  </button>
+                  <input
+                    type="text"
+                    class="form-control quantity-input"
+                    value="0"
+                  />
+                  <button class="btn btn-outline-secondary" type="button">
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <button class="btn btn-lg btn-custom" onclick="orderNow()">
+            Place Order
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2 class="text-center section-title">About Orangelo</h2>
+        <div class="row align-items-center">
+          <div class="col-md-6 mb-4 mb-md-0">
+            <img
+              src="https://img.restaurantguru.com/w320/h220/rcc1-Orangelo-Cafe-and-Bistro-interior.jpg"
+              height="400vh"
+              width="600vw"
+              style="border-radius: 15px"
+              alt="Restaurant Interior"
+            />
+          </div>
+          <div class="col-md-6">
+            <h3 class="mb-4">Our Story</h3>
+            <p>
+              Founded in 2010, Orangelo has been a beacon of culinary excellence
+              in our community. Our passionate team of chefs and staff are
+              dedicated to providing an unforgettable dining experience that
+              combines innovative flavors with timeless techniques.
+            </p>
+            <p>
+              We take pride in sourcing the finest local and organic
+              ingredients, supporting sustainable farming practices, and
+              creating dishes that not only please the palate but also nourish
+              the soul.
+            </p>
+            <p>
+              At Orangelo, we believe that great food has the power to bring
+              people together, create lasting memories, and celebrate life's
+              special moments. Join us for an extraordinary culinary journey
+              that will delight your senses and warm your heart.
+            </p>
+            <a
+              href="#reservation"
+              class="btn btn-custom mt-3"
+              onclick="reservation()"
+              >Make a Reservation</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- (Other sections remain the same) -->
+
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2 class="text-center section-title">Get in Touch</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="contact-info">
+              <i class="fas fa-map-marker-alt contact-icon"></i>
+              <h4>Our Location</h4>
+              <p>121 tar bazar, katol</p>
+              <p>314 IT Park, Nagpur</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact-info">
+              <i class="fas fa-phone contact-icon"></i>
+              <h4>Call Us</h4>
+              <p>+1 (555) 123-4567</p>
+              <p>+1 (555) 987-6543</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact-info">
+              <i class="fas fa-envelope contact-icon"></i>
+              <h4>Email Us</h4>
+              <p>info@orangelo.com</p>
+              <p>reservations@orangelo.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-6 mx-auto">
+            <form class="contact-form">
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Subject"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <textarea
+                  class="form-control"
+                  rows="5"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-custom">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+      <div class="container">
+        <p>&copy; 2024 Orangelo Restaurant. All rights reserved.</p>
+        <div class="mt-3">
+          <a href="#" class="text-white me-3"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="#" class="text-white me-3"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-white"><i class="fab fa-tripadvisor"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Navbar scroll effect
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 50) {
+          document.querySelector(".navbar").classList.add("scrolled");
+        } else {
+          document.querySelector(".navbar").classList.remove("scrolled");
+        }
+      });
+
+      function orderNow() {
+        alert("Your order has been placed successfully!");
+      }
+      function reservation() {
+        prompt("ENTER YOUR NAME.");
+        alert("RESERVATION SUCCESSFULLY COMPLITED");
+      }
+    </script>
+  </body>
+</html>
