@@ -1,0 +1,899 @@
+@keyframes slideOut {
+  0% {
+      transform: translateX(0);
+
+  }
+
+  100% {
+      transform: translateX(-100%);
+
+  }
+}
+
+/* slide out animation */
+.slideOut {
+  animation: slideOut 0.1s ease;
+
+}
+
+/* webpage background video */
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+
+}
+
+/* h1 css */
+h1 {
+  padding: 0;
+  border: 0;
+  font-family: sans-serif, Tahoma, Verdana, Geneva;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  background: linear-gradient(0deg, #e9e900, #7bff00);
+  background-size: 200% 200%;
+  color: #000;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  text-align: left;
+  font-size: xx-large;
+  font-weight: bolder;
+  display: block;
+}
+
+/* h3 css */
+h3 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  background: #FD9B63;
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(215, 84, 84, 0);
+  font-size: 42px;
+  max-width: 100%;
+  text-align: center;
+}
+
+/* sidebar css */
+.sidebar {
+  cursor: cell;
+  font-size: 11px;
+  letter-spacing: 1px;
+  background-color: rgba(211, 33, 33, 0.7);
+  color: #ff0000;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 25px 32px;
+  transition: 0.4s all cubic-bezier(1, 0, 0, 1);
+  width: 189px;
+  height: 100vh;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+}
+
+/* sidebar css hover  */
+.sidebar:hover {
+  width: 40%;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: rgba(211, 33, 33, 0.7);
+}
+
+/* svg icon */
+.svg--icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+/* html */
+html {
+  box-sizing: border-box;
+  background: #f3f3f3;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+/* clip */
+
+.clip {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* svg icon */
+.svg--icon {
+  width: 100%;
+  max-width: 5rem;
+  height: 100%;
+  max-height: 5rem;
+  display: block;
+  margin: 0 auto;
+  fill: currentColor;
+}
+
+/* wrapper */
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  margin-bottom: 100px;
+  margin-right: 0px;
+  margin-left: 60px;
+}
+
+/* share */
+.share {
+  width: 5rem;
+  height: 5rem;
+  float: left;
+  margin: 0.5rem 1rem 0.5rem 0;
+  color: #ffffff;
+  border: 0.125rem solid #fffcfc;
+  box-shadow: 0 0 8px 0 rgba(50, 50, 50, 0.15);
+  border-radius: 50%;
+  transition: 250ms;
+  padding: 10px;
+}
+
+/* share last child */
+.share:last-child {
+  margin-right: 0;
+}
+
+/* share hover */
+.share:hover,
+.share:focus {
+  background: #f1f1f1;
+}
+
+.share:focus {
+  outline-color: inherit;
+}
+
+
+.twitter:hover,
+.twitter:focus {
+  color: #00aced;
+  box-shadow: 0 0 24px 0 #00aced;
+}
+
+.instagram:hover,
+.instagram:focus {
+  color: #ff0000;
+  box-shadow: 0 0 29px 0 #d924a6;
+}
+
+.instagram {
+  padding: 13px;
+}
+
+.whatsapp:hover,
+.whatsapp:focus {
+  color: #0c8e00;
+  box-shadow: 0 0 24px 0 #5d9d4b;
+}
+
+.whatsapp {
+  padding: 14px;
+}
+
+.linkedin:hover,
+.linkedin:focus {
+  color: #0000f8;
+  box-shadow: 0 0 24px 0 #7100e2;
+}
+
+
+.linkedin {
+  padding: 15px;
+}
+
+
+.facebook:hover,
+.facebook:focus {
+  color: #275dd3;
+  box-shadow: 0 0 24px 0 #0051ff;
+}
+
+
+.google:hover,
+.google:focus {
+  color: #d3ad00;
+  box-shadow: 0 0 24px 0 #0033ff;
+}
+
+.contact:hover,
+.contact:focus {
+  color: #ff0000;
+  box-shadow: 0 0 24px 0 #d924a6;
+}
+
+.button-title-wrapper {
+  cursor: se-resize;
+  text-transform: uppercase;
+  background-color: rgba(21, 117, 115, 0.11);
+  padding: 25px 32px;
+  width: 100%;
+  white-space: nowrap;
+  bottom: 0;
+  right: 0px;
+  z-index: 100;
+  position: absolute;
+}
+
+
+.button-title-wrapper:hover {
+  background-color: rgba(21, 117, 115, 0.455);
+}
+
+/* loader */
+.loader {
+  display: flex;
+  justify-content: center;
+}
+
+/* bars */
+
+.bar {
+  width: 7px;
+  height: 13px;
+  margin: 0 15px;
+  border-radius: 10px;
+  animation: loading_5192 1s ease-in-out infinite;
+  background-color: aqua;
+}
+
+
+.bar:nth-child(1) {
+  animation-delay: 0.01s;
+}
+
+
+.bar:nth-child(2) {
+  animation-delay: 0.09s;
+}
+
+
+.bar:nth-child(3) {
+  animation-delay: 0.19s;
+}
+
+
+.bar:nth-child(4) {
+  animation-delay: 0.29s;
+}
+
+@keyframes loading_5192 {
+  0% {
+      transform: scale(1);
+  }
+
+  20% {
+      transform: scale(1, 2.5);
+  }
+
+  40% {
+      transform: scale(1);
+  }
+}
+
+/* background image css */
+#background-image {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  background-image: url("./assets/logo/ep-bg-image.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #858585;
+}
+
+/* background  video*/
+#background-video.loading {
+  display: none;
+}
+
+/* welcome subtitle */
+.welcome__subtitle {
+  text-align: center;
+  font-style: italic;
+  color: #77E4C8;
+  font-size: 1.5rem;
+}
+
+/* hamburger menu */
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  padding: 12px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+/* hamburger icon */
+.hamburger-icon {
+  width: 30px;
+  height: 20px;
+  position: relative;
+}
+
+/*  */
+.hamburger-icon span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #333;
+  border-radius: 3px;
+  opacity: 1;
+  left: 0;
+  transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+
+.hamburger-icon span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger-icon span:nth-child(2) {
+  top: 8px;
+}
+
+.hamburger-icon span:nth-child(3) {
+  top: 16px;
+}
+
+.hamburger-menu.open .hamburger-icon span:nth-child(1) {
+  top: 8px;
+  transform: rotate(135deg);
+}
+
+.hamburger-menu.open .hamburger-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.open .hamburger-icon span:nth-child(3) {
+  top: 8px;
+  transform: rotate(-135deg);
+}
+
+
+@media (max-width: 768px) {
+  .home-and-menu-title {
+      font-size: 1.5rem;
+  }
+
+  h3 {
+      font-size: 1.8rem;
+  }
+
+
+  .welcome__subtitle {
+      font-size: 1rem;
+  }
+
+
+  .sidebar {
+      width: 100%;
+      height: auto;
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 60px;
+  }
+
+
+  .wrapper {
+      margin: 0;
+      padding: 1rem;
+  }
+
+
+  .hamburger-menu {
+      display: block;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      cursor: pointer;
+      width: 30px;
+      height: 24px;
+      background: transparent;
+      padding: 0;
+  }
+
+  .hamburger-menu .bar {
+      width: 100%;
+      height: 3px;
+      background-color: #f1da2d;
+      display: block;
+      position: absolute;
+      left: 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .hamburger-menu .bar:nth-child(1) {
+      top: 0;
+  }
+
+  .hamburger-menu .bar:nth-child(2) {
+      top: 50%;
+      transform: translateY(-50%);
+  }
+
+  .hamburger-menu .bar:nth-child(3) {
+      bottom: 0;
+  }
+
+  .hamburger-menu.open .bar:nth-child(1) {
+      transform: translateY(10px) rotate(45deg);
+  }
+
+  .hamburger-menu.open .bar:nth-child(2) {
+      opacity: 0;
+  }
+
+  .hamburger-menu.open .bar:nth-child(3) {
+      transform: translateY(-10px) rotate(-45deg);
+  }
+}
+
+
+h1 {
+
+  font-weight: 700;
+
+  font-family: sans-serif, Tahoma, Verdana, Geneva;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h3 {
+  font-weight: 400;
+  font-family: sans-serif, Tahoma, Verdana, Geneva;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.contact-btn {
+  background-color: #4CAF50;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+  border-radius: 5px;
+
+  max-width: 300px;
+
+  font-size: 16px;
+
+}
+
+.contact-btn:hover,
+.contact-btn:focus {
+  background-color: #45a049;
+
+  transform: translateY(-2px);
+
+  outline: none;
+
+}
+
+@media (max-width: 768px) {
+  .contact-btn {
+      font-size: 14px;
+
+  }
+}
+
+
+.collapsible-content {
+  padding: 0 10px;
+  display: flex;
+  overflow: hidden;
+  background-color: #f1f1f15b;
+  background-size: cover;
+
+}
+
+/* header */
+.header {
+  margin-bottom: 50px;
+  margin-right: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  /* Center items vertically */
+  justify-content: center;
+  /* Center items horizontally */
+  margin-top: 250px;
+  /* Adjust margin as needed */
+}
+
+.logo-image {
+  width: 250px;
+  /* Adjust width as needed */
+  height: 250px;
+  /* Adjust height as needed */
+  margin-right: 15px;
+  /* Space between logo and name */
+}
+
+/* logo name css */
+.logo-name {
+  font-family: sans-serif, Tahoma, Verdana, Geneva;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 1px;
+  color: #31E1F7;
+  font-size: 35px;
+  margin-bottom: 0;
+  text-shadow:
+      0 0 5px #7d8f06,
+      0 0 10px #d8c40c,
+      0 0 20px #207eb1,
+      0 0 40px #31f738;
+}
+
+/* logo name event css */
+.logo-name::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(135deg, #bfb417 0%, #b7db34 100%);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  margin-top: 25px;
+}
+
+/* logo name event css two  */
+.logo-name:hover::after {
+  transform: scaleX(1);
+}
+
+/* click me container */
+.clickme-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* click me gif image */
+.clickme-image {
+  cursor: pointer;
+  max-width: 100%;
+  height: 230px;
+  margin-bottom: 0;
+  margin-top: 60%;
+}
+
+/* explore more */
+.explore-more {
+  cursor: pointer;
+  font-size: 16px;
+  background-color: #151b206e;
+  width: 100vw;
+  height: 70px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: fixed;
+}
+
+/* explore more hover */
+.explore-more:hover {
+  background-color: #151b20b1;
+}
+
+/* h1 css */
+h1 {
+  font-family: sans-serif, Tahoma, Verdana, Geneva;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* h2 css */
+h2 {
+  font-family: sans-serif, Tahoma, Verdana, Geneva;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* gradient type */
+.gradient-type {
+  margin-right: 40px;
+  margin-top: 150px;
+  font-family: sans-serif, Tahoma, Verdana, Geneva;
+  font-style: normal;
+  color: #FF4D6D;
+  text-shadow: 0 0 10px rgba(255, 77, 109, 0.5);
+}
+
+/* Media Queries for MacBook */
+@media (min-width: 1280px) and (max-width: 1440px) and (min-height: 800px) and (max-height: 900px) {
+  .logo-container {
+      margin-top: 40px;
+  }
+
+  .logo-image {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+  }
+
+  .logo-name {
+      font-size: 2rem;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1680px) and (min-height: 900px) and (max-height: 1050px) {
+  .logo-container {
+      margin-top: 45px;
+  }
+
+  .logo-image {
+      width: 45px;
+      height: 45px;
+      margin-right: 12px;
+  }
+
+  .logo-name {
+      font-size: 2.25rem;
+  }
+}
+
+@media (min-width: 2560px) and (max-width: 2880px) and (min-height: 1600px) and (max-height: 1800px) {
+  .logo-container {
+      margin-top: 55px;
+  }
+
+  .logo-image {
+      width: 60px;
+      height: 60px;
+      margin-right: 18px;
+  }
+
+  .logo-name {
+      font-size: 2.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .clickme-container {
+      padding: 10px;
+  }
+
+  .clickme-image {
+      max-width: 80%;
+      margin-top: 255px;
+      margin-bottom: 0;
+  }
+
+  .explore-more {
+      font-size: 14px;
+      padding: 8px 16px;
+      margin-top: 0;
+  }
+}
+
+
+/* Responsive styles for 14.09" x 9.68" (35.79 cm x 24.59 cm) */
+@media screen and (width: 35.79cm) and (height: 24.59cm) {
+  .container {
+      max-width: 34.79cm;
+      /* Subtracting 1cm for padding */
+      padding: 0.5cm;
+  }
+
+  /* Adjust font sizes */
+  body {
+      font-size: 16px;
+  }
+
+  h1 {
+      font-size: 24px;
+  }
+
+  /* Adjust other element sizes as needed */
+  .logo-image {
+      width: 80px;
+      height: 80px;
+  }
+
+  .sidebar {
+      width: 160px;
+  }
+}
+
+/* Responsive styles for 30 cm x 24 cm */
+@media screen and (width: 30cm) and (height: 24cm) {
+  .container {
+      max-width: 29cm;
+      /* Subtracting 1cm for padding */
+      padding: 0.5cm;
+  }
+
+  /* Adjust font sizes */
+  body {
+      font-size: 14px;
+  }
+
+  h1 {
+      font-size: 22px;
+  }
+
+  /* Adjust other element sizes as needed */
+  .logo-image {
+      width: 70px;
+      height: 70px;
+  }
+
+  .sidebar {
+      width: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-btn {
+      font-size: 14px;
+  }
+
+  .clickme-image {
+      max-width: 80%;
+      margin-top: 255px;
+  }
+
+  .explore-more {
+      font-size: 14px;
+      padding: 8px 16px;
+  }
+
+  .sidebar {
+      width: 100%;
+      height: auto;
+  }
+
+  .hamburger-menu {
+      display: block;
+  }
+}
+
+/* MacBook Air 13" / MacBook Pro 13" */
+@media (min-width: 1280px) and (max-width: 1440px) and (min-height: 800px) and (max-height: 900px) {
+  .logo-container {
+      margin-top: 40px;
+  }
+
+  .logo-image {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+  }
+
+  .logo-name {
+      font-size: 2rem;
+  }
+
+  .header {
+      margin-bottom: 30px;
+      margin-right: 100px;
+  }
+
+  .contact-btn {
+      font-size: 16px;
+  }
+
+  .clickme-image {
+      margin-bottom: 100%;
+  }
+}
+
+/* Media Query for 1440px Ã— 900px */
+@media (min-width: 1440px) and (max-width: 1440px) and (min-height: 900px) and (max-height: 900px) {
+  .logo-container {
+      margin-top: 50px;
+  }
+
+  .logo-image {
+      width: 60px;
+      height: 60px;
+      margin-right: 15px;
+  }
+
+  .logo-name {
+      font-size: 2.25rem;
+  }
+
+  .header {
+      margin-bottom: 40px;
+      margin-right: 120px;
+  }
+
+  .contact-btn {
+      font-size: 18px;
+  }
+
+  .clickme-image {
+      max-width: 90%;
+      margin-top: 50%;
+  }
+
+  .explore-more {
+      font-size: 16px;
+      padding: 10px 20px;
+  }
+}

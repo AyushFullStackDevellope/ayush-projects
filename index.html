@@ -1,489 +1,271 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
+    <!-- meta for divise size -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
-    />
-    <title>landing.page.com</title>
-    <!-- CSS and JS links -->
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2/2144.png" />
-    <link rel="stylesheet" href="./homepage-projects/index.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/bootstrap-icons.svg"
-    />
-    <!-- Style switchers -->
-    <link
-      rel="stylesheet"
-      href="./homepage-projects/helper/styleswitchers.css"
-    />
+    <!-- title -->
+    <title>enjoyprogramming.com</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/logo/resized-logo.jpeg" />
+    <!-- css styling -->
+    <link rel="stylesheet" href="index.css" />
   </head>
 
-  <body class="dark">
-    <!-- Main container start -->
-    <div class="main-container">
-      <!-- Aside start -->
-      <div class="aside">
-        <div class="logo">
+  <body>
+    <!-- Logo and header section -->
+    <header class="header">
+      <!-- Company logo image -->
+      <img
+        src="./assets/logo/resized-logo.jpeg"
+        style="height: 110px; width: 110px; border-radius: 50%"
+        alt="Enjoy Programming Logo"
+      />
+      <!-- Company name -->
+      <span class="logo-name"> Enjoy Programming</span>
+    </header>
+
+    <!-- Main heading section -->
+    <section class="main-heading">
+      <!-- Main title with custom styling -->
+      <h3 class="gradient-type">
+        Welcome To The World Of Information Technology
+      </h3>
+
+      <!-- Subtitle describing the company -->
+      <p class="welcome__subtitle">
+        A genuine IT training institute with professional industrial trainers
+      </p>
+    </section>
+
+    <!-- Mobile navigation menu icon (hamburger menu) -->
+    <nav class="mobile-nav">
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </nav>
+
+    <!-- TODO: Implement contact button next to "Enjoy Programming" with collapse functionality -->
+    <!-- Sidebar container -->
+    <div class="sidebar" id="menu-icon">
+      <!-- SVG definitions for social media icons -->
+
+      <svg class="svg--source" width="0" height="0" aria-hidden="true">
+        <!-- Twitter icon -->
+        <symbol id="svg--twitter" viewBox="0 0 24 24">
+          <path
+            d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z"
+          />
+        </symbol>
+
+        <!-- Google icon -->
+        <symbol id="svg--google" viewBox="0 0 24 24">
+          <path
+            d="M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.345-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0c-6.635 0-12 5.365-12 12s5.365 12 12 12c6.926 0 11.52-4.869 11.52-11.726 0-.788-.085-1.39-.189-1.989H12.24z"
+          />
+        </symbol>
+
+        <!-- Facebook icon -->
+        <symbol id="svg--facebook" viewBox="0 0 24 24">
+          <path
+            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+          />
+        </symbol>
+
+        <!-- Instagram icon -->
+        <symbol id="svg--instagram" viewBox="0 0 24 24">
+          <path
+            d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+          />
+        </symbol>
+
+        <!-- WhatsApp icon -->
+        <symbol id="svg--whatsapp" viewBox="0 0 24 24">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+          />
+        </symbol>
+
+        <!-- LinkedIn icon -->
+        <symbol id="svg--linkedin" viewBox="0 0 24 24">
+          <path
+            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+          />
+        </symbol>
+
+        <!-- Call icon -->
+        <symbol id="svg--call" viewBox="0 0 24 24">
+          <path
+            d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56-.35-.12-.74-.03-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"
+          />
+        </symbol>
+      </svg>
+      <!-- SVG definitions for social media icons -->
+
+      <div class="wrapper">
+        <h2 style="margin-top: 150px; color: white; font-size: 30px">
+          Get in Touch
+        </h2>
+
+        <!-- Social media links container -->
+        <div class="connect">
+          <!-- Contact link -->
+          <a href="#contact" class="share contact">
+            <svg role="presentation" class="svg--icon">
+              <use xlink:href="#svg--call" />
+            </svg>
+            <span class="clip">CONTACT</span>
+          </a>
+          <!-- Twitter link -->
           <a
-            href="https://www.google.com/search?q=ayush+nakade&source=lmns&bih=746&biw=1033&hl=en&sa=X&ved=2ahUKEwi4opmV2-6GAxVv3DgGHQGMAqEQ0pQJKAB6BAgBEAI"
+            href="https://twitter.com/i/flow/login?redirect_after_login=%2FEnjoyProgra"
+            class="share twitter"
           >
-            <span>A</span>YUSH
+            <svg role="presentation" class="svg--icon">
+              <use xlink:href="#svg--twitter" />
+            </svg>
+            <span class="clip">TWITTER</span>
+          </a>
+
+          <!-- Google link -->
+          <a
+            href="https://www.google.com/search?sca_esv=e59d9031b627fbb2&sca_upv=1&sxsrf=ADLYWIIWmvkqlpk641azgqxNyw9a60Doow:1721142435793&q=enjoy+programming+katol&source=lnms&fbs=AEQNm0AeMNWKf4PpcKMI-eSa16lJoRPMIuyspCxWO6iZW9F1Ns6EVsgc0W_0xN47PHaanAEtg26fpfc9gg2y1-ZsywNNGJPyPXxyZl3OB7_lu3CbWFwPC7o1pNNKT1C4vCcPYMIiaCxOnL1VTeZtKCOBxKbLtsIT7dWxrHzaYm5o-LGx0lyo9tMuuLx0cPjKnhq70PbmqwdEkd6oEJDtKnygaMVmTh5k-A&sa=X&ved=2ahUKEwju6fib66uHAxWLzDgGHawQCx0Q0pQJegQIERAB&biw=1440&bih=813&dpr=1"
+            rel="author"
+            class="share google"
+          >
+            <svg role="presentation" class="svg--icon">
+              <use xlink:href="#svg--google" />
+            </svg>
+            <span class="clip">GOOGLE +</span>
+          </a>
+
+          <!-- Facebook link -->
+          <a
+            href="https://www.facebook.com/profile.php?id=61551450214007"
+            rel="author"
+            class="share facebook"
+          >
+            <svg role="presentation" class="svg--icon">
+              <use xlink:href="#svg--facebook" />
+            </svg>
+            <span class="clip">FACEBOOK</span>
+          </a>
+
+          <!-- Instagram link -->
+          <a
+            href="https://www.instagram.com/enjoyprogrammings/"
+            class="share instagram"
+          >
+            <svg role="presentation" class="svg--icon">
+              <use xlink:href="#svg--instagram" />
+            </svg>
+            <span class="clip">INSTAGRAM</span>
+          </a>
+
+          <!-- WhatsApp link -->
+          <a
+            href="https://whatsapp.com/channel/0029VaOlzUW3rZZjsxB6sW2w"
+            class="share whatsapp"
+          >
+            <svg role="presentation" class="svg--icon">
+              <use xlink:href="#svg--whatsapp" />
+            </svg>
+            <span class="clip">whatsapp</span>
+          </a>
+
+          <!-- LinkedIn link -->
+          <a
+            href="https://www.linkedin.com/in/enjoy-programming-43606b290/"
+            class="share linkedin"
+          >
+            <svg role="presentation" class="svg--icon">
+              <use xlink:href="#svg--linkedin" />
+            </svg>
+            <span class="clip">Linkedin</span>
           </a>
         </div>
-        <div class="nav-toggler">
-          <span></span>
-        </div>
-        <ul class="nav">
-          <li>
-            <a href="#home" class="active"><i class="fa fa-home"></i>Home</a>
-          </li>
-          <li>
-            <a href="#about"><i class="fa fa-user"></i>About</a>
-          </li>
-          <li>
-            <a href="#portfolio"><i class="fa fa-briefcase"></i>Portfolio</a>
-          </li>
-          <li>
-            <a href="#contact"><i class="fa fa-comments"></i>Contact</a>
-          </li>
-        </ul>
-      </div>
-      <!-- Aside end -->
-
-      <!-- Main content start -->
-      <div class="main-content">
-        <!-- Home section start -->
-        <section class="home active section" id="home">
-          <div class="container">
-            <div class="row">
-              <div class="home-info padd-15">
-                <h3 class="hello">
-                  Hello, My name is <span class="name">Ayush Nakade</span>
-                </h3>
-                <h3 class="my-profession">
-                  I'm a <span class="typing">web designer</span>
-                </h3>
-                <p>
-                  Together, we explore the boundaries of possibility, blending
-                  cutting-edge technology with creative finesse to bring your
-                  ideas to life.
-                </p>
-                <a href="./html-projects/resume.html" class="btn"
-                  >Download CV</a
-                >
-              </div>
-              <div class="home-img padd-15">
-                <img
-                  src="./assets/images/ayush-img.png"
-                  alt="Ayush Nakade"
-                  width="300px"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- Home section end -->
-
-        <!-- About section start -->
-        <section class="about section" id="about">
-          <div class="container">
-            <div class="row">
-              <div class="section-title padd-15">
-                <h2>About Me</h2>
-              </div>
-            </div>
-            <div class="row">
-              <div class="about-content padd-15">
-                <div class="row">
-                  <div class="about-text padd-15">
-                    <h3>
-                      I'm Ayush Nakade and
-                      <span class="top-head">FULLSTACK DEVELOPER</span>
-                    </h3>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="personal-info padd-15">
-                    <div class="row">
-                      <div class="info-item padd-15">
-                        <p>Birthday : <span>01 sep 2006</span></p>
-                      </div>
-                      <div class="info-item padd-15">
-                        <p>Age : <span>17</span></p>
-                      </div>
-                      <div class="info-item padd-15">
-                        <p>Phone : <span>+91 8055936343</span></p>
-                      </div>
-                      <div class="info-item padd-15">
-                        <p>
-                          Email :
-                          <span onclick="copyEmail()"
-                            >ayushnakade18@gmail.com</span
-                          >
-                        </p>
-                      </div>
-                      <div class="info-item padd-15">
-                        <p>Degree : <span>IT</span></p>
-                      </div>
-                      <div class="info-item padd-15">
-                        <p>City : <span>Nagpur,Maharashtra,India</span></p>
-                      </div>
-                      <div class="info-item padd-15">
-                        <p>
-                          Skip Id :
-                          <span onclick="copySkype()"
-                            >live:.cid.6b52ae3d6f119f96</span
-                          >
-                        </p>
-                      </div>
-                      <div class="info-item padd-15">
-                        <p>LinkedIn : <span>@Ayush Nakade</span></p>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="buttons padd-15" style="margin-top: 80px">
-                        <a
-                          href="https://www.linkedin.com/in/ayush-nakade-19431a286/"
-                          class="btn hire-me"
-                          >Hire Me</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <div class="skills padd-15">
-                    <div class="row">
-                      <div class="skill-item padd-15">
-                        <h5>HTML</h5>
-                        <div class="progress">
-                          <div class="progress-in" style="width: 92%"></div>
-                          <div class="skill-percent">92%</div>
-                        </div>
-                      </div>
-                      <div class="skill-item padd-15">
-                        <h5>CSS</h5>
-                        <div class="progress">
-                          <div class="progress-in" style="width: 86%"></div>
-                          <div class="skill-percent">86%</div>
-                        </div>
-                      </div>
-                      <div class="skill-item padd-15">
-                        <h5>Bootstrap</h5>
-                        <div class="progress">
-                          <div class="progress-in" style="width: 76%"></div>
-                          <div class="skill-percent">76%</div>
-                        </div>
-                      </div>
-                      <div class="skill-item padd-15">
-                        <h5>JS</h5>
-                        <div class="progress">
-                          <div class="progress-in" style="width: 66%"></div>
-                          <div class="skill-percent">66%</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="education">
-                    <h3 class="title">Education</h3>
-                    <div class="row">
-                      <div class="timeline-box padd-15">
-                        <div class="timeline shadow-dark">
-                          <!-- Timeline item -->
-                          <div class="timeline-item">
-                            <div class="circle-dot"></div>
-                            <h3 class="timeline-date">
-                              <i class="fa fa-calendar"></i> 2024 - 2028
-                            </h3>
-                            <h4 class="timeline-title">
-                              Master in Information Technology
-                            </h4>
-                            <p class=".timeline-title">
-                              Proficient in designing and implementing
-                              innovative IT solutions, demonstrated through
-                              various academic projects and internships.
-                              Equipped with strong technical skills in
-                              programming languages such as Java, Python, and
-                              SQL, alongside expertise in cloud computing
-                              services.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="education padd-15">
-                    <h3 class="title">Experience</h3>
-                    <div class="row">
-                      <div class="timeline-box padd-15">
-                        <div class="timeline shadow-dark">
-                          <!-- Timeline item -->
-                          <div class="timeline-item">
-                            <div class="circle-dot"></div>
-                            <h3 class="timeline-date">
-                              <i class="fa fa-calendar"></i> 2024 - 2025
-                            </h3>
-                            <h4 class="timeline-title">
-                              Master in Information Technology
-                            </h4>
-                            <p class="timeline-text">
-                              Passionate coder with over 3 years of experience
-                              in software development, proficient in multiple
-                              programming languages including Java, Python, and
-                              C#. Demonstrated ability to develop, test, and
-                              maintain scalable software applications, with a
-                              keen focus on optimizing performance.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- About section end -->
-
-        <!-- Portfolio section start -->
-        <section class="portfolio section" id="portfolio">
-          <div class="row">
-            <div class="section-title padd-15">
-              <h2 style="margin-top: 60px">Portfolio</h2>
-            </div>
-            <div class="row">
-              <!-- Portfolio item start -->
-              <div class="portfolio-item padd-15">
-                <div class="portfolio-item-inner shadow-dark">
-                  <div class="portfolio-img">
-                    <a href="./homepage-projects/html-projects.html">
-                      <img
-                        src="https://play-lh.googleusercontent.com/MPDzYIvnXkFgILeyVYa1ZrBhWrQI6voJQ83R3TGhUvU4jjcV3ClQVlhuWDucmSkSwqc=w240-h480-rw"
-                        alt="Project Image"
-                        class="img"
-                      />
-                      <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                          <h3><b>HTML Projects</b></h3>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Portfolio item end -->
-              <!-- Portfolio item start -->
-              <div class="portfolio-item padd-15">
-                <div class="portfolio-item-inner shadow-dark">
-                  <div class="portfolio-img">
-                    <a href="./homepage-projects/css-projects.html">
-                      <img
-                        src="https://play-lh.googleusercontent.com/TxjQBGYHvMJsBX5dCvxQ4R-_4N-XrVhW6-p7D7TXanXKZMD8L-UkeMBWO1dtubGVNqU"
-                        alt="Project Image"
-                        class="img"
-                      />
-                      <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                          <h3><b>CSS Projects</b></h3>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- Portfolio item end -->
-              <!-- Portfolio item start -->
-              <div class="portfolio-item padd-15">
-                <div class="portfolio-item-inner shadow-dark">
-                  <div class="portfolio-img">
-                    <a href="./homepage-projects/js-projects.html">
-                      <img
-                        src="https://play-lh.googleusercontent.com/s4AnA0RrLKhVMKDBSBTjNvPBBK2wQk3-4ZP2RONGxK_VqnMNXWTmPy-6f8J64GxDgyU"
-                        alt="Project Image"
-                        class="img"
-                      />
-                      <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                          <h3><b>JavaScript Projects</b></h3>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- Portfolio item start -->
-              <div class="portfolio-item padd-15">
-                <div class="portfolio-item-inner shadow-dark">
-                  <div class="portfolio-img">
-                    <a href="./homepage-projects/bootstrap-projects.html">
-                      <img
-                        src="https://www.sketchappsources.com/resources/source-image/bootstrap-icons-1.4.0-neanda.png"
-                        alt="Project Image"
-                        class="img"
-                      />
-                      <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                          <h3><b>Bootstrap Projects</b></h3>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <!-- Portfolio item end -->
-            </div>
-          </div>
-        </section>
-        <!-- Portfolio section end -->
-
-        <!-- Contact section start -->
-        <section class="contact section" id="contact">
-          <div class="container">
-            <div class="row">
-              <div class="section-title padd-15">
-                <h2>Contact Me</h2>
-              </div>
-            </div>
-            <h3 class="contact-title">Have you any question?</h3>
-            <h4 class="contact-sub-title">I am At Your Service</h4>
-            <div class="row">
-              <!-- Contact info item start -->
-              <div class="contact-info-item padd-15">
-                <div class="icon"><i class="fa fa-phone"></i></div>
-                <h4>Call Us On</h4>
-                <p>+91 8055936343</p>
-              </div>
-              <!-- Contact info item end -->
-              <!-- Contact info item start -->
-              <div class="contact-info-item padd-15">
-                <div class="icon"><i class="fa fa-map-marker-alt"></i></div>
-                <h4>Find Us</h4>
-                <p>Nagpur, India</p>
-              </div>
-              <!-- Contact info item end -->
-              <!-- Contact info item start -->
-              <div class="contact-info-item padd-15">
-                <div class="icon"><i class="fa fa-envelope"></i></div>
-                <h4>Email</h4>
-                <p>ayushnakade18@gmail.com</p>
-              </div>
-              <!-- Contact info item end -->
-              <!-- Contact info item start -->
-              <div class="contact-info-item padd-15">
-                <div class="icon"><i class="fa fa-globe-europe"></i></div>
-                <h4>Website</h4>
-                <p>AyushFullStackDevellope</p>
-              </div>
-              <!-- Contact info item end -->
-              <!-- Contact info item start -->
-              <div
-                class="contact-info-item padd-15"
-                style="margin-top: 30px; color: var(--theme-color)"
-              >
-                <a
-                  href="https://github.com/AyushFullStackDevellope/ayushprojects"
-                  target="_blank"
-                >
-                  <div class="icon" class="contact-info-item padd-15">
-                    <i class="bi bi-github"></i>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="25px"
-                      height="25px"
-                      class="bi bi-github"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
-                      />
-                    </svg>
-                  </div>
-                  <h4>GitHub</h4>
-                  <p>AyushFullStackDevelloper</p>
-                </a>
-              </div>
-              <!-- Contact info item end -->
-              <!-- Contact info item start -->
-              <div class="contact-info-item padd-15" style="margin-top: 30px">
-                <a
-                  href="https://www.linkedin.com/in/ayush-nakade-19431a286/"
-                  target="_blank"
-                >
-                  <div class="icon">
-                    <i class="bi bi-linkedin"></i>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="25px"
-                      height="25px"
-                      class="bi bi-linkedin"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
-                      />
-                    </svg>
-                  </div>
-                  <h4>LinkedIn</h4>
-                  <p>Ayush Nakade</p>
-                </a>
-              </div>
-              <!-- Contact info item end -->
-              <!-- Contact info item start -->
-              <div class="contact-info-item padd-15" style="margin-top: 30px">
-                <a href="skype:live:ayushnakade18?chat">
-                  <div class="icon">
-                    <i class="bi bi-skype"></i>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="25px"
-                      height="25px"
-                      class="bi bi-skype"
-                      viewBox="0 0 16 16"
-                    >
-                      <path
-                        d="M4.671 0c.88 0 1.733.247 2.468.702a7.42 7.42 0 0 1 6.02 2.118 7.37 7.37 0 0 1 2.167 5.215q0 .517-.072 1.026a4.66 4.66 0 0 1 .6 2.281 4.64 4.64 0 0 1-1.37 3.294A4.67 4.67 0 0 1 11.18 16c-.84 0-1.658-.226-2.37-.644a7.42 7.42 0 0 1-6.114-2.107A7.37 7.37 0 0 1 .529 8.035q0-.545.08-1.081a4.644 4.644 0 0 1 .76-5.59A4.68 4.68 0 0 1 4.67 0zm.447 7.01c.18.309.43.572.729.769a7 7 0 0 0 1.257.653q.737.308 1.145.523c.229.112.437.264.615.448.135.142.21.331.21.528a.87.87 0 0 1-.335.723c-.291.196-.64.289-.99.264a2.6 2.6 0 0 1-1.048-.206 11 11 0 0 1-.532-.253 1.3 1.3 0 0 0-.587-.15.72.72 0 0 0-.501.176.63.63 0 0 0-.195.491.8.8 0 0 0 .148.482 1.2 1.2 0 0 0 .456.354 5.1 5.1 0 0 0 2.212.419 4.6 4.6 0 0 0 1.624-.265 2.3 2.3 0 0 0 1.08-.801c.267-.39.402-.855.386-1.327a2.1 2.1 0 0 0-.279-1.101 2.5 2.5 0 0 0-.772-.792A7 7 0 0 0 8.486 7.3a1 1 0 0 0-.145-.058 18 18 0 0 1-1.013-.447 1.8 1.8 0 0 1-.54-.387.73.73 0 0 1-.2-.508.8.8 0 0 1 .385-.723 1.76 1.76 0 0 1 .968-.247c.26-.003.52.03.772.096q.412.119.802.293c.105.049.22.075.336.076a.6.6 0 0 0 .453-.19.7.7 0 0 0 .18-.496.72.72 0 0 0-.17-.476 1.4 1.4 0 0 0-.556-.354 3.7 3.7 0 0 0-.708-.183 6 6 0 0 0-1.022-.078 4.5 4.5 0 0 0-1.536.258 2.7 2.7 0 0 0-1.174.784 1.9 1.9 0 0 0-.45 1.287c-.01.37.076.736.25 1.063"
-                      />
-                    </svg>
-                  </div>
-                  <h4>Skype</h4>
-                  <p>live:.cid.6b52ae3d6f119f96</p>
-                </a>
-              </div>
-              <!-- Contact info item end -->
-            </div>
-          </div>
-        </section>
-
-        <!-- Contact section end -->
-      </div>
-      <!-- Main content end -->
-    </div>
-    <!-- Main container end -->
-
-    <!-- Style switcher start -->
-    <!-- Style switcher start -->
-    <div class="style-switcher">
-      <div class="day-night s-icon">
-        <i class="fas fa-moon fa"></i>
       </div>
     </div>
+    <!-- "Click Me" GIF button -->
+    <a href="information/hometwo.html" class="clickme-container">
+      <!-- Animated GIF for the "Click Me" button -->
+      <footer>
+        <img
+          src="./assets/animations/robot.gif"
+          alt="Click Me"
+          class="clickme-image"
+        />
+        <!-- Footer section -->
 
-    <!-- Style switcher end -->
+        <!-- "Explore More" button within the footer -->
+        <button class="explore-more">Explore More</button>
+      </footer>
+    </a>
 
-    <!-- Style switcher end -->
-    <!-- JS Files -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
-    <script src="./homepage-projects/index.js"></script>
-    <script src="./homepage-projects/helper/styleswitcher.js"></script>
+    <!-- Background image container (fallback for video) -->
+    <div id="background-image">
+      <!-- Static background image -->
+      <img src="./assets/logo/ep-bg-image.png" />
+    </div>
+
+    <!-- Background video -->
+    <video id="background-video" autoplay loop muted class="loaded">
+      <!-- Video source -->
+      <source src="./assets/videos/photo/ep-video-bg.mp4" type="video/mp4"/>
+    </video>
+    <!-- SCRIPTING -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Select the hamburger menu icon and sidebar elements
+        const menuIcon = document.querySelector(".hamburger-menu");
+        const sidebar = document.querySelector(".sidebar");
+
+        if (!menuIcon || !sidebar) {
+          console.error("Menu icon or sidebar not found in the DOM");
+          return;
+        }
+
+        // Function to toggle the sidebar visibility
+        function toggleMenu() {
+          // If sidebar is flex, hide it. If hidden, show it.
+          sidebar.style.display =
+            sidebar.style.display === "flex" ? "none" : "flex";
+        }
+
+        // Function to handle responsive behavior
+        function handleResize() {
+          // For mobile devices (width <= 768px)
+          if (window.innerWidth <= 768) {
+            // Show the hamburger menu
+            menuIcon.style.display = "block";
+            // Initially hide the sidebar
+            sidebar.style.display = "none";
+            // Add click event to toggle sidebar if not already added
+            if (!menuIcon.classList.contains("click-handler-added")) {
+              menuIcon.addEventListener("click", toggleMenu);
+              menuIcon.classList.add("click-handler-added");
+            }
+          } else {
+            // For larger screens
+            // Hide the hamburger menu
+            menuIcon.style.display = "none";
+            // Always show the sidebar
+            sidebar.style.display = "flex";
+            // Remove click event if it exists
+            if (menuIcon.classList.contains("click-handler-added")) {
+              menuIcon.removeEventListener("click", toggleMenu);
+              menuIcon.classList.remove("click-handler-added");
+            }
+          }
+        }
+
+        // Call handleResize initially to set the correct state
+        handleResize();
+
+        // Add event listener for window resize to ensure responsiveness
+        window.addEventListener("resize", handleResize);
+      });
+    </script>
   </body>
 </html>
