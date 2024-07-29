@@ -525,7 +525,7 @@
                   <button
                     class="btn btn-outline-secondary"
                     type="button"
-                    onclick="minusNumber()"
+                    onclick="minusOrder()"
                   >
                     -
                   </button>
@@ -538,7 +538,7 @@
                   <button
                     class="btn btn-outline-secondary"
                     type="button"
-                    onclick="addNumber()"
+                    onclick="addOrder()"
                   >
                     +
                   </button>
@@ -560,7 +560,7 @@
                   <button
                     class="btn btn-outline-secondary"
                     type="button"
-                    onclick="minusNumber()"
+                    onclick="minusMenu()"
                   >
                     -
                   </button>
@@ -573,7 +573,7 @@
                   <button
                     class="btn btn-outline-secondary"
                     type="button"
-                    onclick="addNumber()"
+                    onclick="addMenu()"
                   >
                     +
                   </button>
@@ -597,7 +597,7 @@
                   <button
                     class="btn btn-outline-secondary"
                     type="button"
-                    onclick="minusNumber()"
+                    onclick="minusSandwich()"
                   >
                     -
                   </button>
@@ -610,7 +610,7 @@
                   <button
                     class="btn btn-outline-secondary"
                     type="button"
-                    onclick="addNumber()"
+                    onclick="addSandwich()"
                   >
                     +
                   </button>
@@ -632,7 +632,7 @@
                   <button
                     class="btn btn-outline-secondary"
                     type="button"
-                    onclick="minusNumber()"
+                    onclick="minusCheese()"
                   >
                     -
                   </button>
@@ -645,7 +645,7 @@
                   <button
                     class="btn btn-outline-secondary"
                     type="button"
-                    onclick="addNumber()"
+                    onclick="addCheese()"
                   >
                     +
                   </button>
@@ -667,7 +667,7 @@
                   <button
                     class="btn btn-outline-secondary"
                     type="button"
-                    onclick="minusNumber()"
+                    onclick="minusChocolate()"
                   >
                     -
                   </button>
@@ -680,7 +680,7 @@
                   <button
                     class="btn btn-outline-secondary"
                     type="button"
-                    onclick="addNumber()"
+                    onclick="addChocolate()"
                   >
                     +
                   </button>
@@ -704,7 +704,7 @@
                   <button
                     class="btn btn-outline-secondary"
                     type="button"
-                    onclick="minusNumber()"
+                    onclick="minusManchurian()"
                   >
                     -
                   </button>
@@ -717,7 +717,7 @@
                   <button
                     class="btn btn-outline-secondary"
                     type="button"
-                    onclick="addNumber()"
+                    onclick="addManchurian()"
                   >
                     +
                   </button>
@@ -739,7 +739,7 @@
                   <button
                     class="btn btn-outline-secondary"
                     type="button"
-                    onclick="minusNumber()"
+                    onclick="minusRice()"
                   >
                     -
                   </button>
@@ -752,7 +752,7 @@
                   <button
                     class="btn btn-outline-secondary"
                     type="button"
-                    onclick="addNumber()"
+                    onclick="addRice()"
                   >
                     +
                   </button>
@@ -774,7 +774,7 @@
                   <button
                     class="btn btn-outline-secondary"
                     type="button"
-                    onclick="minusNumber()"
+                    onclick="minusCoffee()"
                   >
                     -
                   </button>
@@ -787,7 +787,7 @@
                   <button
                     class="btn btn-outline-secondary"
                     type="button"
-                    onclick="addNumber()"
+                    onclick="addCoffee()"
                   >
                     +
                   </button>
@@ -978,14 +978,116 @@
         if (i <= 9) {
           i++;
           document.getElementById("display").value = i;
-          document.getElementById("display-two").value = i;
         }
       }
       function minusNumber() {
         if (i > 0) {
           i--;
           document.getElementById("display").value = i;
+        }
+      }
+      i = 0;
+      function addOrder() {
+        if (i <= 9) {
+          i++;
           document.getElementById("display-two").value = i;
+        }
+      }
+      function minusOrder() {
+        if (i > 0) {
+          i--;
+          document.getElementById("display-two").value = i;
+        }
+      }
+      i = 0;
+      function addMenu() {
+        if (i <= 9) {
+          i++;
+          document.getElementById("display-three").value = i;
+        }
+      }
+      function minusMenu() {
+        if (i > 0) {
+          i--;
+          document.getElementById("display-three").value = i;
+        }
+      }
+      i = 0;
+      function addSandwich() {
+        if (i <= 9) {
+          i++;
+          document.getElementById("display-four").value = i;
+        }
+      }
+      function minusSandwich() {
+        if (i > 0) {
+          i--;
+          document.getElementById("display-four").value = i;
+        }
+      }
+      i = 0;
+      function addCheese() {
+        if (i <= 9) {
+          i++;
+          document.getElementById("display-five").value = i;
+        }
+      }
+      function minusCheese() {
+        if (i > 0) {
+          i--;
+          document.getElementById("display-five").value = i;
+        }
+      }
+      i = 0;
+      function addChocolate() {
+        if (i <= 9) {
+          i++;
+          document.getElementById("display-six").value = i;
+        }
+      }
+      function minusChocolate() {
+        if (i > 0) {
+          i--;
+          document.getElementById("display-six").value = i;
+        }
+      }
+      i = 0;
+      function addManchurian() {
+        if (i <= 9) {
+          i++;
+          document.getElementById("display-seven").value = i;
+        }
+      }
+      function minusManchurian() {
+        if (i > 0) {
+          i--;
+          document.getElementById("display-seven").value = i;
+        }
+      }
+      i = 0;
+      function addRice() {
+        if (i <= 9) {
+          i++;
+          document.getElementById("display-eight").value = i;
+        }
+      }
+      function minusRice() {
+        if (i > 0) {
+          i--;
+          document.getElementById("display-eight").value = i;
+        }
+      }
+      i = 0;
+      function addCoffee() {
+        if (i <= 9) {
+          i++;
+          document.getElementById("display-nine").value = i;
+        }
+      }
+      function minusCoffee() {
+        if (i > 0) {
+          i--;
+          document.getElementById("display-nine").value = i;
         }
       }
     </script>
