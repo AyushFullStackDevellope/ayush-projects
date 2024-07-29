@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link
-      rel="icon"
-      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG2HrsX6SjZinNd-3emSr7hqZM-YnukF_FlA4lwq8zyPmm6nGb53kUrkRkjTHBSLinIC8&usqp=CAU"
-    />
+    <link rel="icon" href="./assets/images/orange-favicon.png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Orangelo - Fine Dining Experience</title>
@@ -34,10 +31,12 @@
         --dark-color: #2b2d42;
         --accent-color: #ffd700;
       }
+
       body {
         font-family: "Roboto", sans-serif;
         color: var(--dark-color);
       }
+
       h1,
       h2,
       h3,
@@ -46,18 +45,22 @@
       h6 {
         font-family: "Playfair Display", serif;
       }
+
       .navbar {
         transition: background-color 0.3s ease;
         padding: 1rem 0;
       }
+
       .navbar.scrolled {
         background-color: rgba(255, 118, 33, 0.9) !important;
       }
+
       .navbar-brand {
         font-family: "Playfair Display", serif;
         font-size: 1.5rem;
         font-weight: 700;
       }
+
       .nav-link {
         font-weight: 900;
         text-transform: uppercase;
@@ -65,6 +68,7 @@
         padding: 0.5rem 1rem;
         color: rgb(255, 255, 255);
       }
+
       .hero-section {
         background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
           url("https://b.zmtcdn.com/data/pictures/1/20102691/e29878dbf88b9953632bdb998e8f75be.jpeg")
@@ -75,6 +79,7 @@
         align-items: center;
         color: var(--light-color);
       }
+
       .btn-custom {
         background-color: var(--primary-color);
         color: var(--light-color);
@@ -85,26 +90,31 @@
         letter-spacing: 1px;
         transition: all 0.3s ease;
       }
+
       .btn-custom:hover {
         background-color: var(--secondary-color);
         color: var(--light-color);
         transform: translateY(-3px);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
+
       .menu-item {
         transition: transform 0.3s, box-shadow 0.3s;
         border: none;
         border-radius: 15px;
         overflow: hidden;
       }
+
       .menu-item:hover {
         transform: translateY(-5px);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
       }
+
       .menu-item img {
         height: 200px;
         object-fit: cover;
       }
+
       .testimonial {
         background-color: var(--light-color);
         border-radius: 15px;
@@ -112,6 +122,7 @@
         margin-bottom: 30px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
       }
+
       .testimonial img {
         width: 70px;
         height: 70px;
@@ -119,6 +130,7 @@
         margin-right: 20px;
         border: 3px solid var(--primary-color);
       }
+
       .reservation-form {
         background-color: var(--secondary-color);
         color: var(--light-color);
@@ -138,10 +150,12 @@
         left: 50%;
         transform: translateX(-50%);
       }
+
       .order-section {
         background-color: var(--light-color);
         padding: 60px 0;
       }
+
       .order-item {
         background-color: #fff;
         border-radius: 15px;
@@ -150,9 +164,11 @@
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         transition: transform 0.3s;
       }
+
       .order-item:hover {
         transform: translateY(-5px);
       }
+
       .order-item img {
         width: 100%;
         height: 200px;
@@ -160,10 +176,12 @@
         border-radius: 10px;
         margin-bottom: 15px;
       }
+
       .quantity-input {
         width: 60px;
         text-align: center;
       }
+
       .about-section {
         background-color: var(--light-color);
         padding: 80px 0;
@@ -201,6 +219,7 @@
       }
     </style>
   </head>
+
   <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
@@ -236,18 +255,269 @@
     <section id="home" class="hero-section">
       <div class="container text-center">
         <h1 class="display-1 fw-bold mb-4">Welcome to Orangelo</h1>
-        <p class="lead mb-5">Experience the finest dining in town</p>
+        <h2 class="h3 mb-4">We Host Special Events!</h2>
+        <p>From birthday parties to corporate events, we've got you covered.</p>
         <a href="#menu" class="btn btn-lg btn-custom me-3">View Our Menu</a>
         <a
-          href="#reservation"
-          class="btn btn-lg btn-outline-light"
-          onclick="reservation()"
-          >Make a Reservation</a
+          href="https://www.zomato.com/katol/orangelo-cafe-bistro-katol-locality/order"
+          class="btn btn-lg btn-danger"
+          target="_blank"
+          >Order on Zomato</a
         >
       </div>
     </section>
 
     <!-- Menu Section -->
+    <div id="menu" class="section py-5">
+      <div class="container">
+        <h2 class="text-center section-title mb-5">Our Exquisite Menu</h2>
+
+        <!-- Menu Categories -->
+        <ul
+          class="nav nav-tabs justify-content-center mb-5"
+          id="menuTabs"
+          role="tablist"
+        >
+          <li class="nav-item" role="presentation">
+            <button
+              style="color: #ff6b35"
+              class="nav-link active"
+              id="italian-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#italian"
+              type="button"
+              role="tab"
+            >
+              Italian
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              style="color: #ff6b35"
+              class="nav-link"
+              id="chinese-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#chinese"
+              type="button"
+              role="tab"
+            >
+              Chinese
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              style="color: #ff6b35"
+              class="nav-link"
+              id="snacks-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#snacks"
+              type="button"
+              role="tab"
+            >
+              Snacks
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              style="color: #ff6b35"
+              class="nav-link"
+              id="drinks-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#drinks"
+              type="button"
+              role="tab"
+            >
+              Cold Drinks
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              style="color: #ff6b35"
+              class="nav-link"
+              id="cakes-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#cakes"
+              type="button"
+              role="tab"
+            >
+              Cakes & Desserts
+            </button>
+          </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="menuTabContent">
+          <!-- Italian -->
+          <div class="tab-pane fade show active" id="italian" role="tabpanel">
+            <div class="row">
+              <!-- Add Italian menu items here -->
+              <div class="col-md-4 mb-4">
+                <div class="card menu-item">
+                  <img
+                    src="https://i0.wp.com/kabilarestro.com/wp-content/uploads/2023/05/Cheese-Corn-Pizza.jpg?fit=1000%2C750&ssl=1"
+                    class="card-img-top"
+                    alt="Corn Cheese Pizza"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Corn Cheese Pizza</h5>
+                    <p class="card-text">
+                      Delicious corn and cheese topped pizza.
+                    </p>
+                    <p class="price">₹199</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="card menu-item">
+                  <img
+                    src="https://insanelygoodrecipes.com/wp-content/uploads/2021/12/Spaghetti-Bolognese-with-Basil-in-a-Plate.jpg"
+                    class="card-img-top"
+                    alt="Truffle Pasta"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">White Sauce Pasta</h5>
+                    <p class="card-text">
+                      Homemade fettuccine with black truffle cream sauce, topped
+                      with Parmesan cheese.
+                    </p>
+                    <p class="card-text"><strong>₹ 189</strong></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="card menu-item">
+                  <img
+                    src="https://storage.googleapis.com/shy-pub/285347/1685038567422_SKU-0734_0.jpg"
+                    alt="Grilled Salmon"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Farmhouse Pizza [8 inches]</h5>
+                    <p class="card-text">
+                      Homemade fettuccine with black truffle cream sauce, topped
+                      with Parmesan cheese.
+                    </p>
+                    <p class="card-text"><strong>₹ 189</strong></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="card menu-item">
+                  <img
+                    src="https://b.zmtcdn.com/data/dish_photos/cee/ecb0ac336b49e97ff6e23c35641a2cee.jpg"
+                    alt="Truffle Pasta"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Margherita Pizza [8 inches]</h5>
+                    <p class="card-text">
+                      Homemade fettuccine with black truffle cream sauce, topped
+                      with Parmesan cheese.
+                    </p>
+                    <p class="card-text"><strong>₹ 189</strong></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="card menu-item">
+                  <img
+                    src="https://b.zmtcdn.com/data/dish_photos/31c/0f6c90bd8573a72d9aac11db4e13831c.jpg"
+                    alt="Truffle Pasta"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Cheese Burst Pizza</h5>
+                    <p class="card-text">
+                      Homemade fettuccine with black truffle cream sauce, topped
+                      with Parmesan cheese.
+                    </p>
+                    <p class="card-text"><strong>₹ 189</strong></p>
+                  </div>
+                </div>
+              </div>
+              <!-- Add more Italian items here -->
+            </div>
+          </div>
+
+          <!-- Chinese -->
+          <div class="tab-pane fade" id="chinese" role="tabpanel">
+            <div class="row">
+              <!-- Add Chinese menu items here -->
+              <div class="col-md-4 mb-4">
+                <div class="card menu-item">
+                  <img
+                    src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/hakka-noodles-recipe.jpg"
+                    class="card-img-top"
+                    alt="Veg Hakka Noodles"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Veg Hakka Noodles</h5>
+                    <p class="card-text">
+                      Stir-fried noodles with mixed vegetables.
+                    </p>
+                    <p class="price">₹139</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="card menu-item">
+                  <img
+                    src="https://img-cdn.thepublive.com/fit-in/1200x675/filters:format(webp)/sanjeev-kapoor/media/post_banners/6646f586ef1d17675356dd656de7eb04fe1973c6b41dd4047c2fffa3ee1ffa06.jpg"
+                    class="card-img-top"
+                    alt="Seafood Risotto"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Veg Manchurian Rice</h5>
+                    <p class="card-text">
+                      Creamy Arborio rice with a medley of fresh seafood,
+                      finished with a touch of saffron.
+                    </p>
+                    <p class="price">₹139</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="card menu-item">
+                  <img
+                  src="https://b.zmtcdn.com/data/dish_photos/9a4/503f814c2e37c1ead9bbf111147799a4.png"
+                  alt="Grilled Salmon"
+                />
+                <h5>Veg Manchurian</h5>
+                <p>Fresh Atlantic Noodles, grilled to perfection</p>
+                    <p class="price">₹139</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="card menu-item">
+                  <img
+                  src="https://b.zmtcdn.com/data/dish_photos/9a4/503f814c2e37c1ead9bbf111147799a4.png"
+                  alt="Grilled Salmon"
+                />
+                <h5>Veg Manchurian</h5>
+                <p>Fresh Atlantic Noodles, grilled to perfection</p>
+                    <p class="price">₹139</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Add more Chinese items here -->
+            </div>
+          </div>
+
+          <!-- Snacks -->
+          <div class="tab-pane fade" id="snacks" role="tabpanel">
+            <!-- Add Snacks items here -->
+          </div>
+
+          <!-- Cold Drinks -->
+          <div class="tab-pane fade" id="drinks" role="tabpanel">
+            <!-- Add Cold Drinks items here -->
+          </div>
+
+          <!-- Cakes & Desserts -->
+          <div class="tab-pane fade" id="cakes" role="tabpanel">
+            <!-- Add Cakes & Desserts items here -->
+          </div>
+        </div>
+      </div>
+    </div>
     <section id="menu" class="py-5">
       <div class="container">
         <h2 class="text-center section-title">Our Exquisite Menu</h2>
@@ -269,23 +539,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-4">
-            <div class="card menu-item">
-              <img
-                src="https://insanelygoodrecipes.com/wp-content/uploads/2021/12/Spaghetti-Bolognese-with-Basil-in-a-Plate.jpg"
-                class="card-img-top"
-                alt="Truffle Pasta"
-              />
-              <div class="card-body">
-                <h5 class="card-title">White Sauce Pasta</h5>
-                <p class="card-text">
-                  Homemade fettuccine with black truffle cream sauce, topped
-                  with Parmesan cheese.
-                </p>
-                <p class="card-text"><strong>₹ 189</strong></p>
-              </div>
-            </div>
-          </div>
+
           <div class="col-md-4 mb-4">
             <div class="card menu-item">
               <img
@@ -456,7 +710,10 @@
               </div>
             </div>
           </div>
-          <img src="./assets/images/orangelo-menu.png" />
+          <img
+            src="./assets/images/orangelo-menu.jpeg"
+            style="width: 80vw; margin-left: 9%"
+          />
         </div>
         <div class="text-center mt-4">
           <button
@@ -797,9 +1054,11 @@
           </div>
         </div>
         <div class="text-center mt-4">
-          <button class="btn btn-lg btn-custom" onclick="orderNow()">
-            Place Order
-          </button>
+          <a
+            href="https://www.zomato.com/katol/orangelo-cafe-bistro-katol-locality/order"
+          >
+            <button class="btn btn-lg btn-custom">Order on Zomato</button></a
+          >
         </div>
       </div>
     </section>
@@ -862,10 +1121,6 @@
             </div>
           </div>
         </div>
-
-        <div class="text-center mt-4">
-          <a href="#menu" class="btn btn-lg btn-custom">Explore Our Menu</a>
-        </div>
       </div>
     </div>
     <!-- ===== KITCHEN SECTION END===== -->
@@ -913,6 +1168,55 @@
         </div>
       </div>
     </section>
+    <!-- EVENTS SECTION -->
+    <div id="events" class="section py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center section-title mb-5">
+          Special Events at Orangelo
+        </h2>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Birthday Parties</h5>
+                <p class="card-text">
+                  Make your birthday celebration unforgettable with our special
+                  packages.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Corporate Events</h5>
+                <p class="card-text">
+                  Impress your clients and colleagues with our professional
+                  catering services.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Private Parties</h5>
+                <p class="card-text">
+                  Host your private gatherings in our elegant and comfortable
+                  setting.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <a href="#contact" class="btn btn-lg btn-custom"
+            >Inquire About Events</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- MAP SECTION -->
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14872.040348063152!2d78.5855404!3d21.2710683!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd459aa5ea25bfd%3A0xce1119880a72ef9f!2sOrangelo%20Cafe%20%26%20Bistro!5e0!3m2!1sen!2sin!4v1722040529095!5m2!1sen!2sin"
       width="100%"
@@ -953,49 +1257,6 @@
               <br />
               <br />
             </div>
-          </div>
-        </div>
-        <div class="row mt-5">
-          <div class="col-md-6 mx-auto">
-            <form class="contact-form">
-              <div class="mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Your Name"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="Your Email"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Subject"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <textarea
-                  class="form-control"
-                  rows="5"
-                  placeholder="Your Message"
-                  required
-                ></textarea>
-              </div>
-              <div class="text-center">
-                <button type="submit" class="btn btn-custom">
-                  Send Message
-                </button>
-              </div>
-            </form>
           </div>
         </div>
       </div>
