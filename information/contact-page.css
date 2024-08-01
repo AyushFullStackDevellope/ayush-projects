@@ -1,0 +1,151 @@
+body {
+  background-color: #181818;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  animation: fadeIn 1s ease-out;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.header-container .logo {
+  width: 150px;
+  margin-right: 44%;
+}
+
+.back-button {
+  background-color: #00aaff;
+  color: #ffffff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-bottom: 150px;
+}
+
+
+.back-button i {
+  margin-right: 8px;
+}
+
+.back-button:hover {
+  background-color: #0088cc;
+  transform: scale(1.05);
+}
+
+.section-title h2 {
+  color: #00aaff;
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact .contact-info-item {
+  text-align: center;
+  padding: 15px;
+}
+
+.contact .contact-info-item p {
+  font-size: 16px;
+  line-height: 25px;
+  color: #b0b0b0;
+  font-weight: 400;
+}
+
+.contact .contact-info-item .icon {
+  display: inline-block;
+  font-size: 25px;
+  color: #00aaff;
+}
+
+.contact .contact-info-item .icon * {
+  fill: #00aaff;
+  /* For SVG icons */
+  color: #00aaff;
+  /* For FontAwesome icons */
+}
+
+.contact .contact-info-item h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin: 15px 0 5px;
+}
+
+.contact .contact-info-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.padd-15 {
+  padding: 15px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0   15px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 60px;
+}
+
+.font-family-secondary {
+  font-family: 'Your Secondary Font', sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .back-button {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  .section-title h2 {
+    font-size: 25px;
+    margin: 0%;
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out;
+}

@@ -55,13 +55,14 @@ h3 {
   padding: 0;
   border: 0;
   font: inherit;
-  background: #FD9B63;
+  background: #cff400;
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgba(215, 84, 84, 0);
   font-size: 42px;
   max-width: 100%;
   text-align: center;
+  font-weight: 900;
 }
 
 /* sidebar css */
@@ -308,9 +309,7 @@ html {
       transform: scale(1);
   }
 }
-
-/* background image css */
-#background-image {
+.background-image{
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -319,13 +318,12 @@ html {
   top: 0;
   bottom: 0;
   z-index: -1;
-  background-image: url("./assets/logo/ep-bg-image.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-color: #858585;
 }
-
+/* background image css */
 /* background  video*/
 #background-video.loading {
   display: none;
@@ -586,14 +584,9 @@ h3 {
   font-weight: 500;
   font-style: normal;
   letter-spacing: 1px;
-  color: #31E1F7;
+  color: rgb(244, 220, 0);
   font-size: 35px;
   margin-bottom: 0;
-  text-shadow:
-      0 0 5px #7d8f06,
-      0 0 10px #d8c40c,
-      0 0 20px #207eb1,
-      0 0 40px #31f738;
 }
 
 /* logo name event css */
@@ -680,7 +673,7 @@ h2 {
   font-family: sans-serif, Tahoma, Verdana, Geneva;
   font-style: normal;
   color: #FF4D6D;
-  text-shadow: 0 0 10px rgba(255, 77, 109, 0.5);
+
 }
 
 /* Media Queries for MacBook */
