@@ -1,733 +1,625 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="icon" href="./assets/images/orange-favicon.png" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Orangelo - Fine Dining Experience</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <style>
-      :root {
-        --primary-color: #ff6b35;
-        --secondary-color: #4a4e69;
-        --light-color: #f7f7f2;
-        --dark-color: #2b2d42;
-        --accent-color: #ffd700;
-      }
 
-      body {
-        font-family: "Roboto", sans-serif;
-        color: var(--dark-color);
-      }
+<head>
+  <link rel="icon" href="./assets/images/orange-favicon.png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orangelo - Fine Dining Experience</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <style>
+    :root {
+      --primary-color: #ff6b35;
+      --secondary-color: #4a4e69;
+      --light-color: #f7f7f2;
+      --dark-color: #2b2d42;
+      --accent-color: #ffd700;
+    }
 
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Playfair Display", serif;
-      }
+    body {
+      font-family: "Roboto", sans-serif;
+      color: var(--dark-color);
+    }
 
-      .navbar {
-        transition: background-color 0.3s ease;
-        padding: 1rem 0;
-      }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Playfair Display", serif;
+    }
 
-      .navbar.scrolled {
-        background-color: rgba(255, 118, 33, 0.9) !important;
-      }
+    .navbar {
+      transition: background-color 0.3s ease;
+      padding: 1rem 0;
+    }
 
-      .navbar-brand {
-        font-family: "Playfair Display", serif;
-        font-size: 1.5rem;
-        font-weight: 700;
-      }
+    .navbar.scrolled {
+      background-color: rgba(255, 118, 33, 0.9) !important;
+    }
 
-      .nav-link {
-        font-weight: 900;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        padding: 0.5rem 1rem;
-        color: rgb(255, 255, 255);
-      }
+    .navbar-brand {
+      font-family: "Playfair Display", serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
 
-      .hero-section {
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-          url("https://b.zmtcdn.com/data/pictures/1/20102691/e29878dbf88b9953632bdb998e8f75be.jpeg")
-            no-repeat center center;
-        background-size: cover;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        color: var(--light-color);
-      }
+    .nav-link {
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 0.5rem 1rem;
+      color: rgb(255, 255, 255);
+    }
 
-      .btn-custom {
-        background-color: var(--primary-color);
-        color: var(--light-color);
-        border: none;
-        padding: 0.75rem 1.5rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        transition: all 0.3s ease;
-      }
+    .hero-section {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("https://b.zmtcdn.com/data/pictures/1/20102691/e29878dbf88b9953632bdb998e8f75be.jpeg") no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      color: var(--light-color);
+    }
 
-      .btn-custom:hover {
-        background-color: var(--secondary-color);
-        color: var(--light-color);
-        transform: translateY(-3px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
+    .btn-custom {
+      background-color: var(--primary-color);
+      color: var(--light-color);
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
 
-      .menu-item {
-        transition: transform 0.3s, box-shadow 0.3s;
-        border: none;
-        border-radius: 15px;
-        overflow: hidden;
-      }
+    .btn-custom:hover {
+      background-color: var(--secondary-color);
+      color: var(--light-color);
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-      .menu-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-      }
+    .menu-item {
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+    }
 
-      .menu-item img {
-        height: 200px;
-        object-fit: cover;
-      }
+    .menu-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
 
-      .testimonial {
-        background-color: var(--light-color);
-        border-radius: 15px;
-        padding: 30px;
-        margin-bottom: 30px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      }
+    .menu-item img {
+      height: 200px;
+      object-fit: cover;
+    }
 
-      .testimonial img {
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-        margin-right: 20px;
-        border: 3px solid var(--primary-color);
-      }
+    .testimonial {
+      background-color: var(--light-color);
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
 
-      .reservation-form {
-        background-color: var(--secondary-color);
-        color: var(--light-color);
-        padding: 40px;
-        border-radius: 15px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      }
+    .testimonial img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      margin-right: 20px;
+      border: 3px solid var(--primary-color);
+    }
 
-      .section-title::after {
-        content: "";
-        position: absolute;
-        display: block;
-        width: 70px;
-        height: 3px;
-        background-color: var(--primary-color);
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-      }
+    .reservation-form {
+      background-color: var(--secondary-color);
+      color: var(--light-color);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
 
-      .order-section {
-        background-color: var(--light-color);
-        padding: 60px 0;
-      }
+    .section-title::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 70px;
+      height: 3px;
+      background-color: var(--primary-color);
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
 
-      .order-item {
-        background-color: #fff;
-        border-radius: 15px;
-        padding: 20px;
-        margin-bottom: 20px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s;
-      }
+    .order-section {
+      background-color: var(--light-color);
+      padding: 60px 0;
+    }
 
-      .order-item:hover {
-        transform: translateY(-5px);
-      }
+    .order-item {
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s;
+    }
 
-      .order-item img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 10px;
-        margin-bottom: 15px;
-      }
+    .order-item:hover {
+      transform: translateY(-5px);
+    }
 
-      .quantity-input {
-        width: 60px;
-        text-align: center;
-      }
+    .order-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
 
-      .about-section {
-        background-color: var(--light-color);
-        padding: 80px 0;
-      }
+    .quantity-input {
+      width: 60px;
+      text-align: center;
+    }
 
-      .about-img {
-        border-radius: 15px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      }
+    .about-section {
+      background-color: var(--light-color);
+      padding: 80px 0;
+    }
 
-      .contact-section {
-        background-color: var(--secondary-color);
-        color: var(--light-color);
-        padding: 80px 0;
-      }
+    .about-img {
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
 
-      .contact-info {
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 15px;
-        padding: 30px;
-        margin-bottom: 30px;
-      }
+    .contact-section {
+      background-color: var(--secondary-color);
+      color: var(--light-color);
+      padding: 80px 0;
+    }
 
-      .contact-form {
-        background-color: var(--light-color);
-        border-radius: 15px;
-        padding: 30px;
-        color: var(--dark-color);
-      }
+    .contact-info {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 30px;
+    }
 
-      .contact-icon {
-        font-size: 2rem;
-        color: var(--primary-color);
-        margin-bottom: 15px;
-      }
-    </style>
-  </head>
+    .contact-form {
+      background-color: var(--light-color);
+      border-radius: 15px;
+      padding: 30px;
+      color: var(--dark-color);
+    }
 
-  <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">Orangelo Cafe & Bistro</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#order">Order</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    .contact-icon {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-      <div class="container text-center">
-        <h1 class="display-1 fw-bold mb-4">Welcome to Orangelo</h1>
-        <h2 class="h3 mb-4">We Host Special Events!</h2>
-        <p>From birthday parties to corporate events, we've got you covered.</p>
-        <a href="#menu" class="btn btn-lg btn-custom me-3">View Our Menu</a>
-        <a
-          href="https://www.zomato.com/katol/orangelo-cafe-bistro-katol-locality/order"
-          class="btn btn-lg btn-danger"
-          target="_blank"
-          >Order on Zomato</a
-        >
-      </div>
-    </section>
-
-    <!-- Menu Section -->
-    <div id="menu" class="section py-5">
-      <div class="container">
-        <h2 class="text-center section-title mb-5">Our Exquisite Menu</h2>
-
-        <!-- Menu Categories -->
-        <ul
-          class="nav nav-tabs justify-content-center mb-5"
-          id="menuTabs"
-          role="tablist"
-        >
-          <li class="nav-item" role="presentation">
-            <button
-              style="color: #ff6b35"
-              class="nav-link active"
-              id="italian-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#italian"
-              type="button"
-              role="tab"
-            >
-              Italian
-            </button>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Orangelo Cafe & Bistro</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
           </li>
-          <li class="nav-item" role="presentation">
-            <button
-              style="color: #ff6b35"
-              class="nav-link"
-              id="chinese-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#chinese"
-              type="button"
-              role="tab"
-            >
-              Chinese
-            </button>
+          <li class="nav-item">
+            <a class="nav-link" href="#order">Order</a>
           </li>
-          <li class="nav-item" role="presentation">
-            <button
-              style="color: #ff6b35"
-              class="nav-link"
-              id="snacks-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#snacks"
-              type="button"
-              role="tab"
-            >
-              Snacks
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              style="color: #ff6b35"
-              class="nav-link"
-              id="drinks-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#drinks"
-              type="button"
-              role="tab"
-            >
-              Cold Drinks
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button
-              style="color: #ff6b35"
-              class="nav-link"
-              id="cakes-tab"
-              data-bs-toggle="tab"
-              data-bs-target="#cakes"
-              type="button"
-              role="tab"
-            >
-              Cakes & Desserts
-            </button>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
           </li>
         </ul>
+      </div>
+    </div>
+  </nav>
 
-        <!-- Tab Content -->
-        <div class="tab-content" id="menuTabContent">
-          <!-- Italian -->
-          <div class="tab-pane fade show active" id="italian" role="tabpanel">
-            <div class="row">
-              <!-- Add Italian menu items here -->
-              <div class="col-md-4 mb-4">
-                <div class="card menu-item">
-                  <img
-                    src="https://i0.wp.com/kabilarestro.com/wp-content/uploads/2023/05/Cheese-Corn-Pizza.jpg?fit=1000%2C750&ssl=1"
-                    class="card-img-top"
-                    alt="Corn Cheese Pizza"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Corn Cheese Pizza</h5>
-                    <p class="card-text">
-                      Delicious corn and cheese topped pizza.
-                    </p>
-                    <p class="price">₹199</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 mb-4">
-                <div class="card menu-item">
-                  <img
-                    src="https://insanelygoodrecipes.com/wp-content/uploads/2021/12/Spaghetti-Bolognese-with-Basil-in-a-Plate.jpg"
-                    class="card-img-top"
-                    alt="Truffle Pasta"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">White Sauce Pasta</h5>
-                    <p class="card-text">
-                      Homemade fettuccine with black truffle cream sauce, topped
-                      with Parmesan cheese.
-                    </p>
-                    <p class="card-text"><strong>₹ 189</strong></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 mb-4">
-                <div class="card menu-item">
-                  <img
-                    src="https://storage.googleapis.com/shy-pub/285347/1685038567422_SKU-0734_0.jpg"
-                    alt="Grilled Salmon"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Farmhouse Pizza [8 inches]</h5>
-                    <p class="card-text">
-                      Homemade fettuccine with black truffle cream sauce, topped
-                      with Parmesan cheese.
-                    </p>
-                    <p class="card-text"><strong>₹ 189</strong></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 mb-4">
-                <div class="card menu-item">
-                  <img
-                    src="https://b.zmtcdn.com/data/dish_photos/cee/ecb0ac336b49e97ff6e23c35641a2cee.jpg"
-                    alt="Truffle Pasta"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Margherita Pizza [8 inches]</h5>
-                    <p class="card-text">
-                      Homemade fettuccine with black truffle cream sauce, topped
-                      with Parmesan cheese.
-                    </p>
-                    <p class="card-text"><strong>₹ 189</strong></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 mb-4">
-                <div class="card menu-item">
-                  <img
-                    src="https://b.zmtcdn.com/data/dish_photos/31c/0f6c90bd8573a72d9aac11db4e13831c.jpg"
-                    alt="Truffle Pasta"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Cheese Burst Pizza</h5>
-                    <p class="card-text">
-                      Homemade fettuccine with black truffle cream sauce, topped
-                      with Parmesan cheese.
-                    </p>
-                    <p class="card-text"><strong>₹ 189</strong></p>
-                  </div>
-                </div>
-              </div>
-              <!-- Add more Italian items here -->
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="container text-center">
+      <h1 class="display-1 fw-bold mb-4">Welcome to Orangelo</h1>
+      <h2 class="h3 mb-4">We Host Special Events!</h2>
+      <p>From birthday parties to corporate events, we've got you covered.</p>
+      <a href="#menu" class="btn btn-lg btn-custom me-3">View Our Menu</a>
+      <a href="https://www.zomato.com/katol/orangelo-cafe-bistro-katol-locality/order" class="btn btn-lg btn-danger"
+        target="_blank">Order on Zomato</a>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <div id="menu" class="section py-5">
+    <div class="container">
+      <h2 class="text-center section-title mb-5">Our Exquisite Menu</h2>
+
+      <h3>Italian</h3>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card menu-item">
+            <img
+              src="https://i0.wp.com/kabilarestro.com/wp-content/uploads/2023/05/Cheese-Corn-Pizza.jpg?fit=1000%2C750&ssl=1"
+              class="card-img-top" alt="Corn Cheese Pizza">
+            <div class="card-body">
+              <h5 class="card-title">Corn Cheese Pizza</h5>
+              <p class="card-text">Delicious corn and cheese topped pizza.</p>
+              <p class="price">₹199</p>
             </div>
           </div>
-
-          <!-- Chinese -->
-          <div class="tab-pane fade" id="chinese" role="tabpanel">
-            <div class="row">
-              <!-- Add Chinese menu items here -->
-              <div class="col-md-4 mb-4">
-                <div class="card menu-item">
-                  <img
-                    src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/hakka-noodles-recipe.jpg"
-                    class="card-img-top"
-                    alt="Veg Hakka Noodles"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Veg Hakka Noodles</h5>
-                    <p class="card-text">
-                      Stir-fried noodles with mixed vegetables.
-                    </p>
-                    <p class="price">₹139</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 mb-4">
-                <div class="card menu-item">
-                  <img
-                    src="https://img-cdn.thepublive.com/fit-in/1200x675/filters:format(webp)/sanjeev-kapoor/media/post_banners/6646f586ef1d17675356dd656de7eb04fe1973c6b41dd4047c2fffa3ee1ffa06.jpg"
-                    class="card-img-top"
-                    alt="Seafood Risotto"
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title">Veg Manchurian Rice</h5>
-                    <p class="card-text">
-                      Creamy Arborio rice with a medley of fresh seafood,
-                      finished with a touch of saffron.
-                    </p>
-                    <p class="price">₹139</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 mb-4">
-                <div class="card menu-item">
-                  <img
-                  src="https://b.zmtcdn.com/data/dish_photos/9a4/503f814c2e37c1ead9bbf111147799a4.png"
-                  alt="Grilled Salmon"
-                />
-                <h5>Veg Manchurian</h5>
-                <p>Fresh Atlantic Noodles, grilled to perfection</p>
-                    <p class="price">₹139</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 mb-4">
-                <div class="card menu-item">
-                  <img
-                  src="https://b.zmtcdn.com/data/dish_photos/9a4/503f814c2e37c1ead9bbf111147799a4.png"
-                  alt="Grilled Salmon"
-                />
-                <h5>Veg Manchurian</h5>
-                <p>Fresh Atlantic Noodles, grilled to perfection</p>
-                    <p class="price">₹139</p>
-                  </div>
-                </div>
-              </div>
-              <!-- Add more Chinese items here -->
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card menu-item">
+            <img src="https://theindianclaypot.com/content/images/wp-content/uploads/2021/02/white-sauce-pasta.jpg"
+              class="card-img-top" alt="Truffle Pasta" />
+            <div class="card-body">
+              <h5 class="card-title">White Sauce Pasta</h5>
+              <p class="card-text">
+                Homemade fettuccine with black truffle cream sauce, topped
+                with Parmesan cheese.
+              </p>
+              <p class="card-text"><strong>₹ 189</strong></p>
             </div>
           </div>
-
-          <!-- Snacks -->
-          <div class="tab-pane fade" id="snacks" role="tabpanel">
-            <!-- Add Snacks items here -->
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card menu-item">
+            <img src="https://storage.googleapis.com/shy-pub/285347/1685038567422_SKU-0734_0.jpg"
+              alt="Grilled Salmon" />
+            <div class="card-body">
+              <h5 class="card-title">Farmhouse Pizza [8 inches]</h5>
+              <p class="card-text">
+                Homemade fettuccine with black truffle cream sauce, topped
+                with Parmesan cheese.
+              </p>
+              <p class="card-text"><strong>₹ 189</strong></p>
+            </div>
           </div>
-
-          <!-- Cold Drinks -->
-          <div class="tab-pane fade" id="drinks" role="tabpanel">
-            <!-- Add Cold Drinks items here -->
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card menu-item">
+            <img src="https://b.zmtcdn.com/data/dish_photos/cee/ecb0ac336b49e97ff6e23c35641a2cee.jpg"
+              alt="Truffle Pasta" />
+            <div class="card-body">
+              <h5 class="card-title">Margherita Pizza [8 inches]</h5>
+              <p class="card-text">
+                Homemade fettuccine with black truffle cream sauce, topped
+                with Parmesan cheese.
+              </p>
+              <p class="card-text"><strong>₹ 189</strong></p>
+            </div>
           </div>
-
-          <!-- Cakes & Desserts -->
-          <div class="tab-pane fade" id="cakes" role="tabpanel">
-            <!-- Add Cakes & Desserts items here -->
+        </div>
+        <!-- Add more Italian items here -->
+        <div class="col-md-4 mb-4">
+          <div class="card menu-item">
+            <img src="https://b.zmtcdn.com/data/dish_photos/31c/0f6c90bd8573a72d9aac11db4e13831c.jpg"
+              alt="Truffle Pasta" />
+            <div class="card-body">
+              <h5 class="card-title">Cheese Burst Pizza</h5>
+              <p class="card-text">
+                Homemade fettuccine with black truffle cream sauce, topped
+                with Parmesan cheese.
+              </p>
+              <p class="card-text"><strong>₹ 189</strong></p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <section id="menu" class="py-5">
-      <div class="container">
-        <h2 class="text-center section-title">Our Exquisite Menu</h2>
+
+      <h3>Chinese</h3>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card menu-item">
+            <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/hakka-noodles-recipe.jpg"
+              class="card-img-top" alt="Veg Hakka Noodles">
+            <div class="card-body">
+              <h5 class="card-title">Veg Hakka Noodles</h5>
+              <p class="card-text">Stir-fried noodles with mixed vegetables.</p>
+              <p class="price">₹139</p>
+            </div>
+          </div>
+        </div>
+        <!-- Add more Chinese items here -->
+        <div class="col-md-4 mb-4">
+          <div class="card menu-item">
+            <img
+              src="https://img-cdn.thepublive.com/fit-in/1200x675/filters:format(webp)/sanjeev-kapoor/media/post_banners/6646f586ef1d17675356dd656de7eb04fe1973c6b41dd4047c2fffa3ee1ffa06.jpg"
+              class="card-img-top" alt="Seafood Risotto" />
+            <div class="card-body">
+              <h5 class="card-title">Veg Manchurian Rice</h5>
+              <p class="card-text">
+                Creamy Arborio rice with a medley of fresh seafood,
+                finished with a touch of saffron.
+              </p>
+              <p class="price">₹139</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card menu-item">
+            <img src="https://b.zmtcdn.com/data/dish_photos/9a4/503f814c2e37c1ead9bbf111147799a4.png"
+              alt="Grilled Salmon" />
+            <h5>Veg Manchurian</h5>
+            <p>Fresh Atlantic Noodles, grilled to perfection</p>
+            <p class="price">₹139</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card menu-item">
+          <img src="https://b.zmtcdn.com/data/dish_photos/401/e780dc490bac0f0ae8f6ff7243d43401.png"
+            alt="Grilled Salmon" />
+          <h5>Veg Schezwan Noodles</h5>
+          <p>Fresh Atlantic Noodles, grilled to perfection</p>
+          <p class="price">₹139</p>
+        </div>
+      </div>
+
+      <h3>South Indian</h3>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card menu-item">
+            <img src="https://b.zmtcdn.com/data/dish_photos/2c8/fc77a78e5127bff93ed135089d7342c8.jpg"
+              class="card-img-top" alt="Veg Hakka Noodles">
+            <div class="card-body">
+              <h5 class="card-title">Idli</h5>
+              <p class="card-text">Stir-fried noodles with mixed vegetables.</p>
+              <p class="price">₹49</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card menu-item">
+            <img src="https://www.spiritofindiapattaya.com/wp-content/uploads/2023/01/vada-sambar.jpg"
+              class="card-img-top" alt="Seafood Risotto" />
+            <div class="card-body">
+              <h5 class="card-title">Sambhar Wada</h5>
+              <p class="card-text">
+                Creamy Arborio rice with a medley of fresh seafood,
+                finished with a touch of saffron.
+              </p>
+              <p class="price">₹59</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card menu-item">
+            <img src="https://b.zmtcdn.com/data/dish_photos/7a9/b323aefbe720e0b3f205571a65a947a9.jpg"
+              alt="Grilled Salmon" />
+            <h5>Masala Dosa</h5>
+            <p>Fresh Atlantic Noodles, grilled to perfection</p>
+            <p class="price">₹89</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card menu-item">
+            <img src="https://www.awesomecuisine.com/wp-content/uploads/2009/06/Plain-Dosa.jpg" alt="Grilled Salmon" />
+            <h5>Plain Dosa</h5>
+            <p>Fresh Atlantic Noodles, grilled to perfection</p>
+            <p class="price">₹79</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card menu-item">
+            <img src="https://cdn.tarladalal.com/members/9306/procstepimgs/paneer-chilly-dosa-28-10-189231.jpg"
+              alt="Grilled Salmon" />
+            <h5>Panner 65 Dosa </h5>
+            <p>Fresh Atlantic Noodles, grilled to perfection</p>
+            <p class="price">₹129</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card menu-item">
+            <img
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjUNa97tjrs4Rge9h1JKU151RJ1LyA8YQIK_RvAeKbijEyW0hq2RBBAGe-QU73F5zPpk0fvuQAIVtmzdi4p85h11wydH6nNtlexCt0KCvhyG5Eq1iXcbMYOmMSzvUh4m6KRq6A75cf003w/s1600/DSC_0518.JPG"
+              alt="Grilled Salmon" />
+            <h5>Chinese Dosa</h5>
+            <p>Fresh Atlantic Noodles, grilled to perfection</p>
+            <p class="price">₹119</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card menu-item">
+            <img
+              src="https://i.ytimg.com/vi/uZX5QChmnR0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAByK5pPv2gw7XXKk3SMXkCoUjxkg"
+              alt="Grilled Salmon" />
+            <h5>Onion Uttapam</h5>
+            <p>Fresh Atlantic Noodles, grilled to perfection</p>
+            <p class="price">₹79</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card menu-item">
+            <img src="https://www.viniscookbook.com/wp-content/uploads/2019/06/2019-06-22-13-07-42.jpg"
+              alt="Grilled Salmon" />
+            <h5>Mix Uttapam</h5>
+            <p>Fresh Atlantic Noodles, grilled to perfection</p>
+            <p class="price">₹89</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card menu-item">
+            <img src="https://aartimadan.com/wp-content/uploads/2020/07/instant-uttapam-recipe.jpg"
+              alt="Grilled Salmon" />
+            <h5>Tomato Uttapam</h5>
+            <p>Fresh Atlantic Noodles, grilled to perfection</p>
+            <p class="price">₹89</p>
+          </div>
+        </div>
+      </div>
+
+      <h3>Burgers and Sandwiches</h3>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card menu-item">
+            <img src="https://b.zmtcdn.com/data/dish_photos/ba4/e7c50f6c92f29fd07094bf8f1a53bba4.jpg"
+              class="card-img-top" alt="Veg Hakka Noodles">
+            <div class="card-body">
+              <h5 class="card-title">Veg Sandwich</h5>
+              <p class="card-text">Stir-fried noodles with mixed vegetables.</p>
+              <p class="price">₹89</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card menu-item">
+            <img src="https://b.zmtcdn.com/data/dish_photos/45b/f6ecd3430ba7b090a25fbd44e633545b.jpg"
+              class="card-img-top" alt="Seafood Risotto" />
+            <div class="card-body">
+              <h5 class="card-title">Veg Cheese Sandwich</h5>
+              <p class="card-text">
+                Creamy Arborio rice with a medley of fresh seafood,
+                finished with a touch of saffron.
+              </p>
+              <p class="price">₹99</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card menu-item">
+            <img src="https://www.zaykakatadka.com/wp-content/uploads/2019/04/IMG-20190417-WA0014.jpg"
+              alt="Grilled Salmon" />
+            <h5>Corn Cheese Sandwich</h5>
+            <p>Fresh Atlantic Noodles, grilled to perfection</p>
+            <p class="price">₹119</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card menu-item">
+            <img src="https://b.zmtcdn.com/data/dish_photos/35a/9bddc01056f005fafcc484a2a531a35a.png"
+              alt="Grilled Salmon" />
+            <h5>Chocolate Sandwich</h5>
+            <p>Fresh Atlantic Noodles, grilled to perfection</p>
+            <p class="price">₹119</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card menu-item">
+            <img
+              src="https://yummybee.in/cdn/shop/products/RaspberryChocolateDelight_3_c0d694bc-47b2-45aa-8677-25a5840a161e.png?v=1677867245"
+              alt="Grilled Salmon" />
+            <h5>Paneer Cheese Sandwich</h5>
+            <p>Fresh Atlantic Noodles, grilled to perfection</p>
+            <p class="price">₹139</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card menu-item">
+            <img src="https://b.zmtcdn.com/data/dish_photos/1dc/991eff61e678e267ba3d191f0637c1dc.png"
+              alt="Grilled Salmon" />
+            <h5>Veg Cheese Burger</h5>
+            <p>Fresh Atlantic Noodles, grilled to perfection</p>
+            <p class="price">₹139</p>
+          </div>
+        </div>
+
+        <h3>Drinks (Beverages) & Cakes</h3>
         <div class="row">
           <div class="col-md-4 mb-4">
             <div class="card menu-item">
-              <img
-                src="https://i0.wp.com/kabilarestro.com/wp-content/uploads/2023/05/Cheese-Corn-Pizza.jpg?fit=1000%2C750&ssl=1"
-                class="card-img-top"
-                alt="Grilled Salmon"
-              />
+              <img src="https://thelovenerds.com/wp-content/uploads/2017/12/Irish-Creme-Cold-Brew_-10.jpg"
+                class="card-img-top" alt="Veg Hakka Noodles">
               <div class="card-body">
-                <h5 class="card-title">Corn Cheese Pizza</h5>
-                <p class="card-text">
-                  Fresh Atlantic salmon, grilled to perfection, served with
-                  asparagus and lemon butter sauce.
-                </p>
-                <p class="card-text"><strong>₹199</strong></p>
+                <h5 class="card-title">Irish</h5>
+                <p class="card-text">Stir-fried noodles with mixed vegetables.</p>
+                <p class="price">₹119</p>
               </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card menu-item">
+              <img
+                src="https://images.ctfassets.net/v601h1fyjgba/7cdNOhfEauvOFDfJx91p68/487c04ddacbc8228af9f852eea022397/Iced_Mocha_Hazelnut_Caffe.jpg"
+                class="card-img-top" alt="Seafood Risotto" />
+              <div class="card-body">
+                <h5 class="card-title">Hazelnut</h5>
+                <p class="card-text">
+                  Creamy Arborio rice with a medley of fresh seafood,
+                  finished with a touch of saffron.
+                </p>
+                <p class="price">₹119</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card menu-item">
+              <img src="https://janmoran.com/wp-content/uploads/2022/03/Tiramisu-From-DepositPhotos.jpg"
+                alt="Grilled Salmon" />
+              <h5>Tiramisu</h5>
+              <p>Fresh Atlantic Noodles, grilled to perfection</p>
+              <p class="price">₹119</p>
             </div>
           </div>
 
           <div class="col-md-4 mb-4">
             <div class="card menu-item">
               <img
-                src="https://b.zmtcdn.com/data/dish_photos/1dc/991eff61e678e267ba3d191f0637c1dc.png"
-                class="card-img-top"
-                alt="Chocolate Lava Cake"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Veg Cheese Burger</h5>
-                <p class="card-text">
-                  Decadent chocolate cake with a molten center, served with
-                  vanilla ice cream.
-                </p>
-                <p class="card-text"><strong>₹89</strong></p>
-              </div>
+                src="https://www.heinens.com/content/uploads/2022/05/Mocha-Iced-Coffee-with-Vanilla-Cold-Foam-800x550-1.jpg"
+                alt="Grilled Salmon" />
+              <h5>Machacino</h5>
+              <p>Fresh Atlantic Noodles, grilled to perfection</p>
+              <p class="price">₹119</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
             <div class="card menu-item">
-              <img
-                src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/07/hakka-noodles-recipe.jpg"
-                class="card-img-top"
-                alt="Beef Tenderloin"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Veg Hakka Noodles</h5>
-                <p class="card-text">
-                  Prime beef tenderloin, cooked to your liking, served with
-                  roasted vegetables and red wine reduction.
-                </p>
-                <p class="card-text"><strong>₹139</strong></p>
-              </div>
+              <img src="https://myfoodstory.com/wp-content/uploads/2022/04/Cold-Coffee-3-ways-500x375.jpg"
+                alt="Grilled Salmon" />
+              <h5>Cold Coffee</h5>
+              <p>Fresh Atlantic Noodles, grilled to perfection</p>
+              <p class="price">₹89</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
             <div class="card menu-item">
-              <img
-                src="https://img.clearcals.com/recipes/9aed609f98a8850328143371b69e296efbf2f26a/medium.jpg"
-                class="card-img-top"
-                alt="Grilled Vegetable Platter"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Paneer Schezwan Fried Rice</h5>
-                <p class="card-text">
-                  Assortment of seasonal vegetables, grilled and served with
-                  balsamic glaze and herb-infused olive oil.
-                </p>
-                <p class="card-text"><strong>₹79</strong></p>
-              </div>
+              <img src="https://taubys.com/wp-content/uploads/2019/11/WhatsApp-Image-2021-06-10-at-2.33.17-PM.jpeg"
+                alt="Grilled Salmon" />
+              <h5>Pista Cake</h5>
+              <p>Fresh Atlantic Noodles, grilled to perfection</p>
+              <p class="price">₹89</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
             <div class="card menu-item">
-              <img
-                src="https://img-cdn.thepublive.com/fit-in/1200x675/filters:format(webp)/sanjeev-kapoor/media/post_banners/6646f586ef1d17675356dd656de7eb04fe1973c6b41dd4047c2fffa3ee1ffa06.jpg"
-                class="card-img-top"
-                alt="Seafood Risotto"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Veg Manchurian Rice</h5>
-                <p class="card-text">
-                  Creamy Arborio rice with a medley of fresh seafood, finished
-                  with a touch of saffron.
-                </p>
-                <p class="card-text"><strong>₹149</strong></p>
-              </div>
+              <img src="https://www.theflowerspoint.com/data/cache/images/cakes/cake/chocolate-cake-441x441.png"
+                alt="Grilled Salmon" />
+              <h5>Chocolate Cake</h5>
+              <p>Fresh Atlantic Noodles, grilled to perfection</p>
+              <p class="price">₹89</p>
             </div>
           </div>
           <div class="col-md-4 mb-4">
             <div class="card menu-item">
-              <img
-                src="https://jaipurcakengifts.com/images/thumbs/000/0001532_peri-peri-french-fries_550.webp"
-                class="card-img-top"
-                alt="Seafood Risotto"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Peri Peri Fries</h5>
-                <p class="card-text">
-                  Creamy Arborio rice with a medley of fresh seafood, finished
-                  with a touch of saffron.
-                </p>
-                <p class="card-text"><strong>₹79</strong></p>
-              </div>
+              <img src="https://justbakedcake.com/wp-content/uploads/2020/09/SB-Cake-scaled.jpg" alt="Grilled Salmon" />
+              <h5>Strawberry Cake</h5>
+              <p>Fresh Atlantic Noodles, grilled to perfection</p>
+              <p class="price">₹89</p>
             </div>
           </div>
-          <div class="col-md-4 mb-4">
-            <div class="card menu-item">
-              <img
-                src="https://i.ytimg.com/vi/afDFYbNzOCs/maxresdefault.jpg"
-                class="card-img-top"
-                alt="Seafood Risotto"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Kit Kat Shake</h5>
-                <p class="card-text">
-                  Creamy Arborio rice with a medley of fresh seafood, finished
-                  with a touch of saffron.
-                </p>
-                <p class="card-text"><strong>₹119</strong></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card menu-item">
-              <img
-                src="https://mytastycurry.com/wp-content/uploads/2020/04/Cafe-style-cold-coffee-with-icecream-480x270.jpg"
-                class="card-img-top"
-                alt="Seafood Risotto"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Cold Coffee</h5>
-                <p class="card-text">
-                  Creamy Arborio rice with a medley of fresh seafood, finished
-                  with a touch of saffron.
-                </p>
-                <p class="card-text"><strong>₹149</strong></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card menu-item">
-              <img
-                src="https://b.zmtcdn.com/data/dish_photos/d8c/0f1419e22500c374dbf1cbb670471d8c.jpg"
-                class="card-img-top"
-                alt="Seafood Risotto"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Paneer Cheese Roll</h5>
-                <p class="card-text">
-                  Creamy Arborio rice with a medley of fresh seafood, finished
-                  with a touch of saffron.
-                </p>
-                <p class="card-text"><strong>₹119</strong></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card menu-item">
-              <img
-                src="https://media-cdn.tripadvisor.com/media/photo-s/15/65/f0/6e/corn-cheese-chilly-roll.jpg"
-                class="card-img-top"
-                alt="Seafood Risotto"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Corn Cheese Roll</h5>
-                <p class="card-text">
-                  Creamy Arborio rice with a medley of fresh seafood, finished
-                  with a touch of saffron.
-                </p>
-                <p class="card-text"><strong>₹149</strong></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card menu-item">
-              <img
-                src="https://b.zmtcdn.com/data/dish_photos/e52/c3b56aeacc54a66c9b5d7576493ece52.png"
-                class="card-img-top"
-                alt="Seafood Risotto"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Crispy Veg</h5>
-                <p class="card-text">
-                  Creamy Arborio rice with a medley of fresh seafood, finished
-                  with a touch of saffron.
-                </p>
-                <p class="card-text"><strong>₹149</strong></p>
-              </div>
-            </div>
-          </div>
-          <img
-            src="./assets/images/orangelo-menu.jpeg"
-            style="width: 80vw; margin-left: 9%"
-          />
         </div>
-        <div class="text-center mt-4">
-          <button
-            class="btn btn-lg btn-custom"
-            data-bs-toggle="modal"
-            data-bs-target="#reservationModal"
-            onclick="reservation()"
-          >
-            Make a Reservation
-          </button>
-        </div>
+        <img src="./assets/images/orangelo-menu.png" style="width: 80vw; margin-left: 9%" />
       </div>
-    </section>
-
+    </div>
     <!-- Order Section -->
     <section id="order" class="order-section py-5">
       <div class="container">
@@ -735,33 +627,18 @@
         <div class="row">
           <div class="col-md-4">
             <div class="order-item">
-              <img
-                src="https://storage.googleapis.com/shy-pub/285347/1685038567422_SKU-0734_0.jpg"
-                alt="Grilled Salmon"
-              />
+              <img src="https://storage.googleapis.com/shy-pub/285347/1685038567422_SKU-0734_0.jpg"
+                alt="Grilled Salmon" />
               <h5>Farmhouse Pizza [8 inches]</h5>
               <p>Fresh Atlantic salmon, grilled to perfection</p>
               <div class="d-flex justify-content-between align-items-center">
                 <span class="price">₹320</span>
                 <div class="input-group" style="width: 120px">
-                  <button
-                    class="btn btn-outline-secondary"
-                    type="button"
-                    onclick="minusNumber()"
-                  >
+                  <button class="btn btn-outline-secondary" type="button" onclick="minusNumber()">
                     -
                   </button>
-                  <input
-                    type="text"
-                    class="form-control quantity-input"
-                    value="0"
-                    id="display"
-                  />
-                  <button
-                    class="btn btn-outline-secondary"
-                    type="button"
-                    onclick="addNumber()"
-                  >
+                  <input type="text" class="form-control quantity-input" value="0" id="display" />
+                  <button class="btn btn-outline-secondary" type="button" onclick="addNumber()">
                     +
                   </button>
                 </div>
@@ -770,33 +647,18 @@
           </div>
           <div class="col-md-4">
             <div class="order-item">
-              <img
-                src="https://b.zmtcdn.com/data/dish_photos/cee/ecb0ac336b49e97ff6e23c35641a2cee.jpg"
-                alt="Truffle Pasta"
-              />
+              <img src="https://b.zmtcdn.com/data/dish_photos/cee/ecb0ac336b49e97ff6e23c35641a2cee.jpg"
+                alt="Truffle Pasta" />
               <h5>Margherita Pizza [8 inches]</h5>
               <p>Homemade fettuccine with black truffle cream sauce</p>
               <div class="d-flex justify-content-between align-items-center">
                 <span class="price">₹280</span>
                 <div class="input-group" style="width: 120px">
-                  <button
-                    class="btn btn-outline-secondary"
-                    type="button"
-                    onclick="minusOrder()"
-                  >
+                  <button class="btn btn-outline-secondary" type="button" onclick="minusOrder()">
                     -
                   </button>
-                  <input
-                    type="text"
-                    class="form-control quantity-input"
-                    value="0"
-                    id="display-two"
-                  />
-                  <button
-                    class="btn btn-outline-secondary"
-                    type="button"
-                    onclick="addOrder()"
-                  >
+                  <input type="text" class="form-control quantity-input" value="0" id="display-two" />
+                  <button class="btn btn-outline-secondary" type="button" onclick="addOrder()">
                     +
                   </button>
                 </div>
@@ -805,33 +667,18 @@
           </div>
           <div class="col-md-4">
             <div class="order-item">
-              <img
-                src="https://diyjoy.com/wp-content/uploads/2021/05/cheesy-fries-1-480x270.jpg"
-                alt="Chocolate Lava Cake"
-              />
+              <img src="https://diyjoy.com/wp-content/uploads/2021/05/cheesy-fries-1-480x270.jpg"
+                alt="Chocolate Lava Cake" />
               <h5>French Fries with Cheese</h5>
               <p>Decadent chocolate cake with a molten center</p>
               <div class="d-flex justify-content-between align-items-center">
                 <span class="price">₹89</span>
                 <div class="input-group" style="width: 120px">
-                  <button
-                    class="btn btn-outline-secondary"
-                    type="button"
-                    onclick="minusMenu()"
-                  >
+                  <button class="btn btn-outline-secondary" type="button" onclick="minusMenu()">
                     -
                   </button>
-                  <input
-                    type="text"
-                    class="form-control quantity-input"
-                    value="0"
-                    id="display-three"
-                  />
-                  <button
-                    class="btn btn-outline-secondary"
-                    type="button"
-                    onclick="addMenu()"
-                  >
+                  <input type="text" class="form-control quantity-input" value="0" id="display-three" />
+                  <button class="btn btn-outline-secondary" type="button" onclick="addMenu()">
                     +
                   </button>
                 </div>
@@ -842,33 +689,18 @@
         <div class="row">
           <div class="col-md-4">
             <div class="order-item">
-              <img
-                src="https://b.zmtcdn.com/data/dish_photos/ba4/e7c50f6c92f29fd07094bf8f1a53bba4.jpg"
-                alt="Grilled Salmon"
-              />
+              <img src="https://b.zmtcdn.com/data/dish_photos/ba4/e7c50f6c92f29fd07094bf8f1a53bba4.jpg"
+                alt="Grilled Salmon" />
               <h5>Paneer Cheese Sandwich</h5>
               <p>Fresh Atlantic salmon, grilled to perfection</p>
               <div class="d-flex justify-content-between align-items-center">
                 <span class="price">₹119</span>
                 <div class="input-group" style="width: 120px">
-                  <button
-                    class="btn btn-outline-secondary"
-                    type="button"
-                    onclick="minusSandwich()"
-                  >
+                  <button class="btn btn-outline-secondary" type="button" onclick="minusSandwich()">
                     -
                   </button>
-                  <input
-                    type="text"
-                    class="form-control quantity-input"
-                    value="0"
-                    id="display-four"
-                  />
-                  <button
-                    class="btn btn-outline-secondary"
-                    type="button"
-                    onclick="addSandwich()"
-                  >
+                  <input type="text" class="form-control quantity-input" value="0" id="display-four" />
+                  <button class="btn btn-outline-secondary" type="button" onclick="addSandwich()">
                     +
                   </button>
                 </div>
@@ -879,31 +711,17 @@
             <div class="order-item">
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlm4kVBTWbBvdyKCx99e23_65jh5ba6KdPoA&usqp=CAU"
-                alt="Truffle Pasta"
-              />
+                alt="Truffle Pasta" />
               <h5>Cheese Sandwich</h5>
               <p>Homemade fettuccine with black truffle cream sauce</p>
               <div class="d-flex justify-content-between align-items-center">
                 <span class="price">₹89</span>
                 <div class="input-group" style="width: 120px">
-                  <button
-                    class="btn btn-outline-secondary"
-                    type="button"
-                    onclick="minusCheese()"
-                  >
+                  <button class="btn btn-outline-secondary" type="button" onclick="minusCheese()">
                     -
                   </button>
-                  <input
-                    type="text"
-                    class="form-control quantity-input"
-                    value="0"
-                    id="display-five"
-                  />
-                  <button
-                    class="btn btn-outline-secondary"
-                    type="button"
-                    onclick="addCheese()"
-                  >
+                  <input type="text" class="form-control quantity-input" value="0" id="display-five" />
+                  <button class="btn btn-outline-secondary" type="button" onclick="addCheese()">
                     +
                   </button>
                 </div>
@@ -912,33 +730,18 @@
           </div>
           <div class="col-md-4">
             <div class="order-item">
-              <img
-                src="https://b.zmtcdn.com/data/dish_photos/35a/9bddc01056f005fafcc484a2a531a35a.png"
-                alt="Chocolate Lava Cake"
-              />
+              <img src="https://b.zmtcdn.com/data/dish_photos/35a/9bddc01056f005fafcc484a2a531a35a.png"
+                alt="Chocolate Lava Cake" />
               <h5>Chocolate Sandwich</h5>
               <p>Decadent chocolate cake with a molten center</p>
               <div class="d-flex justify-content-between align-items-center">
                 <span class="price">₹79</span>
                 <div class="input-group" style="width: 120px">
-                  <button
-                    class="btn btn-outline-secondary"
-                    type="button"
-                    onclick="minusChocolate()"
-                  >
+                  <button class="btn btn-outline-secondary" type="button" onclick="minusChocolate()">
                     -
                   </button>
-                  <input
-                    type="text"
-                    class="form-control quantity-input"
-                    value="0"
-                    id="display-six"
-                  />
-                  <button
-                    class="btn btn-outline-secondary"
-                    type="button"
-                    onclick="addChocolate()"
-                  >
+                  <input type="text" class="form-control quantity-input" value="0" id="display-six" />
+                  <button class="btn btn-outline-secondary" type="button" onclick="addChocolate()">
                     +
                   </button>
                 </div>
@@ -949,33 +752,18 @@
         <div class="row">
           <div class="col-md-4">
             <div class="order-item">
-              <img
-                src="https://b.zmtcdn.com/data/dish_photos/9a4/503f814c2e37c1ead9bbf111147799a4.png"
-                alt="Grilled Salmon"
-              />
+              <img src="https://b.zmtcdn.com/data/dish_photos/9a4/503f814c2e37c1ead9bbf111147799a4.png"
+                alt="Grilled Salmon" />
               <h5>Veg Manchurian</h5>
               <p>Fresh Atlantic Noodles, grilled to perfection</p>
               <div class="d-flex justify-content-between align-items-center">
                 <span class="price">₹169</span>
                 <div class="input-group" style="width: 120px">
-                  <button
-                    class="btn btn-outline-secondary"
-                    type="button"
-                    onclick="minusManchurian()"
-                  >
+                  <button class="btn btn-outline-secondary" type="button" onclick="minusManchurian()">
                     -
                   </button>
-                  <input
-                    type="text"
-                    class="form-control quantity-input"
-                    value="0"
-                    id="display-seven"
-                  />
-                  <button
-                    class="btn btn-outline-secondary"
-                    type="button"
-                    onclick="addManchurian()"
-                  >
+                  <input type="text" class="form-control quantity-input" value="0" id="display-seven" />
+                  <button class="btn btn-outline-secondary" type="button" onclick="addManchurian()">
                     +
                   </button>
                 </div>
@@ -984,33 +772,18 @@
           </div>
           <div class="col-md-4">
             <div class="order-item">
-              <img
-                src="https://b.zmtcdn.com/data/dish_photos/649/a34e3d3698876bb3a6026d700abf2649.jpg"
-                alt="Truffle Pasta"
-              />
+              <img src="https://b.zmtcdn.com/data/dish_photos/649/a34e3d3698876bb3a6026d700abf2649.jpg"
+                alt="Truffle Pasta" />
               <h5>Cocktail Rice</h5>
               <p>Homemade fettuccine with black truffle cream sauce</p>
               <div class="d-flex justify-content-between align-items-center">
                 <span class="price">₹169</span>
                 <div class="input-group" style="width: 120px">
-                  <button
-                    class="btn btn-outline-secondary"
-                    type="button"
-                    onclick="minusRice()"
-                  >
+                  <button class="btn btn-outline-secondary" type="button" onclick="minusRice()">
                     -
                   </button>
-                  <input
-                    type="text"
-                    class="form-control quantity-input"
-                    value="0"
-                    id="display-eight"
-                  />
-                  <button
-                    class="btn btn-outline-secondary"
-                    type="button"
-                    onclick="addRice()"
-                  >
+                  <input type="text" class="form-control quantity-input" value="0" id="display-eight" />
+                  <button class="btn btn-outline-secondary" type="button" onclick="addRice()">
                     +
                   </button>
                 </div>
@@ -1019,33 +792,18 @@
           </div>
           <div class="col-md-4">
             <div class="order-item">
-              <img
-                src="https://b.zmtcdn.com/data/dish_photos/16f/4584660b61c73c70f83ce59a789d716f.png"
-                alt="Chocolate Lava Cake"
-              />
+              <img src="https://b.zmtcdn.com/data/dish_photos/16f/4584660b61c73c70f83ce59a789d716f.png"
+                alt="Chocolate Lava Cake" />
               <h5>Cold Coffee</h5>
               <p>Decadent chocolate cake with a molten center</p>
               <div class="d-flex justify-content-between align-items-center">
                 <span class="price">₹69</span>
                 <div class="input-group" style="width: 120px">
-                  <button
-                    class="btn btn-outline-secondary"
-                    type="button"
-                    onclick="minusCoffee()"
-                  >
+                  <button class="btn btn-outline-secondary" type="button" onclick="minusCoffee()">
                     -
                   </button>
-                  <input
-                    type="text"
-                    class="form-control quantity-input"
-                    value="0"
-                    id="display-nine"
-                  />
-                  <button
-                    class="btn btn-outline-secondary"
-                    type="button"
-                    onclick="addCoffee()"
-                  >
+                  <input type="text" class="form-control quantity-input" value="0" id="display-nine" />
+                  <button class="btn btn-outline-secondary" type="button" onclick="addCoffee()">
                     +
                   </button>
                 </div>
@@ -1054,11 +812,8 @@
           </div>
         </div>
         <div class="text-center mt-4">
-          <a
-            href="https://www.zomato.com/katol/orangelo-cafe-bistro-katol-locality/order"
-          >
-            <button class="btn btn-lg btn-custom">Order on Zomato</button></a
-          >
+          <a href="https://www.zomato.com/katol/orangelo-cafe-bistro-katol-locality/order">
+            <button class="btn btn-lg btn-custom">Order on Zomato</button></a>
         </div>
       </div>
     </section>
@@ -1074,9 +829,7 @@
             <div class="card kitchen-item">
               <img
                 src="https://6amcity.brightspotcdn.com/dims4/default/9fff2e4/2147483647/strip/true/crop/480x270+0+0/resize/1000x563!/quality/90/?url=https%3A%2F%2Fk1-prod-sixam-city.s3.us-east-2.amazonaws.com%2Fbrightspot%2F9a%2F31%2F04637f5d495e9421fcb071dda50c%2F2a-pizza-wheel-greenville-technical-college-gvl.gif"
-                class="card-img-top"
-                alt="Cooking Process 3"
-              />
+                class="card-img-top" alt="Cooking Process 3" />
 
               <div class="card-body">
                 <h5 class="card-title">Artisanal Pizza Making</h5>
@@ -1090,11 +843,8 @@
 
           <div class="col-md-4 mb-4">
             <div class="card kitchen-item">
-              <img
-                src="https://i.pinimg.com/originals/8b/b3/87/8bb387ee878eddeb23baea344d4e13af.gif"
-                class="card-img-top"
-                alt="Cooking Process 2"
-              />
+              <img src="https://i.pinimg.com/originals/8b/b3/87/8bb387ee878eddeb23baea344d4e13af.gif"
+                class="card-img-top" alt="Cooking Process 2" />
               <div class="card-body">
                 <h5 class="card-title">Pasta Perfection</h5>
                 <p class="card-text">
@@ -1106,11 +856,8 @@
 
           <div class="col-md-4 mb-4">
             <div class="card kitchen-item">
-              <img
-                src="https://media1.giphy.com/media/XIixg3mYzPy7n1YgSJ/giphy-downsized-large.gif"
-                class="card-img-top"
-                alt="Cooking Process 1"
-              />
+              <img src="https://media1.giphy.com/media/XIixg3mYzPy7n1YgSJ/giphy-downsized-large.gif"
+                class="card-img-top" alt="Cooking Process 1" />
               <div class="card-body">
                 <h5 class="card-title">Sizzling Stir-Fry</h5>
                 <p class="card-text">
@@ -1130,13 +877,8 @@
         <h2 class="text-center section-title">About Orangelo</h2>
         <div class="row align-items-center">
           <div class="col-md-6 mb-4 mb-md-0">
-            <img
-              src="https://img.restaurantguru.com/w320/h220/rcc1-Orangelo-Cafe-and-Bistro-interior.jpg"
-              height="400vh"
-              width="600vw"
-              style="border-radius: 15px"
-              alt="Restaurant Interior"
-            />
+            <img src="https://img.restaurantguru.com/w320/h220/rcc1-Orangelo-Cafe-and-Bistro-interior.jpg"
+              height="400vh" width="600vw" style="border-radius: 15px" alt="Restaurant Interior" />
           </div>
           <div class="col-md-6">
             <h3 class="mb-4">Our Story</h3>
@@ -1158,12 +900,7 @@
               special moments. Join us for an extraordinary culinary journey
               that will delight your senses and warm your heart.
             </p>
-            <a
-              href="#reservation"
-              class="btn btn-custom mt-3"
-              onclick="reservation()"
-              >Make a Reservation</a
-            >
+            <a href="#reservation" class="btn btn-custom mt-3" onclick="reservation()">Make a Reservation</a>
           </div>
         </div>
       </div>
@@ -1210,22 +947,15 @@
           </div>
         </div>
         <div class="text-center mt-4">
-          <a href="#contact" class="btn btn-lg btn-custom"
-            >Inquire About Events</a
-          >
+          <a href="#contact" class="btn btn-lg btn-custom">Inquire About Events</a>
         </div>
       </div>
     </div>
     <!-- MAP SECTION -->
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14872.040348063152!2d78.5855404!3d21.2710683!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd459aa5ea25bfd%3A0xce1119880a72ef9f!2sOrangelo%20Cafe%20%26%20Bistro!5e0!3m2!1sen!2sin!4v1722040529095!5m2!1sen!2sin"
-      width="100%"
-      height="450"
-      style="border: 0"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-    ></iframe>
+      width="100%" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
     <section id="contact" class="contact-section">
       <div class="container">
         <h2 class="text-center section-title">Get in Touch</h2>
@@ -1266,16 +996,9 @@
       <div class="container">
         <p>&copy; 2024 Orangelo Restaurant. All rights reserved.</p>
         <div class="mt-3" style="font-size: xx-large">
-          <a
-            href="https://www.facebook.com/orangelocafe/?locale=hi_IN"
-            class="text-white me-3"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
-          <a
-            href="https://www.instagram.com/orangelocafe/"
-            class="text-white me-3"
-            ><i class="fab fa-instagram"></i
-          ></a>
+          <a href="https://www.facebook.com/orangelocafe/?locale=hi_IN" class="text-white me-3"><i
+              class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/orangelocafe/" class="text-white me-3"><i class="fab fa-instagram"></i></a>
           <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
         </div>
       </div>
@@ -1417,5 +1140,6 @@
         }
       }
     </script>
-  </body>
+</body>
+
 </html>
