@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>enjoyprogramming.com</title>
+  <!-- CSS and JS links -->
+  <link rel="icon" type="image/x-icon" href="../assets/logo/ep-logo.jpeg" />
+  <link rel="stylesheet" href="hometwo.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/bootstrap-icons.svg" />
+  <!-- Style switchers -->
+  <link rel="stylesheet" href="../helper/styleswitchers.css" />
+  <!-- Font family -->
+  <link rel="stylesheet" href="../helper/apptheme.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<div>
+</div>
+
+<body class="dark">
+  <!-- Main container start -->
+  <div class="main-container ">
+    <!-- Aside start -->
+    <div class="aside font-family-seconday">
+      <div class="logo">
+        <img src="../assets/logo/resized-logo.jpeg" height="140px" width="auto" style="border-radius: 50%;" />
+      </div>
+      <div class="nav-toggler">
+        <span></span>
+      </div>
+      <!-- +++++ SIDE NAVBAR START+++++ -->
+      <ul class="nav font-family-seconday">
+        <li>
+          <a href="home.html"><i class="fa fa-home"></i>Home</a>
+        </li>
+        <li>
+          <a href="portfolio.html"><i class="fa fa-briefcase"></i>Portfolio</a>
+        </li>
+        <li>
+          <a href="courses.html" class="active"><i class="fa fa-book"></i>Courses</a>
+        </li>
+        <li>
+          <a href="pictures.html"><i class="fa-solid fa-image"></i>Pictures</a>
+        </li>
+        <li>
+          <a href="certificate.html"><i class="fa-solid fa-certificate"></i>Certificates</a>
+        </li>
+        <li>
+          <a href="quiz.html"><i class="fa fa-question-circle"></i>Quiz</a>
+        </li>
+        <li>
+          <a href="contact.html"><i class="fa fa-comments"></i>Contact</a>
+        </li>
+      </ul>
+
+      <a href="../index.html" class="btn" style="margin-top: 40px;">Back to Home</a>
+
+      <!-- +++++ SIDE NAVBAR END +++++ -->
+    </div>
+    <!-- Aside end -->
+
+    <!-- Main content start -->
+    <div class="main-content">
+      <!-- ====================================== COURSES SECTION START======================================== -->
+      <section class="about section active" id="services">
+        <div class="container">
+          <div class="row">
+            <div class="section-title padd-15">
+              <h2>Courses</h2>
+            </div>
+          </div>
+          <div class="row course-levels">
+            <div class="main">
+              <!-- Phase I Start-->
+              <div class="column">
+                <div class="content">
+                  <div class="content-1">
+                    <div class="top-section font-family-seconday">
+                      <h4>Crash Course</h4>
+                      <h5>1 Live Project</h5>
+                    </div>
+                    <div class="fees font-family-seconday">
+                      <p><strong>Fee Structure:</strong> ₹5000 - ₹12000</p>
+                      <p><strong>Duration:</strong> 1 Month / 2 Months</p>
+                    </div>
+                  </div>
+                  <div class="cont-2 font-family-seconday">
+                    <button onclick="togglePhase('phase1')" class="dropdown-btn">
+                      <span>Read More </span>
+                      <span class="arrow">▼</span>
+                    </button>
+                  </div>
+
+                </div>
+              </div>
+              <!-- Phase I End-->
+              <!-- Phase II Start -->
+              <div class="column">
+                <div class="content">
+                  <div class="content-1">
+                    <div class="top-section font-family-seconday">
+                      <h4>Full Stack Development</h4>
+                      <h5>Live Projects</h5>
+                    </div>
+                    <div class="fees font-family-seconday">
+                      <p><strong>Fee Structure:</strong> ₹92,000</p>
+                      <p><strong>Duration:</strong> 16 Months</p>
+                    </div>
+                  </div>
+                  <div class="cont-2 font-family-seconday">
+                    <button onclick="togglePhase('phase2')" class="dropdown-btn">
+                      <span>Read More </span>
+                      <span class="arrow">▼</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Phase II End -->
+              <!-- Phase III Start-->
+              <div class="column">
+                <div class="content">
+                  <div class="content-1">
+                    <div class="top-section font-family-seconday">
+                      <h4>Internship</h4>
+                      <h5>Short </h5>
+                    </div>
+                    <div class="fees font-family-seconday">
+                      <p><strong>Fee Structure:</strong> ₹12,000 </p>
+                      <p><strong>Duration:</strong> 1 Month / 2 Months</p>
+                    </div>
+                  </div>
+                  <div class="cont-2 font-family-seconday">
+                    <button onclick="togglePhase('phase3')" class="dropdown-btn">
+                      <span>Read More </span>
+                      <span class="arrow">▼</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Phase III End-->
+              <!-- Phase IV Start -->
+              <div class="column">
+                <div class="content">
+                  <div class="content-1">
+                    <div class="top-section font-family-seconday">
+                      <h4>Internship</h4>
+                      <h5>6 Months / 12 Months</h5>
+                    </div>
+                    <div class="fees font-family-seconday">
+                      <p><strong>Fee Structure:</strong>₹46,000, ₹92,000</p>
+                      <p><strong>Duration:</strong> 6 Months / 12 Months</p>
+                    </div>
+                  </div>
+                  <div class="cont-2 font-family-seconday">
+                    <button onclick="togglePhase('phase4')" class="dropdown-btn">
+                      <span>Read More </span>
+                      <span class="arrow">▼</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Phase IV End -->
+              <!-- Phase V Start -->
+              <div class="column">
+                <div class="content">
+                  <div class="content-1">
+                    <div class="top-section font-family-seconday">
+                      <h4>Experience Developer</h4>
+                      <h5>One To One Training with Live Project Experience of 2 Years</h5>
+                    </div>
+                    <div class="fees font-family-seconday">
+                      <p><strong>Fee Structure:</strong> ₹2.50L</p>
+                      <p><strong>Duration:</strong> 3840 Hours / 2 Years</p>
+                    </div>
+                  </div>
+                  <div class="cont-2 font-family-seconday">
+                    <button onclick="togglePhase('phase5')" class="dropdown-btn">
+                      <span>Read More </span>
+                      <span class="arrow">▼</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- Phase V End -->
+            </div>
+            <!-- End .course-levels -->
+            <!-- Icons for each phase -->
+            <div class="phase-tables">
+              <!-- Phase I Table -->
+              <div class="icon-section">
+                <!-- Phase I Icons -->
+                <div id="phase1-icons" class="icon-row phase-icons" style="display: none; margin-left: 15px;">
+                  <div class="container">
+                    <!-- First Section -->
+                    <h2 style="text-align: center;">Pick any one of the following</h2>
+                    <div class="card mb-3"
+                      style="background-color: rgba(0, 0, 0, 0); color: gray;  border: solid var(--theme-color); padding: 20px;">
+                      <h2 class="table-caption">Web Development</h2> <br>
+                      <div class="card-body">
+                        <div class="row text-center align-items-center">
+                          <div class="col-md-4 mb-3 icon-container">
+                            <img src="../assets/images/icons/html-logo.png" alt="html logo" class="icon-img-2">
+                            <h5 class="card-title mt-2">HTML 5</h5>
+                          </div>
+                          <div class="col-md-4 mb-3 icon-container">
+                            <img src="../assets/images/icons/css-logo.png" alt="css logo" class="icon-img-2">
+                            <h5 class="card-title mt-2">CSS 3</h5>
+                          </div>
+                          <div class="col-md-4 mb-3 icon-container">
+                            <img src="../assets/images/icons/bootstrap-logo.png" alt="bootstrap-logo"
+                              class="icon-img-2">
+                            <h5 class="card-title mt-2">Bootstrap</h5>
+                          </div>
+                          <div class="col-md-4 mb-3 icon-container">
+                            <img src="../assets/images/icons/github-logo.png" alt="github-logo" class="icon-img-2">
+                            <h5 class="card-title mt-2"> Github</h5>
+                          </div>
+                        </div>
+                        <br>
+                        <strong>Durations :</strong> 1 month
+                        <br>
+                        <strong>Fees :</strong> ₹5,000
+                      </div>
+                    </div>
+                    <!-- OR separator -->
+                    <div class="text-center mb-3" style="text-align: center;">
+                      <strong
+                        style="background-color: #1A9F45; padding: 7px 10px; border-radius: 60%; color: #ffffff;">OR</strong>
+                    </div>
+
+                    <!-- Second Section -->
+                    <div class="card mb-3"
+                      style="background-color: rgba(0, 0, 0, 0); color: gray;  border: solid var(--theme-color); padding: 20px;">
+                      <h2 class="table-caption">Programming Language (Any one from below)</h2> <br>
+                      <div class="card-body">
+                        <div class="row text-center align-items-center">
+                          <div class="col-md-4 mb-3 icon-container">
+                            <img src="../assets/images/icons/python-logo.png" alt="Python logo" class="icon-img-2">
+                            <h5 class="card-title mt-2">Python</h5>
+                          </div>
+                          <div class="col-md-4 mb-3 icon-container">
+                            <img src="../assets/images/icons/cplus-logo.png" alt="C++ logo" class="icon-img-2">
+                            <h5 class="card-title mt-2">C++</h5>
+                          </div>
+                          <div class="col-md-4 mb-3 icon-container">
+                            <img src="../assets/images/icons/java-logo.png" alt="Java logo" class="icon-img-2">
+                            <h5 class="card-title mt-2">Java</h5>
+                          </div>
+                          <div class="col-md-4 mb-3 icon-container">
+                            <img src="../assets/images/icons/js-logo.png" alt="JavaScript logo" class="icon-img-2">
+                            <h5 class="card-title mt-2">JavaScript</h5>
+                          </div>
+                          <div class="col-md-4 mb-3 icon-container">
+                            <img src="../assets/images/icons/ts-logo.png" alt="JavaScript logo" class="icon-img-2">
+                            <h5 class="card-title mt-2">TypeScript</h5>
+                          </div>
+                          <div class="col-md-4 mb-3 icon-container">
+                            <img src="../assets/images/icons/ruby-logo.png" alt="JavaScript logo" class="icon-img-2">
+                            <h5 class="card-title mt-2">Ruby</h5>
+                          </div>
+                          <div class="col-md-4 mb-3 icon-container">
+                            <img src="../assets/images/icons/swift-logo.png" alt="JavaScript logo" class="icon-img-2">
+                            <h5 class="card-title mt-2">Swift</h5>
+                          </div>
+                          <div class="col-md-4 mb-3 icon-container">
+                            <img src="../assets/images/icons/c-lng-logo.png" alt="JavaScript logo" class="icon-img-2">
+                            <h5 class="card-title mt-2">C</h5>
+                          </div>
+                        </div>
+                        <br>
+                        <strong>Durations :</strong> 1 month
+                        <br>
+                        <strong>Fees :</strong> ₹10,000
+                      </div>
+                    </div>
+
+                    <!-- OR separator -->
+                    <div class="text-center mb-3" style="text-align: center;">
+                      <strong
+                        style="background-color: #1A9F45; padding: 7px 10px; border-radius: 60%; color: #ffffff;">OR</strong>
+                    </div>
+                    <!-- Third Section -->
+                    <div class="card mb-3"
+                      style="background-color: rgba(0, 0, 0, 0); color: gray;  border: solid var(--theme-color); padding: 20px;">
+                      <h2 class="table-caption">Mobile Development</h2> <br>
+                      <div class="card-body">
+                        <div class="row text-center align-items-center">
+                          <div class="col-md-4 mb-3 icon-container">
+                            <img src="../assets/images/icons/android-logo.png" alt="Python logo" class="icon-img-2">
+                            <h5 class="card-title mt-2">Android Development</h5>
+                          </div>
+                          <div class="col-md-4 mb-3 icon-container">
+                            <img src="../assets/images/icons/ios-logo.png" alt="C++ logo" class="icon-img-2">
+                            <h5 class="card-title mt-2">iOS Development</h5>
+                          </div>
+                          <div class="col-md-4 mb-3 icon-container">
+                            <img src="../assets/images/icons/mobile-designing.png" alt="Java logo" class="icon-img-2">
+                            <h5 class="card-title mt-2">Mobile Designing</h5>
+                          </div>
+                        </div>
+                        <br>
+                        <strong>Durations :</strong> 2 month
+                        <br>
+                        <strong>Fees :</strong> ₹12,000
+                      </div>
+                    </div>
+                    <!-- OR separator -->
+                    <div class="text-center mb-3" style="text-align: center;">
+                      <strong
+                        style="background-color: #1A9F45; padding: 7px 10px; border-radius: 60%; color: #ffffff;">OR</strong>
+                    </div>
+                    <!-- Fourth Section -->
+                    <div class="card mb-3"
+                      style="background-color: rgba(0, 0, 0, 0); color: gray;  border: solid var(--theme-color); padding: 20px;">
+                      <h2 class="table-caption">Manual Testing</h2> <br>
+                      <div class="card-body">
+                        <div class="row text-center align-items-center">
+                          <div class="col-md-4 mb-3 icon-container">
+                            <img src="../assets/images/icons/web-app-testing.png" alt="Web App testing logo"
+                              class="icon-img-2">
+                            <h5 class="card-title mt-2">Web App testing</h5>
+                          </div>
+                          <div class="col-md-4 mb-3 icon-container">
+                            <img src="../assets/images/icons/mobile-testing.png" alt="Mobile testing logo"
+                              class="icon-img-2">
+                            <h5 class="card-title mt-2">Mobile testing</h5>
+                          </div>
+                          <div class="col-md-4 mb-3 icon-container">
+                            <img src="../assets/images/icons/api-testing-logo.png" alt="API Testing logo"
+                              class="icon-img-2">
+                            <h5 class="card-title mt-2">API Testing</h5>
+                          </div>
+                          <div class="col-md-4 mb-3 icon-container">
+                            <img src="../assets/images/icons/database-testing.png" alt="DB Testing logo"
+                              class="icon-img-2">
+                            <h5 class="card-title mt-2"> DB Testing</h5>
+                          </div>
+                        </div>
+                        <br>
+                        <strong>Durations :</strong> 2 month
+                        <br>
+                        <strong>Fees :</strong> ₹10,000
+                      </div>
+                    </div>
+                    <!-- OR separator -->
+                    <div class="text-center mb-3" style="text-align: center;">
+                      <strong
+                        style="background-color: #1A9F45; padding: 7px 10px; border-radius: 60%; color: #ffffff;">OR</strong>
+                    </div>
+                    <!-- Fourth Section -->
+                    <div class="card mb-3"
+                      style="background-color: rgba(0, 0, 0, 0); color: gray;  border: solid var(--theme-color); padding: 20px;">
+                      <h2 class="table-caption">Automation ( Any one )</h2> <br>
+                      <div class="card-body">
+                        <div class="row text-center align-items-center">
+                          <div class="col-md-4 mb-3 icon-container">
+                            <img src="../assets/images/icons/selenium-logo.png" alt="Web App testing logo"
+                              class="icon-img-2">
+                            <h5 class="card-title mt-2">Selenium</h5>
+                          </div>
+                          <div class="col-md-4 mb-3 icon-container">
+                            <img src="../assets/images/icons/cypress-logo.png" alt="Mobile testing logo"
+                              class="icon-img-2">
+                            <h5 class="card-title mt-2">Cypress</h5>
+                          </div>
+                        </div>
+                        <br>
+                        <strong>Durations :</strong> 2 month
+                        <br>
+                        <strong>Fees :</strong> ₹12,000
+                        <br>
+                        <strong> Prerequisites :</strong> Manual Testing, JavaScript, Java.
+                      </div>
+                    </div>
+                    <!-- OR separator -->
+                    <div class="text-center mb-3" style="text-align: center;">
+                      <strong
+                        style="background-color: #1A9F45; padding: 7px 10px; border-radius: 60%; color: #ffffff;">OR</strong>
+                    </div>
+                    <!-- Fourth Section -->
+                    <div class="card mb-3"
+                      style="background-color: rgba(0, 0, 0, 0); color: gray;  border: solid var(--theme-color); padding: 20px;">
+                      <h2 class="table-caption"> DBMS</h2> <br>
+                      <div class="card-body">
+                        <div class="row text-center align-items-center">
+                          <div class="col-md-4 mb-3 icon-container">
+                            <img src="../assets/images/icons/python-logo.png" alt="Web App testing logo"
+                              class="icon-img-2">
+                            <h5 class="card-title mt-2">Python</h5>
+                          </div>
+                          <div class="col-md-4 mb-3 icon-container">
+                            <img src="../assets/images/icons/database-logo.png" alt="Mobile testing logo"
+                              class="icon-img-2">
+                            <h5 class="card-title mt-2">DBMS</h5>
+                          </div>
+                        </div>
+                        <br>
+                        <strong>Durations :</strong> 2 month
+                        <br>
+                        <strong>Fees :</strong> ₹12,000
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Phase II Icons -->
+                <!-- <div id="phase2-icons" class="icon-row phase-icons" style="display: none;">
+                  <div class="container">
+                  </div>
+                </div> -->
+
+                <!-- Phase III Icons -->
+                <div id="phase3-icons" class="icon-row phase-icons" style="display: none; margin-left: 15px;">
+
+                  <!-- <img src="../assets/images/icons/soft-designing.png" alt="software Designing  Icon" class="icon">
+                  <img src="../assets/images/icons/reactnative.webp" alt="react js Icon" class="icon">
+                  <img src="../assets/images/icons/detabase.png" alt="database  Icon" class="icon">
+                  <img src="../assets/images/icons/scm-logo.jpg" alt="SCM Icon" class="icon">
+                  <img src="../assets/images/icons/java-lng.png" alt="java Icon" class="icon">
+                  <img src="../assets/images/icons/swift-logo.png" alt="Swift Icon" class="icon">
+                  <img src="../assets/images/icons/ios-dev.jpeg" alt="ios Icon" class="icon">
+                  <img src="../assets/images/icons/android-dev.webp" alt="android Icon" class="icon"> -->
+                  <!-- Add more icons as needed -->
+                </div>
+
+                <!-- Phase IV Icons -->
+                <div id="phase4-icons" class="icon-row phase-icons" style="display: none; margin-left: 15px;">
+                  <!-- <img src="../assets/images/icons/pmt-logo.jpg" alt="pmt" class="icon">
+                  <img src="../assets/images/icons/node-js.png" alt="node js" class="icon">
+                  <img src="../assets/images/icons/c-lang.png" alt="c-lang js" class="icon">
+                  <img src="../assets/images/icons/swift-logo.png" alt="swift-logojs" class="icon">
+                  <img src="../assets/images/icons/automation-logo.webp" alt="automation js" class="icon">
+                  <img src="../assets/images/icons/detabase.png" alt="detabase js" class="icon">
+                  <img src="../assets/images/icons/reactnative.webp" alt="reactnative js" class="icon">
+                  <img src="../assets/images/icons/python-logo.png" alt="python js" class="icon"> -->
+                  <!-- Add more icons as needed -->
+                </div>
+
+                <!-- Phase V Icons -->
+                <div id="phase5-icons" class="icon-row phase-icons" style="display: none; margin-left: 15px;">
+                  <!-- <img src="../assets/images/icons/robotics-logo.jpeg" alt="Vue Icon" class="icon">
+                  <img src="../assets/images/icons/node-js.png" alt="GraphQL Icon" class="icon">
+                  <img src="../assets/images/icons/ai-logo.jpg" alt="GraphQL Icon" class="icon">
+                  <img src="../assets/images/icons/python-logo.png" alt="GraphQL Icon" class="icon">
+                  <img src="../assets/images/icons/deployment.png" alt="Angular Icon" class="icon">
+                  <img src="../assets/images/icons/datascience.png" alt="GraphQL Icon" class="icon">
+                  <img src="../assets/images/icons/data-analytics.png" alt="GraphQL Icon" class="icon">
+                  <img src="../assets/images/icons/cyber-security.png" alt="GraphQL Icon" class="icon">
+                  <img src="../assets/images/icons/product-management.png" alt="GraphQL Icon" class="icon">
+                  <img src="../assets/images/icons/interview-logo.png" alt="GraphQL Icon" class="icon">
+                  <img src="../assets/images/icons/detabase.png" alt="GraphQL Icon" class="icon">
+                  <img src="../assets/images/icons/reactnative.webp" alt="GraphQL Icon" class="icon"> -->
+                  <!-- Add more icons as needed -->
+                </div>
+              </div>
+              <!-- End .icon-section -->
+              <div id="phase1-table" class="table-container phase-table" style="display: none; margin-left: 20px;">
+                <!-- Notes Section start-->
+                <div class="row padd-15">
+                  <h3>Prerequisites</h3>
+                  <div class="about-content padd-15" style="color: rgb(112, 112, 112)">
+                    • Students studying below 12th grade <br>
+                    • Basic understanding of computers and internet usage <br>
+                    • Enthusiasm for learning new technologies<br>
+                    • No prior coding experience required<br>
+                  </div>
+                </div>
+                <div class="row padd-15">
+                  <h3>Highlight</h3>
+                </div>
+                <div class="row">
+                  <div class="about-content padd-15" style="color: rgb(112, 112, 112)">
+                    • Introduction to Programming: Learn the basics of coding using any of beginner-friendly languages
+                    like Java, JavaScript, Python, C, C++, Swift, Ruby<br>
+                    • Interactive Projects: Work on fun and engaging projects to apply what you've learned.<br>
+                    • Problem-Solving Skills: Develop critical thinking and problem-solving abilities through coding
+                    challenges.<br>
+                    • Collaborative Learning: Participate in group activities and peer coding sessions.<br>
+                    • Mentorship: Receive guidance and support from experienced instructors.<br>
+                    • Final Project: Create a final project to showcase your new skills.
+                  </div>
+                </div>
+                <!-- Notes Section End-->
+                <!-- Terms & Conditions Section Start -->
+                <div class="row padd-15">
+                  <h3>Terms & Conditions</h3>
+                </div>
+                <div class="row">
+                  <div class="about-content padd-15" style="color: rgb(112, 112, 112)">
+                    <p>1. The student can ask for a <u>refund within 30 days</u> of payment without any question
+                      asked.
+                    </p>
+                    <p>2. The institute needs to refund within 30 days of the refund filled by the students.</p>
+                    <p>3. The institute reserves a right to cancle the admission in case of misbehaviour or incomplete
+                      assignments.</p>
+                    <p>4. In case of completion of level 5, students need to file for a job and the institute needs to
+                      provide interviews to candidates within 180 days. In case of failure students can ask for 50% of
+                      refund of total paid fee.</p>
+                    <p>5. The student cannot roll in institute for any courcse if he cancles or gets terminated for
+                      any
+                      of
+                      level or any of course offered by Enjoy Programming.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Terms & Conditions Section End -->
+            </div>
+
+            <!-- Phase II Table -->
+            <div id="phase2-table" class="table-container phase-table" style="display: none; margin-left: 15px;">
+              <h2 class="table-caption" id="phase2-icons" style="text-align: center;">Courses Table</h2>
+              <div class="table-container">
+                <table class="course-table">
+                  <thead>
+                    <tr>
+                      <th>LEVEL 01</th>
+                      <th>LEVEL 02</th>
+                      <th>LEVEL 03</th>
+                      <th>LEVEL 04</th>
+                      <th>LEVEL 05</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><i class="fas fa-book course-icon"></i>Fundamentals</td>
+                      <td>
+                        <i class="fab fa-android course-icon"></i>Android Development
+                        (Intermediate)
+                        <!-- <i class="fas fa-pencil-ruler course-icon"></i>Software Designing -->
+                      </td>
+                      <td><i class="fas fa-code-branch course-icon"></i>SCM</td>
+                      <td><i class="fas fa-tasks course-icon"></i>PMT</td>
+                      <td><i class="fas fa-rocket course-icon"></i>Deployment</td>
+                    </tr>
+                    <tr>
+                      <td><i class="fas fa-code course-icon"></i>HTML</td>
+
+                      <td>
+                        <i class="fab fa-apple course-icon"></i>iOS Development (Beginner)
+                        <!-- <i class="fas fa-database course-icon"></i>Database (Beginner) -->
+                      </td>
+                      <td>
+                        <i class="fas fa-database course-icon"></i>DBMS (Intermediate)
+                      </td>
+                      <td>
+                        <i class="fas fa-database course-icon"></i>Database (Advance)
+                      </td>
+                      <td>
+                        <i class="fa-solid fa-brain course-icon"></i>Machine Learning
+                        (Basics)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><i class="fab fa-css3 course-icon"></i>CSS</td>
+                      <td><i class="fab fa-java course-icon"></i>Java (Intermediate)</td>
+                      <td>
+                        <i class="fas fa-robot course-icon"></i>Automation (Beginner)
+                      </td>
+                      <td><i class="fa-solid fa-check course-icon"></i>Unit Testing</td>
+                      <td><i class="fab fa-python course-icon"></i>Python</td>
+                    </tr>
+                    <tr>
+                      <td><i class="fab fa-js course-icon"></i>JavaScript (Beginner)</td>
+                      <td><i class="fab fa-js course-icon"></i>JavaScript (Expert)</td>
+                      <td>
+                        <i class="fab fa-android course-icon"></i>Android Development
+                        (Professional)
+                      </td>
+                      <td>
+                        <i class="fas fa-user-tie course-icon"></i>Interview Preparation
+                      </td>
+                      <td>
+                        <i class="fa-solid fa-pen-nib course-icon"></i>Design Patterns
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <i class="fas fa-clipboard-check course-icon"></i>Manual Testing
+                        (Beginner)
+                      </td>
+                      <td><i class="fab fa-swift course-icon"></i>Swift (Beginner)</td>
+                      <td><i class="fab fa-node-js course-icon"></i>Node JS</td>
+                      <td><i class="fab fa-react course-icon"></i>React JS</td>
+                      <td><i class="fas fa-user-tie course-icon"></i>Mock Interview</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>
+                        <i class="fas fa-clipboard-check course-icon"></i>Manual Testing
+                        (Professional)
+                      </td>
+                      <td>
+                        <i class="fab fa-apple course-icon"></i>iOS Development
+                        (Professional)
+                      </td>
+                      <td>
+                        <i class="fab fa-react course-icon"></i>React Native (Beginner)
+                      </td>
+                      <td>
+                        <i class="fab fa-react course-icon"></i>React Native (Expert)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td><i class="fas fa-sun course-icon"></i>UI Designing</td>
+                      <td></td>
+                      <td><i class="fas fa-robot course-icon"></i>Automation (Expert)</td>
+                      <td>
+                        <i class="fa-solid fa-newspaper course-icon"></i>Software Articulm
+                      </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><i class="fa-brands fa-vuejs course-icon"></i>Vue JS</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><span class="subheading">Fees : 12K</span></td>
+                      <td><span class="subheading">Fees : 14K</span></td>
+                      <td><span class="subheading">Fees : 18K</span></td>
+                      <td><span class="subheading">Fees : 22K</span></td>
+                      <td><span class="subheading">Fees : 26K</span></td>
+                    </tr>
+                    <tr>
+                      <td><span class="subheading">Duration : 60 days</span></td>
+                      <td><span class="subheading">Duration : 70 days</span></td>
+                      <td><span class="subheading">Duration : 90 days</span></td>
+                      <td><span class="subheading">Duration : 90 days</span></td>
+                      <td><span class="subheading">Duration : 120 days</span></td>
+                    </tr>
+                    <tr>
+                      <td><span class="subheading">live Project</span></td>
+                      <td><span class="subheading">live Project</span></td>
+                      <td><span class="subheading">live Project</span></td>
+                      <td><span class="subheading">live Project</span></td>
+                      <td><span class="subheading">live Project</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- Notes Section start-->
+              <div class="row padd-15">
+                <h3>Prerequisites</h3>
+                <div class="about-content padd-15" style="color: rgb(112, 112, 112)">
+                  • Students studying below 12th grade <br>
+                  • Basic understanding of computers and internet usage <br>
+                  • Enthusiasm for learning new technologies<br>
+                  • No prior coding experience required<br>
+                </div>
+              </div>
+              <div class="row padd-15">
+                <h3>Highlight</h3>
+              </div>
+              <div class="row">
+                <div class="about-content padd-15" style="color: rgb(112, 112, 112)">
+                  • Introduction to Programming: Learn the basics of coding using any of beginner-friendly languages
+                  like Java, JavaScript, Python, C, C++, Swift, Ruby<br>
+                  • Interactive Projects: Work on fun and engaging projects to apply what you've learned.<br>
+                  • Problem-Solving Skills: Develop critical thinking and problem-solving abilities through coding
+                  challenges.<br>
+                  • Collaborative Learning: Participate in group activities and peer coding sessions.<br>
+                  • Mentorship: Receive guidance and support from experienced instructors.<br>
+                  • Final Project: Create a final project to showcase your new skills.
+                </div>
+              </div>
+              <!-- Notes Section End-->
+              <!-- Terms & Conditions Section Start -->
+              <div class="row padd-15">
+                <h3>Terms & Conditions</h3>
+              </div>
+              <div class="row">
+                <div class="about-content padd-15" style="color: rgb(112, 112, 112)">
+                  <p>1. The student can ask for a <u>refund within 30 days</u> of payment without any question
+                    asked.
+                  </p>
+                  <p>2. The institute needs to refund within 30 days of the refund filled by the students.</p>
+                  <p>3. The institute reserves a right to cancle the admission in case of misbehaviour or incomplete
+                    assignments.</p>
+                  <p>4. In case of completion of level 5, students need to file for a job and the institute needs to
+                    provide interviews to candidates within 180 days. In case of failure students can ask for 50% of
+                    refund of total paid fee.</p>
+                  <p>5. The student cannot roll in institute for any courcse if he cancles or gets terminated for
+                    any
+                    of
+                    level or any of course offered by Enjoy Programming.</p>
+                </div>
+              </div>
+              <!-- Terms & Conditions Section End -->
+            </div>
+
+            <!-- Phase III Table -->
+            <div id="phase3-table" class="table-container phase-table" style="display: none; margin-left: 15px;">
+              <div class="container">
+                <!-- First Section -->
+                <h2 style="text-align: center;">Pick any one of the following</h2>
+                <div class="card mb-3"
+                  style="background-color: rgba(0, 0, 0, 0); color: gray;  border: solid var(--theme-color); padding: 20px;">
+                  <h2 class="table-caption">Web Development</h2> <br>
+                  <div class="card-body">
+                    <div class="row text-center align-items-center">
+                      <div class="col-md-4 mb-3 icon-container">
+                        <img src="../assets/images/icons/html-logo.png" alt="html logo" class="icon-img-2">
+                        <h5 class="card-title mt-2">HTML 5</h5>
+                      </div>
+                      <div class="col-md-4 mb-3 icon-container">
+                        <img src="../assets/images/icons/css-logo.png" alt="css logo" class="icon-img-2">
+                        <h5 class="card-title mt-2">CSS 3</h5>
+                      </div>
+                      <div class="col-md-4 mb-3 icon-container">
+                        <img src="../assets/images/icons/bootstrap-logo.png" alt="bootstrap-logo" class="icon-img-2">
+                        <h5 class="card-title mt-2">Bootstrap</h5>
+                      </div>
+                      <div class="col-md-4 mb-3 icon-container">
+                        <img src="../assets/images/icons/github-logo.png" alt="github-logo" class="icon-img-2">
+                        <h5 class="card-title mt-2"> Github</h5>
+                      </div>
+                    </div>
+                    <br>
+                    <strong>Durations :</strong> 1 month
+                    <br>
+                    <strong>Fees :</strong> ₹5,000
+                  </div>
+                </div>
+                <!-- OR separator -->
+                <div class="text-center mb-3" style="text-align: center;">
+                  <strong
+                    style="background-color: #1A9F45; padding: 7px 10px; border-radius: 60%; color: #ffffff;">OR</strong>
+                </div>
+
+                <!-- Second Section -->
+
+                <div class="card mb-3"
+                  style="background-color: rgba(0, 0, 0, 0); color: gray;  border: solid var(--theme-color); padding: 20px;">
+                  <h2 class="table-caption">Mobile Development</h2> <br>
+                  <div class="card-body">
+                    <div class="row text-center align-items-center">
+                      <div class="col-md-4 mb-3 icon-container">
+                        <img src="../assets/images/icons/android-logo.png" alt="Python logo" class="icon-img-2">
+                        <h5 class="card-title mt-2">Android Development</h5>
+                      </div>
+                      <div class="col-md-4 mb-3 icon-container">
+                        <img src="../assets/images/icons/ios-logo.png" alt="C++ logo" class="icon-img-2">
+                        <h5 class="card-title mt-2">iOS Development</h5>
+                      </div>
+                      <div class="col-md-4 mb-3 icon-container">
+                        <img src="../assets/images/icons/mobile-designing.png" alt="Java logo" class="icon-img-2">
+                        <h5 class="card-title mt-2">Mobile Designing</h5>
+                      </div>
+                    </div>
+                    <br>
+                    <strong>Durations :</strong> 2 month
+                    <br>
+                    <strong>Fees :</strong> ₹12,000
+                  </div>
+                </div>
+                <!-- OR separator -->
+                <div class="text-center mb-3" style="text-align: center;">
+                  <strong
+                    style="background-color: #1A9F45; padding: 7px 10px; border-radius: 60%; color: #ffffff;">OR</strong>
+                </div>
+                <!-- Fourth Section -->
+                <div class="card mb-3"
+                  style="background-color: rgba(0, 0, 0, 0); color: gray;  border: solid var(--theme-color); padding: 20px;">
+                  <h2 class="table-caption">Manual Testing</h2> <br>
+                  <div class="card-body">
+                    <div class="row text-center align-items-center">
+                      <div class="col-md-4 mb-3 icon-container">
+                        <img src="../assets/images/icons/web-app-testing.png" alt="Web App testing logo"
+                          class="icon-img-2">
+                        <h5 class="card-title mt-2">Web App testing</h5>
+                      </div>
+                      <div class="col-md-4 mb-3 icon-container">
+                        <img src="../assets/images/icons/mobile-testing.png" alt="Mobile testing logo"
+                          class="icon-img-2">
+                        <h5 class="card-title mt-2">Mobile testing</h5>
+                      </div>
+                      <div class="col-md-4 mb-3 icon-container">
+                        <img src="../assets/images/icons/api-testing-logo.png" alt="API Testing logo"
+                          class="icon-img-2">
+                        <h5 class="card-title mt-2">API Testing</h5>
+                      </div>
+                      <div class="col-md-4 mb-3 icon-container">
+                        <img src="../assets/images/icons/database-testing.png" alt="DB Testing logo" class="icon-img-2">
+                        <h5 class="card-title mt-2"> DB Testing</h5>
+                      </div>
+                    </div>
+                    <br>
+                    <strong>Durations :</strong> 2 month
+                    <br>
+                    <strong>Fees :</strong> ₹10,000
+                  </div>
+                </div>
+                <!-- OR separator -->
+                <div class="text-center mb-3" style="text-align: center;">
+                  <strong
+                    style="background-color: #1A9F45; padding: 7px 10px; border-radius: 60%; color: #ffffff;">OR</strong>
+                </div>
+                <!-- Fourth Section -->
+                <div class="card mb-3"
+                  style="background-color: rgba(0, 0, 0, 0); color: gray;  border: solid var(--theme-color); padding: 20px;">
+                  <h2 class="table-caption"> Machine Learning</h2> <br>
+                  <div class="card-body">
+                    <div class="row text-center align-items-center">
+                      <div class="col-md-4 mb-3 icon-container">
+                        <img src="../assets/images/icons/python-logo.png" alt="Web App testing logo" class="icon-img-2">
+                        <h5 class="card-title mt-2">Python</h5>
+                      </div>
+                      <div class="col-md-4 mb-3 icon-container">
+                        <img src="../assets/images/icons/machine-learning.png" alt="Mobile testing logo"
+                          class="icon-img-2">
+                        <h5 class="card-title mt-2">Machine Learning</h5>
+                      </div>
+                    </div>
+                    <br>
+                    <strong>Durations :</strong> 2 month
+                    <br>
+                    <strong>Fees :</strong> ₹12,000
+                    <br>
+                    <strong> Prerequisites :</strong> Manual Testing, JavaScript, Java.
+                  </div>
+                </div>
+                <!-- OR separator -->
+                <div class="text-center mb-3" style="text-align: center;">
+                  <strong
+                    style="background-color: #1A9F45; padding: 7px 10px; border-radius: 60%; color: #ffffff;">OR</strong>
+                </div>
+                <!-- Fourth Section -->
+                <div class="card mb-3"
+                  style="background-color: rgba(0, 0, 0, 0); color: gray;  border: solid var(--theme-color); padding: 20px;">
+                  <h2 class="table-caption"> DBMS</h2> <br>
+                  <div class="card-body">
+                    <div class="row text-center align-items-center">
+                      <div class="col-md-4 mb-3 icon-container">
+                        <img src="../assets/images/icons/python-logo.png" alt="Web App testing logo" class="icon-img-2">
+                        <h5 class="card-title mt-2">Python</h5>
+                      </div>
+                      <div class="col-md-4 mb-3 icon-container">
+                        <img src="../assets/images/icons/database-logo.png" alt="Mobile testing logo"
+                          class="icon-img-2">
+                        <h5 class="card-title mt-2">DBMS</h5>
+                      </div>
+                    </div>
+                    <br>
+                    <strong>Durations :</strong> 2 month
+                    <br>
+                    <strong>Fees :</strong> ₹12,000
+                  </div>
+                </div>
+              </div>
+              <!-- Notes Section start-->
+              <div class="row padd-15">
+                <h3>Prerequisites</h3>
+                <div class="about-content padd-15" style="color: rgb(112, 112, 112)">
+                  • Students studying below 12th grade <br>
+                  • Basic understanding of computers and internet usage <br>
+                  • Enthusiasm for learning new technologies<br>
+                  • No prior coding experience required<br>
+                </div>
+              </div>
+              <div class="row padd-15">
+                <h3>Highlight</h3>
+              </div>
+              <div class="row">
+                <div class="about-content padd-15" style="color: rgb(112, 112, 112)">
+                  • Introduction to Programming: Learn the basics of coding using any of beginner-friendly languages
+                  like Java, JavaScript, Python, C, C++, Swift, Ruby<br>
+                  • Interactive Projects: Work on fun and engaging projects to apply what you've learned.<br>
+                  • Problem-Solving Skills: Develop critical thinking and problem-solving abilities through coding
+                  challenges.<br>
+                  • Collaborative Learning: Participate in group activities and peer coding sessions.<br>
+                  • Mentorship: Receive guidance and support from experienced instructors.<br>
+                  • Final Project: Create a final project to showcase your new skills.
+                </div>
+              </div>
+              <!-- Notes Section End-->
+              <!-- Terms & Conditions Section Start -->
+              <div class="row padd-15">
+                <h3>Terms & Conditions</h3>
+              </div>
+              <div class="row">
+                <div class="about-content padd-15" style="color: rgb(112, 112, 112)">
+                  <p>1. The student can ask for a <u>refund within 30 days</u> of payment without any question
+                    asked.
+                  </p>
+                  <p>2. The institute needs to refund within 30 days of the refund filled by the students.</p>
+                  <p>3. The institute reserves a right to cancle the admission in case of misbehaviour or incomplete
+                    assignments.</p>
+                  <p>4. In case of completion of level 5, students need to file for a job and the institute needs to
+                    provide interviews to candidates within 180 days. In case of failure students can ask for 50% of
+                    refund of total paid fee.</p>
+                  <p>5. The student cannot roll in institute for any courcse if he cancles or gets terminated for
+                    any
+                    of
+                    level or any of course offered by Enjoy Programming.</p>
+                </div>
+              </div>
+              <!-- Terms & Conditions Section End -->
+            </div>
+
+            <!-- Phase IV Table -->
+            <div id="phase4-table" class="table-container phase-table" style="display: none; margin-left: 15px;">
+              <h2 class="table-caption" id="phase2-icons" style="text-align: center;">Courses Table</h2>
+              <div class="table-container">
+                <table class="course-table">
+                  <thead>
+                    <tr>
+                      <th>LEVEL 01</th>
+                      <th>LEVEL 02</th>
+                      <th>LEVEL 03</th>
+                      <th>LEVEL 04</th>
+                      <th>LEVEL 05</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><i class="fas fa-book course-icon"></i>Fundamentals</td>
+                      <td>
+                        <i class="fab fa-android course-icon"></i>Android Development
+                        (Intermediate)
+                        <!-- <i class="fas fa-pencil-ruler course-icon"></i>Software Designing -->
+                      </td>
+                      <td><i class="fas fa-code-branch course-icon"></i>SCM</td>
+                      <td><i class="fas fa-tasks course-icon"></i>PMT</td>
+                      <td><i class="fas fa-rocket course-icon"></i>Deployment</td>
+                    </tr>
+                    <tr>
+                      <td><i class="fas fa-code course-icon"></i>HTML</td>
+
+                      <td>
+                        <i class="fab fa-apple course-icon"></i>iOS Development (Beginner)
+                        <!-- <i class="fas fa-database course-icon"></i>Database (Beginner) -->
+                      </td>
+                      <td>
+                        <i class="fas fa-database course-icon"></i>DBMS (Intermediate)
+                      </td>
+                      <td>
+                        <i class="fas fa-database course-icon"></i>Database (Advance)
+                      </td>
+                      <td>
+                        <i class="fa-solid fa-brain course-icon"></i>Machine Learning
+                        (Basics)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><i class="fab fa-css3 course-icon"></i>CSS</td>
+                      <td><i class="fab fa-java course-icon"></i>Java (Intermediate)</td>
+                      <td>
+                        <i class="fas fa-robot course-icon"></i>Automation (Beginner)
+                      </td>
+                      <td><i class="fa-solid fa-check course-icon"></i>Unit Testing</td>
+                      <td><i class="fab fa-python course-icon"></i>Python</td>
+                    </tr>
+                    <tr>
+                      <td><i class="fab fa-js course-icon"></i>JavaScript (Beginner)</td>
+                      <td><i class="fab fa-js course-icon"></i>JavaScript (Expert)</td>
+                      <td>
+                        <i class="fab fa-android course-icon"></i>Android Development
+                        (Professional)
+                      </td>
+                      <td>
+                        <i class="fas fa-user-tie course-icon"></i>Interview Preparation
+                      </td>
+                      <td>
+                        <i class="fa-solid fa-pen-nib course-icon"></i>Design Patterns
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <i class="fas fa-clipboard-check course-icon"></i>Manual Testing
+                        (Beginner)
+                      </td>
+                      <td><i class="fab fa-swift course-icon"></i>Swift (Beginner)</td>
+                      <td><i class="fab fa-node-js course-icon"></i>Node JS</td>
+                      <td><i class="fab fa-react course-icon"></i>React JS</td>
+                      <td><i class="fas fa-user-tie course-icon"></i>Mock Interview</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>
+                        <i class="fas fa-clipboard-check course-icon"></i>Manual Testing
+                        (Professional)
+                      </td>
+                      <td>
+                        <i class="fab fa-apple course-icon"></i>iOS Development
+                        (Professional)
+                      </td>
+                      <td>
+                        <i class="fab fa-react course-icon"></i>React Native (Beginner)
+                      </td>
+                      <td>
+                        <i class="fab fa-react course-icon"></i>React Native (Expert)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td><i class="fas fa-sun course-icon"></i>UI Designing</td>
+                      <td></td>
+                      <td><i class="fas fa-robot course-icon"></i>Automation (Expert)</td>
+                      <td>
+                        <i class="fa-solid fa-newspaper course-icon"></i>Software Articulm
+                      </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><i class="fa-brands fa-vuejs course-icon"></i>Vue JS</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><span class="subheading">Fees : 12K</span></td>
+                      <td><span class="subheading">Fees : 14K</span></td>
+                      <td><span class="subheading">Fees : 18K</span></td>
+                      <td><span class="subheading">Fees : 22K</span></td>
+                      <td><span class="subheading">Fees : 26K</span></td>
+                    </tr>
+                    <tr>
+                      <td><span class="subheading">Duration : 60 days</span></td>
+                      <td><span class="subheading">Duration : 70 days</span></td>
+                      <td><span class="subheading">Duration : 90 days</span></td>
+                      <td><span class="subheading">Duration : 90 days</span></td>
+                      <td><span class="subheading">Duration : 120 days</span></td>
+                    </tr>
+                    <tr>
+                      <td><span class="subheading">live Project</span></td>
+                      <td><span class="subheading">live Project</span></td>
+                      <td><span class="subheading">live Project</span></td>
+                      <td><span class="subheading">live Project</span></td>
+                      <td><span class="subheading">live Project</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- Notes Section start-->
+              <div class="row padd-15">
+                <h3>Prerequisites</h3>
+                <div class="about-content padd-15" style="color: rgb(112, 112, 112)">
+                  • Students studying below 12th grade <br>
+                  • Basic understanding of computers and internet usage <br>
+                  • Enthusiasm for learning new technologies<br>
+                  • No prior coding experience required<br>
+                </div>
+              </div>
+              <div class="row padd-15">
+                <h3>Highlight</h3>
+              </div>
+              <div class="row">
+                <div class="about-content padd-15" style="color: rgb(112, 112, 112)">
+                  • Introduction to Programming: Learn the basics of coding using any of beginner-friendly languages
+                  like Java, JavaScript, Python, C, C++, Swift, Ruby<br>
+                  • Interactive Projects: Work on fun and engaging projects to apply what you've learned.<br>
+                  • Problem-Solving Skills: Develop critical thinking and problem-solving abilities through coding
+                  challenges.<br>
+                  • Collaborative Learning: Participate in group activities and peer coding sessions.<br>
+                  • Mentorship: Receive guidance and support from experienced instructors.<br>
+                  • Final Project: Create a final project to showcase your new skills.
+                </div>
+              </div>
+              <!-- Notes Section End-->
+              <!-- Terms & Conditions Section Start -->
+              <div class="row padd-15">
+                <h3>Terms & Conditions</h3>
+              </div>
+              <div class="row">
+                <div class="about-content padd-15" style="color: rgb(112, 112, 112)">
+                  <p>1. The student can ask for a <u>refund within 30 days</u> of payment without any question
+                    asked.
+                  </p>
+                  <p>2. The institute needs to refund within 30 days of the refund filled by the students.</p>
+                  <p>3. The institute reserves a right to cancle the admission in case of misbehaviour or incomplete
+                    assignments.</p>
+                  <p>4. In case of completion of level 5, students need to file for a job and the institute needs to
+                    provide interviews to candidates within 180 days. In case of failure students can ask for 50% of
+                    refund of total paid fee.</p>
+                  <p>5. The student cannot roll in institute for any courcse if he cancles or gets terminated for
+                    any
+                    of
+                    level or any of course offered by Enjoy Programming.</p>
+                </div>
+              </div>
+              <!-- Terms & Conditions Section End -->
+            </div>
+            <!-- Phase V Table -->
+            <div id="phase5-table" class="table-container phase-table" style="display: none; margin-left: 15px;">
+              <h2 class="table-caption" style="text-align: center;">Courses Table</h2>
+              <div class="table-container">
+                <table class="course-table">
+                  <thead>
+                    <tr>
+                      <th>LEVEL 01</th>
+                      <th>LEVEL 02</th>
+                      <th>LEVEL 03</th>
+                      <th>LEVEL 04</th>
+                      <th>LEVEL 05</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><i class="fas fa-book course-icon"></i>Fundamentals</td>
+                      <td>
+                        <i class="fab fa-android course-icon"></i>Android Development
+                        (Intermediate)
+                        <!-- <i class="fas fa-pencil-ruler course-icon"></i>Software Designing -->
+                      </td>
+                      <td><i class="fas fa-code-branch course-icon"></i>SCM</td>
+                      <td><i class="fas fa-tasks course-icon"></i>PMT</td>
+                      <td><i class="fas fa-rocket course-icon"></i>Deployment</td>
+                    </tr>
+                    <tr>
+                      <td><i class="fas fa-code course-icon"></i>HTML</td>
+
+                      <td>
+                        <i class="fab fa-apple course-icon"></i>iOS Development (Beginner)
+                        <!-- <i class="fas fa-database course-icon"></i>Database (Beginner) -->
+                      </td>
+                      <td>
+                        <i class="fas fa-database course-icon"></i>DBMS (Intermediate)
+                      </td>
+                      <td>
+                        <i class="fas fa-database course-icon"></i>Database (Advance)
+                      </td>
+                      <td>
+                        <i class="fa-solid fa-brain course-icon"></i>Machine Learning
+                        (Basics)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><i class="fab fa-css3 course-icon"></i>CSS</td>
+                      <td><i class="fab fa-java course-icon"></i>Java (Intermediate)</td>
+                      <td>
+                        <i class="fas fa-robot course-icon"></i>Automation (Beginner)
+                      </td>
+                      <td><i class="fa-solid fa-check course-icon"></i>Unit Testing</td>
+                      <td><i class="fab fa-python course-icon"></i>Python</td>
+                    </tr>
+                    <tr>
+                      <td><i class="fab fa-js course-icon"></i>JavaScript (Beginner)</td>
+                      <td><i class="fab fa-js course-icon"></i>JavaScript (Expert)</td>
+                      <td>
+                        <i class="fab fa-android course-icon"></i>Android Development
+                        (Professional)
+                      </td>
+                      <td>
+                        <i class="fas fa-user-tie course-icon"></i>Interview Preparation
+                      </td>
+                      <td>
+                        <i class="fa-solid fa-pen-nib course-icon"></i>Design Patterns
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <i class="fas fa-clipboard-check course-icon"></i>Manual Testing
+                        (Beginner)
+                      </td>
+                      <td><i class="fab fa-swift course-icon"></i>Swift (Beginner)</td>
+                      <td><i class="fab fa-node-js course-icon"></i>Node JS</td>
+                      <td><i class="fab fa-react course-icon"></i>React JS</td>
+                      <td><i class="fas fa-user-tie course-icon"></i>Mock Interview</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td>
+                        <i class="fas fa-clipboard-check course-icon"></i>Manual Testing
+                        (Professional)
+                      </td>
+                      <td>
+                        <i class="fab fa-apple course-icon"></i>iOS Development
+                        (Professional)
+                      </td>
+                      <td>
+                        <i class="fab fa-react course-icon"></i>React Native (Beginner)
+                      </td>
+                      <td>
+                        <i class="fab fa-react course-icon"></i>React Native (Expert)
+                      </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td><i class="fas fa-sun course-icon"></i>UI Designing</td>
+                      <td></td>
+                      <td><i class="fas fa-robot course-icon"></i>Automation (Expert)</td>
+                      <td>
+                        <i class="fa-solid fa-newspaper course-icon"></i>Software Articulm
+                      </td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td><i class="fa-brands fa-vuejs course-icon"></i>Vue JS</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><span class="subheading">Fees : 12K</span></td>
+                      <td><span class="subheading">Fees : 14K</span></td>
+                      <td><span class="subheading">Fees : 18K</span></td>
+                      <td><span class="subheading">Fees : 22K</span></td>
+                      <td><span class="subheading">Fees : 26K</span></td>
+                    </tr>
+                    <tr>
+                      <td><span class="subheading">Duration : 60 days</span></td>
+                      <td><span class="subheading">Duration : 70 days</span></td>
+                      <td><span class="subheading">Duration : 90 days</span></td>
+                      <td><span class="subheading">Duration : 90 days</span></td>
+                      <td><span class="subheading">Duration : 120 days</span></td>
+                    </tr>
+                    <tr>
+                      <td><span class="subheading">live Project</span></td>
+                      <td><span class="subheading">live Project</span></td>
+                      <td><span class="subheading">live Project</span></td>
+                      <td><span class="subheading">live Project</span></td>
+                      <td><span class="subheading">live Project</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- Notes Section start-->
+              <div class="row padd-15">
+                <h3>Prerequisites</h3>
+                <div class="about-content padd-15" style="color: rgb(112, 112, 112)">
+                  • Students studying below 12th grade <br>
+                  • Basic understanding of computers and internet usage <br>
+                  • Enthusiasm for learning new technologies<br>
+                  • No prior coding experience required<br>
+                </div>
+              </div>
+              <div class="row padd-15">
+                <h3>Highlight</h3>
+              </div>
+              <div class="row">
+                <div class="about-content padd-15" style="color: rgb(112, 112, 112)">
+                  • Introduction to Programming: Learn the basics of coding using any of beginner-friendly languages
+                  like Java, JavaScript, Python, C, C++, Swift, Ruby<br>
+                  • Interactive Projects: Work on fun and engaging projects to apply what you've learned.<br>
+                  • Problem-Solving Skills: Develop critical thinking and problem-solving abilities through coding
+                  challenges.<br>
+                  • Collaborative Learning: Participate in group activities and peer coding sessions.<br>
+                  • Mentorship: Receive guidance and support from experienced instructors.<br>
+                  • Final Project: Create a final project to showcase your new skills.
+                </div>
+              </div>
+              <!-- Notes Section End-->
+              <!-- Terms & Conditions Section Start -->
+              <div class="row padd-15">
+                <h3>Terms & Conditions</h3>
+              </div>
+              <div class="row">
+                <div class="about-content padd-15" style="color: rgb(112, 112, 112)">
+                  <p>1. The student can ask for a <u>refund within 30 days</u> of payment without any question
+                    asked.
+                  </p>
+                  <p>2. The institute needs to refund within 30 days of the refund filled by the students.</p>
+                  <p>3. The institute reserves a right to cancle the admission in case of misbehaviour or incomplete
+                    assignments.</p>
+                  <p>4. In case of completion of level 5, students need to file for a job and the institute needs to
+                    provide interviews to candidates within 180 days. In case of failure students can ask for 50% of
+                    refund of total paid fee.</p>
+                  <p>5. The student cannot roll in institute for any courcse if he cancles or gets terminated for
+                    any
+                    of
+                    level or any of course offered by Enjoy Programming.</p>
+                </div>
+              </div>
+              <!-- Terms & Conditions Section End -->
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- End .phase-tables -->
+    </section>
+    <!-- ====================================== COURSES SECTION END======================================== -->
+  </div>
+  <!-- Style switcher start -->
+  <div class="style-switcher">
+    <div class="day-night s-icon">
+      <i class="fa fa-toggle-on"></i>
+    </div>
+    <div class="color-switcher s-icon">
+      <i class="fas fa-palette"></i>
+      <div class="color-options">
+        <span class="color-option" data-color="#ec1839"></span>
+        <span class="color-option" data-color="#2196f3"></span>
+        <span class="color-option" data-color="#ff5722"></span>
+        <span class="color-option" data-color="#4caf50"></span>
+      </div>
+    </div>
+  </div>
+  <!-- Style switcher end -->
+  <!-- Style switcher end -->
+  <!-- JS Files -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
+  <script src="hometwo.js"></script>
+  <script src="../helper/styleswitcher.js"></script>
+
+  <!-- Bootstrap JS (include Popper.js and Bootstrap.js) -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
