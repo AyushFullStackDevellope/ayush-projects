@@ -1,316 +1,84 @@
 <!DOCTYPE html>
-<html>
-  <title>Home Page</title>
-  <head>
-    <!-- CSS files favicons links -->
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Orangelo Cafe & Bistro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2/2144.png" />
-    <link rel="stylesheet" href="home.css">
-  </head>
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet" />
+    <link rel="icon" href="./assets/images/orange-favicon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="orangelo.css">
+    <style>
+        body{
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
 
-  <body class="w3-light-grey w3-content" style="max-width: 1600px">
-    <div class="w3-main">
-      <header>
-        <a href="../index.html"
-          ><button class="button">
-            <div class="button-box">
-              <span class="button-elem">
-                <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
-                  ></path>
-                </svg>
-              </span>
-              <span class="button-elem">
-                <svg viewBox="0 0 46 40">
-                  <path
-                    d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z"
-                  ></path>
-                </svg>
-              </span>
+<body>
+    <!-- =================== NAVBAR SECTION STARTS========================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand"
+                href="https://www.google.com/search?q=orangelo+in+katol&sca_esv=d23600c5c5ea2d83&sxsrf=ADLYWIJG45m4YH1Khp8BnzTq-VLzflB_zw%3A1724424182005&ei=9Z_IZsb9PLeMseMPtpmJsAY&oq=ora&gs_lp=Egxnd3Mtd2l6LXNlcnAiA29yYSoCCAAyBBAjGCcyBBAjGCcyEBAuGIAEGEMYxwEYigUYrwEyERAAGIAEGJECGLEDGIMBGIoFMhEQLhiABBiRAhjHARiKBRivATIWEC4YgAQYsQMY0QMYQxiDARjHARiKBTIKEAAYgAQYQxiKBTIQEC4YgAQYQxjHARiKBRivATIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBUjJEFAAWMQEcAB4AJABAJgBsQGgAfUDqgEDMC4zuAEByAEA-AEBmAIDoAKCBMICCxAAGIAEGJECGIoFwgIIEAAYgAQYsQPCAg4QABiABBixAxiDARiKBcICCxAAGIAEGLEDGIMBwgIREC4YgAQYsQMY0QMYgwEYxwHCAhMQLhiABBixAxjRAxhDGMcBGIoFwgINEC4YgAQYsQMYQxiKBZgDAJIHAzAuM6AHhzg&sclient=gws-wiz-serp">
+                <span class="brand-text">Orangelo Cafe & Bistro </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">
+                            <i class="fas fa-utensils"></i> Menu
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            <i class="fas fa-info-circle"></i> About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="order.html">
+                            <i class="fas fa-shopping-cart"></i> Order
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            <i class="fas fa-envelope"></i> Contact
+                        </a>
+                    </li>
+                </ul>
             </div>
-          </button>
-        </a>
-        <div class="w3-container">
-          <h1><b>My Projects</b></h1>
-          <div class="w3-section w3-bottombar w3-padding-16">
-            <span class="w3-margin-right">Projects Using:</span>
-            <a href="#first-row" class="w3-button w3-black"
-              ><i class="fa fa-code w3-margin-right"></i>HTML</a
-            >
-            <a href="#second-row" class="w3-button w3-black"
-              ><i class="fa fa-code w3-margin-right"></i>CSS</a
-            >
-            <a href="#third-row" class="w3-button w3-black"
-              ><i class="fa fa-code w3-margin-right"></i>JavaScript</a
-            >
-          </div>
         </div>
-      </header>
-      <!-- First Photo Grid-->
-      <div class="w3-row-padding gallery" id="first-row">
-        <div class="project-card">
-          <a href="../html-projects/signin.html">
-            <img
-              src="https://png.pngitem.com/pimgs/s/197-1971077_self-storage-blog-icon-blog-icon-transparent-hd.png"
-              alt="Project Image"
-              class="img"
-            />
+    </nav>
+    <!-- =================== NAVBAR SECTION ENDS========================== -->
+    <!-- =================== HOME SECTION STARTS========================== -->
+    <section id="home" class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-1 fw-bold mb-4 hero-title">Welcome to Orangelo</h1>
+            <h2 class="h3 mb-4 hero-subtitle">We Host Special Events!</h2>
+            <p class="lead mb-5 hero-description"> From birthday parties to corporate events, we've got you covered.
+            </p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-lg btn-primary me-3 mb-3">Explore Menu</a>
+                <a href="https://www.zomato.com/katol/orangelo-cafe-bistro-katol-locality/order"
+                    class="btn btn-lg btn-outline-light mb-3" target="_blank">Order Now</a>
+            </div>
+        </div>
+    </section>
+    <!-- =================== HOME SECTION ENDS========================== -->\
+</body>
 
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content">
-                <h3>Registration Form</h3>
-                <p>These is form project using form tags.</p>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="project-card">
-          <a href="../html-projects/cv.html">
-            <img
-              src="https://p.kindpng.com/picc/s/484-4847061_man-resume-document-employee-shortlisted-portfolio-unique-website.png"
-              alt="Project Image"
-              class="img"
-            />
-          
-          <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-              <h3>Resume Project</h3>
-              <p>These is resume projects using HTML and CSS.</p>
-            </div>
-          </div>
-        </a>
-        </div>
-        <div class="project-card">
-          <a href="../html-projects/calendarone.html">
-            <img
-              src="https://i.pinimg.com/originals/fe/b6/b0/feb6b0e65c95002e6c998f7e580ab1c9.png"
-              alt="Project Image"
-              class="img"
-            />
-          
-          <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-              <h3>Calendar Project</h3>
-              <p>These is Calendar project using table tags and with CSS.</p>
-            </div>
-          </div>
-        </div>
-      </a>
-      </div>
-      <!-- second Photo Grid-->
-      <div class="w3-row-padding gallery" id="second-row">
-        <div class="project-card">
-          <a href="../html-projects/animation/cargame.html">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_vfn03HIHlItzzz7n1EobBjvThj2pCttANs9R0ZfRvf5g7Z493TS85eUVshzYAPZ5mvE&usqp=CAU"
-              alt="Project Image"
-              class="img"
-            />
-          <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-              <h3>Animated Car Game</h3>
-              <p>These is animation project by using marque tag in HTML .</p>
-            </div>
-          </div>
-        </a>
-        </div>
-        <div class="project-card">
-          <a href="../html-projects/youtube.html">
-            <img
-              src="https://i.pinimg.com/736x/e3/e3/48/e3e3480c7752cebc014ece611369876b.jpg"
-              alt="Project Image"
-              class="img"
-            />
-          <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-              <h3>YouTube Project</h3>
-              <p>These is youtube project using Flex technology in CSS.</p>
-            </div>
-          </div>
-        </a>
-        </div>
-        <div class="project-card">
-          <a href="../html-projects/chess.html">
-            <img
-              src="https://www.shutterstock.com/image-vector/chess-pieces-vector-illustration-king-600nw-1940151418.jpg"
-              alt="Project Image"
-              class="img"
-            />
-          <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-              <h3>Chess Board</h3>
-              <p>These is Chess project using Flex and Grid in CSS</p>
-            </div>
-          </div>
-        </div>
-      </a>
-      </div>
-      <!--third Photo Grid-->
-      <div class="w3-row-padding gallery" id="third-row">
-        <div class="project-card">
-          <a href="../js-projects/dom.html">
-            <img
-              src="https://img.lovepik.com/element/45012/5592.png_860.png"
-              alt="Project Image"
-              class="img"
-            />
-          
-          <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-              <h3>Ring Game</h3>
-              <p>
-                These is ring adding programme by using Dynamic HTML and DOM.
-              </p>
-            </div>
-          </div>
-        </a>
-        </div>
-        <div class="project-card">
-          <a href="../assignment/days.html">
-            <img
-              src="https://cdn-icons-png.flaticon.com/512/6358/6358223.png"
-              alt="Project Image"
-              class="img"
-            />
-          
-          <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-              <h3>Days Project</h3>
-              <p>These is days in week project using if else in JS.</p>
-            </div>
-          </div>
-        </a>
-        </div>
-        <div class="project-card">
-          <a href="../assignment/calculator.html">
-            <img
-              src="https://icons.veryicon.com/png/o/miscellaneous/iview30-ios-style/ios-calculator-4.png"
-              alt="Project Image"
-              class="img"
-            />
-          
-          <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-              <h3>Calculator</h3>
-              <p>These is calculator by using Grid and JS.</p>
-            </div>
-          </div>
-        </div>
-      </a>
-      </div>
-      <!-- fourth Photo Grid-->
-      <div class="w3-row-padding gallery">
-        <div class="project-card">
-          <a href="../js-projects/kbcarray.html">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaboUkuwE0nOyDMJZKX6AVMxXhKdwOwPU_Dg&usqp=CAU"
-              alt="Project Image"
-              class="img"
-            />
-          
-          <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-              <h3>KBC Project</h3>
-              <p>These is KBC game made by using Array & Dictionary in JS .</p>
-            </div>
-          </div>
-        </a>
-        </div>
-        <div class="project-card">
-          <a href="../assignment/google.html">
-            <img
-              src="../assets/logo/ep_logo_new.jpeg"
-              alt="Project Image"
-              class="img"
-            />
-          
-          <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-              <h3>EP Search Engine</h3>
-              <p>
-                These is search engine project of students made by using Array.
-              </p>
-            </div>
-          </div>
-        </a>
-        </div>
-        <div class="project-card">
-          <a href="../assignment/table.html">
-            <img
-              src="https://i.pinimg.com/736x/2c/a7/eb/2ca7eb459dd878064a0cd4297217f070.jpg"
-              alt="Project Image"
-              class="img"
-            />
-          
-          <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-              <h3>Multiplication Table</h3>
-              <p>These is tables project made by using While in JS.</p>
-            </div>
-          </div>
-        </div>
-      </a>
-      </div>
-      <!-- Fifth Photo Grid-->
-      <div class="w3-row-padding gallery">
-        <div class="project-card">
-          <a href="../assignment/musicplayer.html">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQZRYR-teMO8ClDR3mIGxMHj4GJHT1_4W2nr_vowXpj_moar_YaBabWqQ1X098V9S5ADU&usqp=CAU"
-              alt="Project Image"
-              class="img"
-            />
-          
-          <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-              <h3>Music Player</h3>
-              <p>These is Music player project by using Array in JS.</p>
-            </div>
-          </div>
-        </a>
-        </div>
-        <div class="project-card">
-          <a href="../assignment/vowel.html">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSQSw1suHwMKqyR5MdsN7MlBDwDzG7XJulpwD2-8qC2FYSjqQxZFZOX4TYXx3s75e-DcA&usqp=CAU"
-              alt="Project Image"
-              class="img"
-            />
-          
-          <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-              <h3>Vowels</h3>
-              <p>These is Vowels project by using if else in JS.</p>
-            </div>
-          </div>
-        </a>
-        </div>
-        <div class="project-card">
-          <a href="../assignment/evenodd.html">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvPeoT4Oeh8UrsBiHJlVAakBrfenVJY1-aag&s"
-              alt="Project Image"
-              class="img"
-            />
-          
-          <div class="portfolio-hover">
-            <div class="portfolio-hover-content">
-              <h3>Even ODD</h3>
-              <p>These is even odd project if else programme in JS.</p>
-            </div>
-          </div>
-        </a>
-        </div>
-      </div>
-    </div>
-
-    <footer class="footer_b">
-      <p>&copy; 2024 Full Stack Developer. All rights reserved.</p>
-    </footer>
-  </body>
 </html>
