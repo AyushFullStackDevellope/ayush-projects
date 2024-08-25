@@ -12,586 +12,7 @@
     rel="stylesheet" />
   <link rel="icon" href="./assets/images/orange-favicon.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    body {
-      overflow-x: hidden;
-    }
-
-    .navbar-brand {
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-
-    .hero-section {
-      background-image: url('https://example.com/path-to-your-hero-image.jpg');
-      background-size: cover;
-      background-position: center;
-      color: white;
-      padding: 50px 0;
-    }
-
-    .btn-custom {
-      background-color: #ff6600;
-      color: white;
-    }
-
-    .menu-item img {
-      height: 200px;
-      object-fit: cover;
-      width: 100%;
-    }
-
-    @media (max-width: 991px) {
-      .navbar-nav {
-        text-align: center;
-      }
-
-      .navbar-nav .nav-item {
-        padding: 0.5rem 0;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .hero-section {
-        padding: 30px 0;
-      }
-
-      .menu-item img {
-        height: 150px;
-      }
-
-      h1 {
-        font-size: 1.8rem;
-      }
-
-      h2 {
-        font-size: 1.4rem;
-      }
-
-      .btn-lg {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
-      }
-
-      .container {
-        padding-left: 15px;
-        padding-right: 15px;
-      }
-    }
-
-    :root {
-      --primary-color: #ff6b35;
-      --secondary-color: #4a4e69;
-      --light-color: #f7f7f2;
-      --dark-color: #2b2d42;
-      --accent-color: #ffd700;
-    }
-
-    body {
-      font-family: "Roboto", sans-serif;
-      color: var(--dark-color);
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: "Playfair Display", serif;
-    }
-
-    .navbar {
-      transition: background-color 0.3s ease;
-      padding: 1rem 0;
-    }
-
-    .navbar.scrolled {
-      background-color: rgba(255, 118, 33, 0.9) !important;
-    }
-
-    .navbar-brand {
-      font-family: "Playfair Display", serif;
-      font-size: 1.5rem;
-      font-weight: 700;
-    }
-
-    .nav-link {
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      padding: 0.5rem 1rem;
-      color: rgb(255, 255, 255);
-    }
-
-    .hero-section {
-      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("https://b.zmtcdn.com/data/pictures/1/20102691/e29878dbf88b9953632bdb998e8f75be.jpeg") no-repeat center center;
-      background-size: cover;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      color: var(--light-color);
-    }
-
-    .btn-custom {
-      background-color: var(--primary-color);
-      color: var(--light-color);
-      border: none;
-      padding: 0.75rem 1.5rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      transition: all 0.3s ease;
-    }
-
-    .btn-custom:hover {
-      background-color: var(--secondary-color);
-      color: var(--light-color);
-      transform: translateY(-3px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .menu-item {
-      transition: transform 0.3s, box-shadow 0.3s;
-      border: none;
-      border-radius: 15px;
-      overflow: hidden;
-    }
-
-    .menu-item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .menu-item img {
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .testimonial {
-      background-color: var(--light-color);
-      border-radius: 15px;
-      padding: 30px;
-      margin-bottom: 30px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    }
-
-    .testimonial img {
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      margin-right: 20px;
-      border: 3px solid var(--primary-color);
-    }
-
-    .reservation-form {
-      background-color: var(--secondary-color);
-      color: var(--light-color);
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    .section-title::after {
-      content: "";
-      position: absolute;
-      display: block;
-      width: 70px;
-      height: 3px;
-      background-color: var(--primary-color);
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .order-section {
-      background-color: var(--light-color);
-      padding: 60px 0;
-    }
-
-    .order-item {
-      background-color: #fff;
-      border-radius: 15px;
-      padding: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s;
-    }
-
-    .order-item:hover {
-      transform: translateY(-5px);
-    }
-
-    .order-item img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
-
-    .quantity-input {
-      width: 60px;
-      text-align: center;
-    }
-
-    .about-section {
-      background-color: var(--light-color);
-      padding: 80px 0;
-    }
-
-    .about-img {
-      border-radius: 15px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
-
-    .contact-section {
-      background-color: var(--secondary-color);
-      color: var(--light-color);
-      padding: 80px 0;
-    }
-
-    .contact-info {
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 15px;
-      padding: 30px;
-      margin-bottom: 30px;
-    }
-
-    .contact-form {
-      background-color: var(--light-color);
-      border-radius: 15px;
-      padding: 30px;
-      color: var(--dark-color);
-    }
-
-    .contact-icon {
-      font-size: 2rem;
-      color: var(--primary-color);
-      margin-bottom: 15px;
-    }
-
-    .menu-section-title {
-      font-size: 2.5rem;
-      color: #ff6600;
-      margin-top: 2rem;
-      margin-bottom: 1.5rem;
-      text-align: center;
-    }
-
-    .menu-subsection-title {
-      font-size: 2rem;
-      color: #333;
-      margin-top: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .menu-category {
-      font-size: 1.5rem;
-      color: #666;
-      margin-top: 1rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .menu-item {
-      transition: transform 0.3s ease-in-out;
-      height: 100%;
-    }
-
-    .menu-item:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .card-img-top {
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .card-body {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .card-title {
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-    }
-
-    .card-text {
-      flex-grow: 1;
-    }
-
-    .price {
-      font-weight: bold;
-      color: #ff6600;
-      margin-top: auto;
-    }
-
-    .testimonial-card {
-      background-color: #ffffff;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      padding: 30px;
-      transition: transform 0.3s ease;
-      height: 100%;
-    }
-
-    .testimonial-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .testimonial-content {
-      position: relative;
-      margin-bottom: 20px;
-    }
-
-    .quote-icon {
-      color: #ff6600;
-      font-size: 24px;
-      position: absolute;
-      top: -10px;
-      left: -15px;
-    }
-
-    .testimonial-content p {
-      font-style: italic;
-      color: #555;
-      line-height: 1.6;
-    }
-
-    .testimonial-author {
-      display: flex;
-      align-items: center;
-      margin-top: 20px;
-    }
-
-    .author-img {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      margin-right: 15px;
-      object-fit: cover;
-    }
-
-    .author-info h5 {
-      margin: 0;
-      color: #333;
-    }
-
-    .author-info span {
-      font-size: 0.9em;
-      color: #777;
-    }
-
-    .testimonial-rating {
-      color: #ff6600;
-      margin-top: 10px;
-    }
-
-    .section-title {
-      position: relative;
-
-      padding-bottom: 10px;
-      margin-bottom: 30px;
-      text-align: center;
-    }
-
-    .mb-4 {
-      font-weight: 900 !important;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-    }
-
-    /* Navbar Styles */
-    .navbar {
-      transition: all 0.4s ease;
-      padding: 1rem 0;
-      background-color: transparent;
-    }
-
-    .navbar.scrolled {
-      background-color: var(--dark-color);
-      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    .navbar-brand {
-      display: flex;
-      align-items: center;
-    }
-
-
-    .navbar-brand:hover .logo {
-      transform: rotate(10deg);
-    }
-
-    .brand-text {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--light-color);
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    }
-
-    .nav-link {
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      padding: 0.5rem 1rem;
-      color: var(--light-color);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .nav-link::before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      bottom: 0;
-      left: -100%;
-      background-color: #ff6b35;
-      transition: all 0.3s ease;
-    }
-
-    .nav-link:hover::before {
-      left: 0;
-    }
-
-    /* Hero Section Styles */
-    .hero-section {
-      height: 100vh;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .hero-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(135deg, rgba(20, 33, 61, 0.8), rgba(252, 163, 17, 0.8));
-      z-index: 1;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      color: var(--light-color);
-      max-width: 800px;
-      padding: 2rem;
-    }
-
-    .hero-title {
-      font-size: 5rem;
-      font-weight: 800;
-      margin-bottom: 1rem;
-      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-      animation: slideInDown 1s ease;
-    }
-
-    .highlight {
-      color: var(--secondary-color);
-    }
-
-    .hero-subtitle {
-      font-size: 2.5rem;
-      font-weight: 300;
-      margin-bottom: 1.5rem;
-      animation: slideInUp 1s ease 0.5s;
-      animation-fill-mode: both;
-    }
-
-    .hero-description {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      animation: fadeIn 1s ease 1s;
-      animation-fill-mode: both;
-    }
-
-    .hero-buttons {
-      animation: fadeInUp 1s ease 1.5s;
-      animation-fill-mode: both;
-    }
-
-    .btn-primary {
-      background-color: var(--primary-color);
-      border-color: var(--primary-color);
-    }
-
-    .btn-primary:hover {
-      background-color: var(--secondary-color);
-      border-color: var(--secondary-color);
-      transform: translateY(-3px);
-      box-shadow: 0 4px 15px rgba(252, 163, 17, 0.4);
-    }
-
-    /* Animations */
-    @keyframes slideInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-100px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes slideInUp {
-      from {
-        opacity: 0;
-        transform: translateY(100px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      .hero-title {
-        font-size: 3.5rem;
-      }
-
-      .hero-subtitle {
-        font-size: 2rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="orangelo.css">
 </head>
 
 <body>
@@ -1073,6 +494,50 @@
     </div>
   </div>
   <!-- =================== MENU SECTION END========================== -->
+
+  <!-- =================== OFFERS SECTION START ========================== -->
+  <div class="container-fluid bg-light py-3" id="offers">
+    <div class="container">
+      <h2 class="text-center mb-4">Special Offers</h2>
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <div class="card h-100 border-primary">
+            <div class="card-header bg-primary text-white">
+              <h5 class="card-title mb-0">20% Off Pizzas</h5>
+            </div>
+            <div class="card-body">
+              <p class="card-text">Get 20% off on all pizzas. Perfect for a family dinner!</p>
+              <p class="card-text"><small class="text-muted">Use code: PIZZA20</small></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card h-100 border-success">
+            <div class="card-header bg-success text-white">
+              <h5 class="card-title mb-0">Free Dessert</h5>
+            </div>
+            <div class="card-body">
+              <p class="card-text">Enjoy a free dessert with orders above ₹500.</p>
+              <p class="card-text"><small class="text-muted">No code needed. Applied automatically.</small></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card h-100 border-warning">
+            <div class="card-header bg-warning text-dark">
+              <h5 class="card-title mb-0">Buy 1 Get 1 Beverages</h5>
+            </div>
+            <div class="card-body">
+              <p class="card-text">Buy one beverage and get another one free!</p>
+              <p class="card-text"><small class="text-muted">Valid 2-5 PM daily</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- =================== OFFERS SECTION END ========================== -->
+
   <!-- =================== ORDER SECTION STARTS========================== -->
   <section id="order" class="order-section py-5">
     <div class="container">
@@ -1654,8 +1119,10 @@
           <div class="mt-3" style="font-size: xx-large">
             <a href="https://www.facebook.com/orangelocafe/?locale=hi_IN" class="text-white me-3"><i
                 class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/orangelocafe/" class="text-white me-3"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.google.com/search?q=orangelo+in+katol&sca_esv=996eebb2cded8125&sxsrf=ADLYWIJa6NQU5bl2R_xejn5hjbFjk2v8yA%3A1724487758833&ei=TpjJZovGMuSNseMP0oe94Ac&ved=0ahUKEwiLpaPCmY2IAxXkRmwGHdJDD3wQ4dUDCA8&uact=5&oq=orangelo+in+katol&gs_lp=Egxnd3Mtd2l6LXNlcnAiEW9yYW5nZWxvIGluIGthdG9sMgQQIxgnMgQQIxgnMggQABiABBiiBDIIEAAYgAQYogRI_gpQ6QhY6QhwAngAkAEAmAGUAaABlAGqAQMwLjG4AQPIAQD4AQGYAgGgApwBmAMAiAYBkgcDMC4xoAe2BA&sclient=gws-wiz-serp" class="text-white me-3"><i class="fab fa-google"></i></a>
+            <a href="https://www.instagram.com/orangelocafe/" class="text-white me-3"><i
+                class="fab fa-instagram"></i></a>
+            <a href="https://www.google.com/search?q=orangelo+in+katol&sca_esv=996eebb2cded8125&sxsrf=ADLYWIJa6NQU5bl2R_xejn5hjbFjk2v8yA%3A1724487758833&ei=TpjJZovGMuSNseMP0oe94Ac&ved=0ahUKEwiLpaPCmY2IAxXkRmwGHdJDD3wQ4dUDCA8&uact=5&oq=orangelo+in+katol&gs_lp=Egxnd3Mtd2l6LXNlcnAiEW9yYW5nZWxvIGluIGthdG9sMgQQIxgnMgQQIxgnMggQABiABBiiBDIIEAAYgAQYogRI_gpQ6QhY6QhwAngAkAEAmAGUAaABlAGqAQMwLjG4AQPIAQD4AQGYAgGgApwBmAMAiAYBkgcDMC4xoAe2BA&sclient=gws-wiz-serp"
+              class="text-white me-3"><i class="fab fa-google"></i></a>
           </div>
         </div>
       </div>
