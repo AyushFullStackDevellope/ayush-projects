@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exclusive Offers</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="https://www.transparentpng.com/thumb/food/Ha2HDD-food-cut-out-png.png">
+    <link rel="stylesheet" href="../style_sheets/offers.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="offers-banner">
+            <div class="offers-text">
+                <h1>Exclusive Offers</h1>
+                <p>Discover amazing deals tailored just for you!</p>
+            </div>
+            <div class="offers-icon">%</div>
+        </div>
+
+        <div class="tabs">
+            <div class="tab active" data-tab="payment">Payment Offers</div>
+            <div class="tab" data-tab="restaurant">Restaurant Offers</div>
+        </div>
+
+        <div id="paymentOffers" class="offers-section active">
+            <h2>Available Coupons</h2>
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <div class="offer-code">SUMMER25</div>
+                    <div class="offer-title">25% off on Summer Collection</div>
+                    <div class="offer-description">
+                        Use code SUMMER25 for 25% off on all summer items
+                    </div>
+                    <div class="offer-actions">
+                        <button class="btn btn-copy" data-clipboard-text="SUMMER25">
+                            COPY CODE
+                        </button>
+                    </div>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-code">NEWUSER50</div>
+                    <div class="offer-title">50% off for New Users</div>
+                    <div class="offer-description">
+                        Get 50% off on your first order with code NEWUSER50
+                    </div>
+                    <div class="offer-actions">
+                        <button class="btn btn-copy" data-clipboard-text="NEWUSER50">
+                            COPY CODE
+                        </button>
+                    </div>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-code">FREESHIP100</div>
+                    <div class="offer-title">Free Shipping on Orders over $100</div>
+                    <div class="offer-description">
+                        Use code FREESHIP100 for free shipping on orders above $100
+                    </div>
+                    <div class="offer-actions">
+                        <button class="btn btn-copy" data-clipboard-text="FREESHIP100">
+                            COPY CODE
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bank-offers">
+                <h2>Exclusive Bank Offers</h2>
+                <div class="bank-offer-card">
+                    <img src="https://www.logo-designer.co/storage/2017/04/2017-Design-Stack-new-logo-design-State-Bank-of-India.png"
+                        alt="SBI Logo" class="bank-logo" />
+                    <div class="bank-offer-content">
+                        <div class="bank-offer-title">15% off with SBI Credit Cards</div>
+                        <div class="bank-offer-description">
+                            Use code SBI75 for 15% off up to ₹75 on orders above ₹400
+                        </div>
+                        <div class="offer-actions">
+                            <button class="btn btn-copy" data-clipboard-text="SBI75">
+                                COPY CODE
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bank-offer-card">
+                    <img src="https://i.pinimg.com/736x/cc/15/74/cc1574e6b15ed8aa8a7759c2c9220429.jpg" alt="HDFC Logo"
+                        class="bank-logo" />
+                    <div class="bank-offer-content">
+                        <div class="bank-offer-title">15% off with HDFC PayZapp Card</div>
+                        <div class="bank-offer-description">
+                            Use PAYZAPP100 for 15% off up to ₹100 on orders above ₹250
+                        </div>
+                        <div class="offer-actions">
+                            <button class="btn btn-copy" data-clipboard-text="PAYZAPP100">
+                                COPY CODE
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bank-offer-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJX-kIkzGyUlRX9t0qUcmX66YBERIAq5-ywg&s"
+                        alt="RuPay Logo" class="bank-logo" />
+                    <div class="bank-offer-content">
+                        <div class="bank-offer-title">30% cashback with RuPay Cards</div>
+                        <div class="bank-offer-description">
+                            Use RUPAY30 for 30% cashback up to ₹150 on orders above ₹300
+                        </div>
+                        <div class="offer-actions">
+                            <button class="btn btn-copy" data-clipboard-text="RUPAY30">
+                                COPY CODE
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="restaurantOffers" class="offers-section" style="display: none">
+            <h2>Restaurant Offers</h2>
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <div class="offer-code">PIZZA50</div>
+                    <div class="offer-title">50% off on Large Pizzas</div>
+                    <div class="offer-description">
+                        Get 50% off on any large pizza at participating restaurants
+                    </div>
+                    <div class="offer-actions">
+                        <button class="btn btn-more">+ MORE</button>
+                        <button class="btn btn-copy" data-clipboard-text="PIZZA50">
+                            COPY CODE
+                        </button>
+                    </div>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-code">BURGER2FOR1</div>
+                    <div class="offer-title">Buy 1 Get 1 Free on Burgers</div>
+                    <div class="offer-description">
+                        Order any burger and get another of equal or lesser value for free
+                    </div>
+                    <div class="offer-actions">
+                        <button class="btn btn-more">+ MORE</button>
+                        <button class="btn btn-copy" data-clipboard-text="BURGER2FOR1">
+                            COPY CODE
+                        </button>
+                    </div>
+                </div>
+                <div class="offer-card">
+                    <div class="offer-code">DESSERT25</div>
+                    <div class="offer-title">25% off on Desserts</div>
+                    <div class="offer-description">
+                        Enjoy 25% discount on all desserts with any main course order
+                    </div>
+                    <div class="offer-actions">
+                        <button class="btn btn-more">+ MORE</button>
+                        <button class="btn btn-copy" data-clipboard-text="DESSERT25">
+                            COPY CODE
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tab switching
+        document.querySelectorAll(".tab").forEach((tab) => {
+            tab.addEventListener("click", () => {
+                document
+                    .querySelectorAll(".tab")
+                    .forEach((t) => t.classList.remove("active"));
+                tab.classList.add("active");
+                document.querySelectorAll(".offers-section").forEach((section) => {
+                    section.style.display = "none";
+                });
+                document.getElementById(tab.dataset.tab + "Offers").style.display =
+                    "block";
+            });
+        });
+
+        // Initialize clipboard.js
+        new ClipboardJS(".btn-copy");
+
+        // Add animation to copy buttons
+        document.querySelectorAll(".btn-copy").forEach((btn) => {
+            btn.addEventListener("click", function () {
+                this.textContent = "COPIED!";
+                setTimeout(() => {
+                    this.textContent = "COPY CODE";
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+
+</html>
