@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- internal styling -->
+    <link rel="icon" type="image/x-icon" href="https://scontent.fnag12-1.fna.fbcdn.net/v/t39.30808-1/428666087_122132408708048340_3787509526926870149_n.jpg?stp=dst-jpg_p480x480&_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=Ysnvn99NrIMQ7kNvgHLlbV0&_nc_ht=scontent.fnag12-1.fna&oh=00_AYDi0O_ae93wA2CmJTsG59bLvY9LuJ8ii26C8f97dQBtkg&oe=6667B794">
+    <style>
+        .st1 {
+            padding: 40px;
+            background-color: #789461;
+
+        }
+
+        fieldset {
+            padding: 20px;
+            font-family: 'Gamja Flower', sans-serif;
+            font-family: 'Space Mono', monospace;
+
+        }
+
+        body {
+            background-color: black;
+            color: #e7e7e7;
+        }
+
+        .s2 {
+            background-color: #96E9C6;
+            width: 20%;
+
+        }
+
+        .s1 {
+            background-color: #D04848;
+            width: 20%;
+            padding-right: 20px;
+        }
+
+        legend {
+            background-color: #294B29;
+        }
+
+        page[size="A4"] {
+            width: 21cm;
+            height: 20cm;
+        }
+
+        page {
+            background: white;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 0.5cm;
+        }
+
+        .button {
+            background-color: #96e9c6;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            border-radius: 5px;
+            text-decoration: none;
+            outline: none;
+        }
+
+        /* button hover effect */
+        .button:hover {
+            background-color: #75d9b0;
+            transform: scale(1.05);
+        }
+    </style>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- form -->
+    <form action="formainpage.html" class="st1">
+        <!-- form heading -->
+        <fieldset>
+            <legend><u>ENJOY PROGRAMMING: Enter your Details</u></legend>
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname">
+            <br>
+            <br>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname">
+            <br>
+            <br>
+            <!-- laptop selection -->
+            <h2> What Laptop Do you Own?</h2>
+            <input type="checkbox" id="lp" name="Laptop">
+            <label for="lp">🌐 Windows</label>
+            &emsp;
+            <input type="checkbox" id="lp" name="Laptop">
+            <label for="lp"> Mac</label>
+            &emsp;&emsp;
+            <input type="checkbox" id="lp" name="Laptop">
+            <label for="lp">🐧 Linux</label>
+            <br>
+            <br>
+            <!-- educational details -->
+            <h2> 🏫 Select your Education </h2>
+            &emsp;&emsp;<input type="radio" id="ed" name="educational">
+            &emsp;<label for="ed">Schooling 📖</label>
+            <br> <br>
+            &emsp;&emsp;<input type="radio" id="ed" name="educational">
+            &emsp;<label for="ed">Jr.College 📚</label>
+            <br> <br>
+            &emsp;&emsp;<input type="radio" id="ed" name="educational">
+            &emsp;<label for="ed">Graduation 📙</label>
+            <br> <br>
+            &emsp;&emsp;<input type="radio" id="ed" name="educational">
+            &emsp;<label for="ed">PHD 👨‍🎓</label>
+            <br> <br>
+            &emsp;&emsp;<input type="radio" id="ed" name="educational">
+            &emsp;<label for="ed">Post Graduation 📑</label>
+            <br> <br>
+            <!-- next page button -->
+            <a href="signin.html">
+                <button class="button" type="button" class="cancelbtn">Preview</button></a>
+            <a href="formainpage.html">
+                <button class=" button" type="submit" class="signupbtn">Click to Proceed</button></a>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>
