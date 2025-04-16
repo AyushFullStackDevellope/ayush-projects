@@ -89,7 +89,23 @@ main {
     font-size: 2rem;
     color: white;
 }
+button.run-button {
+    background-color: var(--success);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
 
+button.run-button:hover {
+    background-color: #27ae60;
+}
 .javascript-bg {
     background: linear-gradient(135deg, var(--javascript), #e6c200);
 }

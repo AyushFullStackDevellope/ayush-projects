@@ -1,136 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Examples | Code Showcase</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/javascript.min.js"></script>
     <link rel="stylesheet" href="./common-style.css" />
-      <!-- fav icon -->
-  <link rel="icon" href="https://cdn-icons-png.freepik.com/512/1049/1049443.png" type="image/x-icon" />
-</head>
+    <!-- fav icon -->
+    <link
+      rel="icon"
+      href="https://cdn-icons-png.freepik.com/512/1049/1049443.png"
+      type="image/x-icon"
+    />
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav>
-            <div class="logo">
-                <i class="fas fa-code"></i>
-                <span>CodeShowcase</span>
-            </div>
-            <div class="nav-links">
-                <a href="home.html">Home</a>
-                <a href="javascript.html">JavaScript</a>
-                <a href="java-lng.html">Java</a>
-                <a href="c-lng.html">C</a>
-                <a href="swift-lng.html">Swift</a>
-                <a href="python-lng.html">Python</a>
-            </div>
-        </nav>
+      <nav>
+        <div class="logo">
+          <i class="fas fa-code"></i>
+          <span>CodeShowcase</span>
+        </div>
+        <div class="nav-links">
+          <a href="home.html">Home</a>
+          <a href="javascript.html">JavaScript</a>
+          <a href="java-lng.html">Java</a>
+          <a href="c-lng.html">C</a>
+          <a href="swift-lng.html">Swift</a>
+          <a href="python-lng.html">Python</a>
+        </div>
+      </nav>
     </header>
 
     <main>
-        <section class="language-header">
-            <div class="language-icon javascript-bg">
-                <i class="fab fa-js"></i>
-            </div>
-            <div class="language-intro">
-                <h1>JavaScript Examples</h1>
-                <p>
-                    Modern, versatile, and powerful - the language that powers the web.
-                </p>
-            </div>
-        </section>
+      <section class="language-header">
+        <div class="language-icon javascript-bg">
+          <i class="fab fa-js"></i>
+        </div>
+        <div class="language-intro">
+          <h1>JavaScript Examples</h1>
+          <p>
+            Modern, versatile, and powerful - the language that powers the web.
+          </p>
+        </div>
+      </section>
 
-        <div class="tabs">
-            <button class="tab-button active">Basic Examples</button>
+      <div class="tabs">
+        <button class="tab-button active">Basic Examples</button>
+      </div>
+
+      <!-- Example 1 -->
+      <div class="example-container">
+        <div class="example-header">
+          <h2>Example 1: Adding two Numbers</h2>
         </div>
 
-        <!-- Example 1 -->
-        <div class="example-container">
-            <div class="example-header">
-                <h2>Example 1: Adding two Numbers</h2>
+        <div class="code-container">
+          <div class="code-box">
+            <div class="code-header">
+              <div class="code-header-title">
+                <i class="fas fa-code"></i>
+                <span>Code</span>
+              </div>
+              <div class="code-actions">
+                <button class="run-button" onclick="runCode()">
+                  <i class="fas fa-play"></i>
+                  <span>Run</span>
+                </button>
+              </div>
             </div>
-
-            <div class="code-container">
-                <div class="code-box">
-                    <div class="code-header">
-                        <div class="code-header-title">
-                            <i class="fas fa-code"></i>
-                            <span>Code</span>
-                        </div>
-                    </div>
-                    <div class="code-editor">
-                        <pre><code class="language-javascript">// Taking input from user
+            <div class="code-editor">
+              <pre><code class="language-javascript">// Taking input from user
 let a = prompt("Enter first number:");
 let b = prompt("Enter second number:");
 
 // Calculating sum
-let sum = Number(a + b);
+let sum = Number(a) + Number(b);
        
 // Displaying output
 console.log("Sum is: " + sum);                          
                      </code></pre>
-                    </div>
-                </div>
+            </div>
+          </div>
 
-                <div class="io-container">
-                    <div class="input-box">
-                        <div class="input-header">
-                            <i class="fas fa-arrow-right"></i>
-                            <span>Input</span>
-                        </div>
-                        <div class="input-content">
-                            <pre>Enter first number: 10  
+          <div class="io-container">
+            <div class="input-box">
+              <div class="input-header">
+                <i class="fas fa-arrow-right"></i>
+                <span>Input</span>
+              </div>
+              <div class="input-content">
+                <pre>
+Enter first number: 10  
 Enter second number: 8
-                                </pre>
-                        </div>
-                    </div>
-                    <div class="output-box">
-                        <div class="output-header">
-                            <i class="fas fa-arrow-left"></i>
-                            <span>Output</span>
-                        </div>
-                        <div class="output-content">
-                            <pre>Sum is: 18</pre>
-                        </div>
-                    </div>
-                </div>
+                                </pre
+                >
+              </div>
             </div>
-
-            <div class="example-description">
-                <h3>Code Explanation</h3>
-                <blockquote>
-                    <li>input() reads input as a string, int() converts it to an integer.</li>
-                    <li>a + b performs addition.</li>
-                    <li>console.log() prints the result.</li>
-                </blockquote>
+            <div class="output-box">
+              <div class="output-header">
+                <i class="fas fa-arrow-left"></i>
+                <span>Output</span>
+              </div>
+              <div class="output-content">
+                <pre>Sum is: 18</pre>
+              </div>
             </div>
+          </div>
         </div>
+
+        <div class="example-description">
+          <h3>Code Explanation</h3>
+          <blockquote>
+            <li>
+              input() reads input as a string, int() converts it to an integer.
+            </li>
+            <li>a + b performs addition.</li>
+            <li>console.log() prints the result.</li>
+          </blockquote>
+        </div>
+      </div>
     </main>
 
     <a href="#" class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
+      <i class="fas fa-arrow-up"></i>
     </a>
 
     <footer>
-        <p>&copy; 2025 CodeShowcase. Ayush Nakade All Rights Reserved.</p>
+      <p>&copy; 2025 CodeShowcase. Ayush Nakade All Rights Reserved.</p>
     </footer>
 
     <script>
-        // Initialize syntax highlighting
-        document.addEventListener("DOMContentLoaded", (event) => {
-            document.querySelectorAll("pre code").forEach((block) => {
-                hljs.highlightBlock(block);
-            });
+      // Initialize syntax highlighting
+      document.addEventListener("DOMContentLoaded", (event) => {
+        document.querySelectorAll("pre code").forEach((block) => {
+          hljs.highlightBlock(block);
         });
+      });
+      
+      // Run code button via prompt input and output in alert user input 2 numbers and add them
+      function runCode() {
+        let a = prompt("Enter first number:");
+        let b = prompt("Enter second number:");
+        let sum = Number(a) + Number(b);
+        alert("Sun is: " + sum);
+      }
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/javascript.min.js"></script>
-</body>
-
+  </body>
 </html>
