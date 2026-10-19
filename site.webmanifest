@@ -1,0 +1,12 @@
+{
+  "name": "Ayush Nakade — Full Stack Developer",
+  "short_name": "Ayush Nakade",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#08080b",
+  "theme_color": "#08080b",
+  "icons": [
+    { "src": "./assets/logo/ayush-logo.png", "sizes": "313x313", "type": "image/png" },
+    { "src": "./assets/logo/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

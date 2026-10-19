@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://ayushfullstackdevellope.github.io/ayush-projects/</loc><lastmod>2026-10-19</lastmod><priority>1.0</priority></url>
+  <url><loc>https://ayushfullstackdevellope.github.io/ayush-projects/html-projects/resume.html</loc><priority>0.8</priority></url>
+  <url><loc>https://ayushfullstackdevellope.github.io/ayush-projects/homepage-projects/portfolio/live-projects.html</loc><priority>0.7</priority></url>
+  <url><loc>https://ayushfullstackdevellope.github.io/ayush-projects/homepage-projects/portfolio/react-projects.html</loc><priority>0.6</priority></url>
+  <url><loc>https://ayushfullstackdevellope.github.io/ayush-projects/homepage-projects/portfolio/js-projects.html</loc><priority>0.6</priority></url>
+  <url><loc>https://ayushfullstackdevellope.github.io/ayush-projects/homepage-projects/portfolio/html-projects.html</loc><priority>0.5</priority></url>
+  <url><loc>https://ayushfullstackdevellope.github.io/ayush-projects/homepage-projects/portfolio/css-projects.html</loc><priority>0.5</priority></url>
+  <url><loc>https://ayushfullstackdevellope.github.io/ayush-projects/homepage-projects/portfolio/bootstrap-projects.html</loc><priority>0.5</priority></url>
+</urlset>

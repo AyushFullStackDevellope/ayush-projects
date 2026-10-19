@@ -1,0 +1,32 @@
+# Ayush Nakade
+
+> Ayush Nakade is a full stack web developer from Nagpur, Maharashtra, India. He builds responsive, accessible websites and web apps with React, JavaScript and Node.js, and is open to frontend / full stack developer roles and internships (on-site in Nagpur or remote).
+
+## Key facts
+- Role: Full Stack Developer (React, JavaScript, Node.js, REST APIs)
+- Location: Nagpur, Maharashtra, India (IST, UTC+5:30)
+- Education: Information Technology degree, 2024–2028 (in progress)
+- Certification: Full Stack Developer – Beginner (Level 1), Enjoy Programming, 15 June 2024 (HTML5, CSS3, JavaScript, manual testing)
+- Shipped: 6 live client websites, 50+ practice projects
+- Works with AI coding assistants for prototyping, debugging and review, and tests everything he ships
+- Contact: ayushnakade18@gmail.com
+
+## Skills
+- Frontend: HTML5, CSS3, Sass, JavaScript (ES6+), React, Bootstrap
+- Backend: Node.js, RESTful APIs, SQL databases
+- Tools: Git/GitHub, Netlify, GitHub Pages, responsive design, manual testing
+- Also familiar with: Python, Java
+
+## Projects
+- [All Scientific Tech](https://all-scientific-tech.netlify.app/): company website built with React, deployed on Netlify
+- [Enjoy Programming](https://www.enjoyprograming.com/): programming institute website (HTML, CSS, JavaScript)
+- [ParadiseTrails](https://paradisetrails.eppro.in/): responsive client website (HTML, CSS, JavaScript)
+- [Class Notes](https://ayushfullstackdevellope.github.io/class_notes/home.html): study notes for classes 8–12
+- Orangelo: multi-page restaurant website (Bootstrap, Flexbox, Grid)
+- Cake Shop: bakery website (Bootstrap)
+
+## Links
+- [Portfolio](https://ayushfullstackdevellope.github.io/ayush-projects/)
+- [Résumé](https://ayushfullstackdevellope.github.io/ayush-projects/html-projects/resume.html)
+- [GitHub](https://github.com/AyushFullStackDevellope)
+- [LinkedIn](https://www.linkedin.com/in/ayush-nakade-19431a286/)

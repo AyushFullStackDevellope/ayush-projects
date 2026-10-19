@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exact Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 100px 200px 200px 50px 50px;
+            width: 500px;
+            height: 400px;
+        }
+        .black {
+            background: black;
+            grid-column: span 2;
+        }
+        .pink1 {
+            background: #e13096;
+            grid-row: span 2;
+            height: 220px;
+        }
+        .blue {
+            background: #5bb6f2;
+            grid-column: span 3;
+            width: 100%;
+        }
+        .pink2 {
+            background: #e13096;
+            grid-row: span 3;
+            height: 100%;
+        }
+        .cyan {
+            background: #6de3c5;
+            grid-column: span 3;
+        }
+        .purple {
+            background: #6800f9;
+            grid-column: span 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="black"></div>
+        <div class="pink2"></div>
+        <div class="pink1"></div>
+        <div class="blue"></div>
+        <div class="cyan"></div>
+        <div class="purple"></div>
+    </div>
+</body>
+</html>
